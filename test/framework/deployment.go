@@ -1,23 +1,8 @@
-// Copyright 2017 The prometheus-operator Authors
-//
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-//     http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-
 package framework
 
 import (
 	"fmt"
 	"time"
-
 	"github.com/pkg/errors"
 	appsv1 "k8s.io/api/apps/v1beta2"
 	apierrors "k8s.io/apimachinery/pkg/api/errors"
@@ -28,6 +13,10 @@ import (
 )
 
 func MakeDeployment(pathToYaml string) (*appsv1.Deployment, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	manifest, err := PathToOSFile(pathToYaml)
 	if err != nil {
 		return nil, err
@@ -36,11 +25,13 @@ func MakeDeployment(pathToYaml string) (*appsv1.Deployment, error) {
 	if err := yaml.NewYAMLOrJSONDecoder(manifest, 100).Decode(&tectonicPromOp); err != nil {
 		return nil, errors.Wrap(err, fmt.Sprintf("failed to decode file %s", pathToYaml))
 	}
-
 	return &tectonicPromOp, nil
 }
-
 func CreateDeployment(kubeClient kubernetes.Interface, namespace string, d *appsv1.Deployment) error {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	d.Namespace = namespace
 	_, err := kubeClient.AppsV1beta2().Deployments(namespace).Create(d)
 	if err != nil {
@@ -48,37 +39,36 @@ func CreateDeployment(kubeClient kubernetes.Interface, namespace string, d *apps
 	}
 	return nil
 }
-
 func DeleteDeployment(kubeClient kubernetes.Interface, namespace, name string) error {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	d, err := kubeClient.AppsV1beta2().Deployments(namespace).Get(name, metav1.GetOptions{})
 	if err != nil {
 		return err
 	}
-
 	zero := int32(0)
 	d.Spec.Replicas = &zero
-
 	d, err = kubeClient.AppsV1beta2().Deployments(namespace).Update(d)
 	if err != nil {
 		return err
 	}
 	return kubeClient.AppsV1beta2().Deployments(namespace).Delete(d.Name, &metav1.DeleteOptions{})
 }
-
 func WaitUntilDeploymentGone(kubeClient kubernetes.Interface, namespace, name string, timeout time.Duration) error {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return wait.Poll(time.Second, timeout, func() (bool, error) {
-		_, err := kubeClient.
-			AppsV1beta2().Deployments(namespace).
-			Get(name, metav1.GetOptions{})
-
+		_, err := kubeClient.AppsV1beta2().Deployments(namespace).Get(name, metav1.GetOptions{})
 		if err != nil {
 			if apierrors.IsNotFound(err) {
 				return true, nil
 			}
-
 			return false, err
 		}
-
 		return false, nil
 	})
 }

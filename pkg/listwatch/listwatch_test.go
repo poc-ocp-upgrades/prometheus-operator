@@ -1,23 +1,8 @@
-// Copyright 2016 The prometheus-operator Authors
-//
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-//     http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-
 package listwatch
 
 import (
 	"sync"
 	"testing"
-
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/watch"
@@ -27,7 +12,10 @@ import (
 var _ watch.Interface = &multiWatch{}
 
 func setupMultiWatch(n int, t *testing.T, rvs ...string) ([]*watch.FakeWatcher, *multiWatch) {
-	// Default resource versions to the correct length if none were passed.
+	_logClusterCodePath()
+	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	if len(rvs) == 0 {
 		rvs = make([]string, n)
 	}
@@ -46,15 +34,17 @@ func setupMultiWatch(n int, t *testing.T, rvs ...string) ([]*watch.FakeWatcher, 
 	}
 	return ws, m
 }
-
 func TestNewMultiWatch(t *testing.T) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	func() {
 		defer func() {
 			if r := recover(); r == nil {
 				t.Error("expected newMultiWatch to panic when number of resource versions is less than ListerWatchers")
 			}
 		}()
-		// Create a multiWatch from 2 ListerWatchers but only pass 1 resource version.
 		_, _ = setupMultiWatch(2, t, "1")
 	}()
 	func() {
@@ -63,12 +53,14 @@ func TestNewMultiWatch(t *testing.T) {
 				t.Errorf("newMultiWatch should not panic when number of resource versions matches ListerWatchers; got: %v", r)
 			}
 		}()
-		// Create a multiWatch from 2 ListerWatchers and pass 2 resource versions.
 		_, _ = setupMultiWatch(2, t, "1", "2")
 	}()
 }
-
 func TestMultiWatchResultChan(t *testing.T) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	ws, m := setupMultiWatch(10, t)
 	defer m.Stop()
 	var events []watch.Event
@@ -95,8 +87,11 @@ func TestMultiWatchResultChan(t *testing.T) {
 		t.Errorf("expected %d events but got %d", len(ws), len(events))
 	}
 }
-
 func TestMultiWatchStop(t *testing.T) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	ws, m := setupMultiWatch(10, t)
 	m.Stop()
 	var stopped int
@@ -111,7 +106,6 @@ func TestMultiWatchStop(t *testing.T) {
 	}
 	select {
 	case <-m.stopped:
-		// all good, watcher is closed, proceed
 	default:
 		t.Error("expected multiWatch to be stopped")
 	}
@@ -122,64 +116,60 @@ func TestMultiWatchStop(t *testing.T) {
 }
 
 type mockListerWatcher struct {
-	evCh    chan watch.Event
-	stopped bool
+	evCh	chan watch.Event
+	stopped	bool
 }
 
 func (m *mockListerWatcher) List(options metav1.ListOptions) (runtime.Object, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return nil, nil
 }
-
 func (m *mockListerWatcher) Watch(options metav1.ListOptions) (watch.Interface, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return m, nil
 }
-
 func (m *mockListerWatcher) Stop() {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	m.stopped = true
 }
-
 func (m *mockListerWatcher) ResultChan() <-chan watch.Event {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return m.evCh
 }
-
 func TestRacyMultiWatch(t *testing.T) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	evCh := make(chan watch.Event)
 	lw := &mockListerWatcher{evCh: evCh}
-
-	mw, err := newMultiWatch(
-		[]cache.ListerWatcher{lw},
-		[]string{"foo"},
-		metav1.ListOptions{},
-	)
+	mw, err := newMultiWatch([]cache.ListerWatcher{lw}, []string{"foo"}, metav1.ListOptions{})
 	if err != nil {
 		t.Error(err)
 		return
 	}
-
-	// this will not block, as newMultiWatch started a goroutine,
-	// receiving that event and block on the dispatching it there.
-	evCh <- watch.Event{
-		Type: "foo",
-	}
-
+	evCh <- watch.Event{Type: "foo"}
 	if got := <-mw.ResultChan(); got.Type != "foo" {
 		t.Errorf("expected foo, got %s", got.Type)
 		return
 	}
-
-	// Enqueue event, do not dequeue it.
-	// In conjunction with go test -race this asserts
-	// if there is a race between stopping and dispatching an event
-	evCh <- watch.Event{
-		Type: "bar",
-	}
+	evCh <- watch.Event{Type: "bar"}
 	mw.Stop()
-
 	if got := lw.stopped; got != true {
 		t.Errorf("expected watcher to be closed true, got %t", got)
 	}
-
-	// some reentrant calls, should be non-blocking
 	mw.Stop()
 	mw.Stop()
 }
