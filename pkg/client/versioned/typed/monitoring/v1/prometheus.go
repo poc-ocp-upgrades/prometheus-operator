@@ -34,9 +34,13 @@ func newPrometheuses(c *MonitoringV1Client, namespace string) *prometheuses {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return &prometheuses{client: c.RESTClient(), ns: namespace}
 }
 func (c *prometheuses) Get(name string, options meta_v1.GetOptions) (result *v1.Prometheus, err error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -50,6 +54,8 @@ func (c *prometheuses) List(opts meta_v1.ListOptions) (result *v1.PrometheusList
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	result = &v1.PrometheusList{}
 	err = c.client.Get().Namespace(c.ns).Resource("prometheuses").VersionedParams(&opts, scheme.ParameterCodec).Do().Into(result)
 	return
@@ -59,10 +65,14 @@ func (c *prometheuses) Watch(opts meta_v1.ListOptions) (watch.Interface, error) 
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	opts.Watch = true
 	return c.client.Get().Namespace(c.ns).Resource("prometheuses").VersionedParams(&opts, scheme.ParameterCodec).Watch()
 }
 func (c *prometheuses) Create(prometheus *v1.Prometheus) (result *v1.Prometheus, err error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -76,11 +86,15 @@ func (c *prometheuses) Update(prometheus *v1.Prometheus) (result *v1.Prometheus,
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	result = &v1.Prometheus{}
 	err = c.client.Put().Namespace(c.ns).Resource("prometheuses").Name(prometheus.Name).Body(prometheus).Do().Into(result)
 	return
 }
 func (c *prometheuses) UpdateStatus(prometheus *v1.Prometheus) (result *v1.Prometheus, err error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -94,6 +108,8 @@ func (c *prometheuses) Delete(name string, options *meta_v1.DeleteOptions) error
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return c.client.Delete().Namespace(c.ns).Resource("prometheuses").Name(name).Body(options).Do().Error()
 }
 func (c *prometheuses) DeleteCollection(options *meta_v1.DeleteOptions, listOptions meta_v1.ListOptions) error {
@@ -101,9 +117,13 @@ func (c *prometheuses) DeleteCollection(options *meta_v1.DeleteOptions, listOpti
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return c.client.Delete().Namespace(c.ns).Resource("prometheuses").VersionedParams(&listOptions, scheme.ParameterCodec).Body(options).Do().Error()
 }
 func (c *prometheuses) Patch(name string, pt types.PatchType, data []byte, subresources ...string) (result *v1.Prometheus, err error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()

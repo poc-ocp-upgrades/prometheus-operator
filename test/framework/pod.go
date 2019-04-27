@@ -12,6 +12,8 @@ func (f *Framework) PrintPodLogs(ns, p string) error {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	pod, err := f.KubeClient.CoreV1().Pods(ns).Get(p, metav1.GetOptions{})
 	if err != nil {
 		return errors.Wrapf(err, "failed to print logs of pod '%v': failed to get pod", p)
@@ -28,6 +30,8 @@ func (f *Framework) PrintPodLogs(ns, p string) error {
 	return nil
 }
 func (f *Framework) GetPodRestartCount(ns, podName string) (map[string]int32, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()

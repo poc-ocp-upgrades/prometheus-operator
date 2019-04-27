@@ -33,9 +33,13 @@ func newPrometheusRules(c *MonitoringV1Client, namespace string) *prometheusRule
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return &prometheusRules{client: c.RESTClient(), ns: namespace}
 }
 func (c *prometheusRules) Get(name string, options meta_v1.GetOptions) (result *v1.PrometheusRule, err error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -49,6 +53,8 @@ func (c *prometheusRules) List(opts meta_v1.ListOptions) (result *v1.PrometheusR
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	result = &v1.PrometheusRuleList{}
 	err = c.client.Get().Namespace(c.ns).Resource("prometheusrules").VersionedParams(&opts, scheme.ParameterCodec).Do().Into(result)
 	return
@@ -58,10 +64,14 @@ func (c *prometheusRules) Watch(opts meta_v1.ListOptions) (watch.Interface, erro
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	opts.Watch = true
 	return c.client.Get().Namespace(c.ns).Resource("prometheusrules").VersionedParams(&opts, scheme.ParameterCodec).Watch()
 }
 func (c *prometheusRules) Create(prometheusRule *v1.PrometheusRule) (result *v1.PrometheusRule, err error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -75,11 +85,15 @@ func (c *prometheusRules) Update(prometheusRule *v1.PrometheusRule) (result *v1.
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	result = &v1.PrometheusRule{}
 	err = c.client.Put().Namespace(c.ns).Resource("prometheusrules").Name(prometheusRule.Name).Body(prometheusRule).Do().Into(result)
 	return
 }
 func (c *prometheusRules) Delete(name string, options *meta_v1.DeleteOptions) error {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -91,9 +105,13 @@ func (c *prometheusRules) DeleteCollection(options *meta_v1.DeleteOptions, listO
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return c.client.Delete().Namespace(c.ns).Resource("prometheusrules").VersionedParams(&listOptions, scheme.ParameterCodec).Body(options).Do().Error()
 }
 func (c *prometheusRules) Patch(name string, pt types.PatchType, data []byte, subresources ...string) (result *v1.PrometheusRule, err error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()

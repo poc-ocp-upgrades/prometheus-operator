@@ -14,6 +14,8 @@ func (f *Framework) WaitForConfigMapExist(ns, name string) (*v1.ConfigMap, error
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	var configMap *v1.ConfigMap
 	err := wait.Poll(2*time.Second, f.DefaultTimeout, func() (bool, error) {
 		var err error
@@ -29,6 +31,8 @@ func (f *Framework) WaitForConfigMapExist(ns, name string) (*v1.ConfigMap, error
 	return configMap, errors.Wrapf(err, "waiting for ConfigMap '%v' in namespace '%v'", name, ns)
 }
 func (f *Framework) WaitForConfigMapNotExist(ns, name string) error {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()

@@ -13,9 +13,13 @@ func (c *FakeMonitoringV1) Alertmanagers(namespace string) v1.AlertmanagerInterf
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return &FakeAlertmanagers{c, namespace}
 }
 func (c *FakeMonitoringV1) Prometheuses(namespace string) v1.PrometheusInterface {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -27,6 +31,8 @@ func (c *FakeMonitoringV1) PrometheusRules(namespace string) v1.PrometheusRuleIn
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return &FakePrometheusRules{c, namespace}
 }
 func (c *FakeMonitoringV1) ServiceMonitors(namespace string) v1.ServiceMonitorInterface {
@@ -34,9 +40,13 @@ func (c *FakeMonitoringV1) ServiceMonitors(namespace string) v1.ServiceMonitorIn
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return &FakeServiceMonitors{c, namespace}
 }
 func (c *FakeMonitoringV1) RESTClient() rest.Interface {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()

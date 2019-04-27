@@ -21,9 +21,13 @@ func New(f internalinterfaces.SharedInformerFactory, namespace string, tweakList
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return &version{factory: f, namespace: namespace, tweakListOptions: tweakListOptions}
 }
 func (v *version) Alertmanagers() AlertmanagerInformer {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -35,6 +39,8 @@ func (v *version) Prometheuses() PrometheusInformer {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return &prometheusInformer{factory: v.factory, namespace: v.namespace, tweakListOptions: v.tweakListOptions}
 }
 func (v *version) PrometheusRules() PrometheusRuleInformer {
@@ -42,9 +48,13 @@ func (v *version) PrometheusRules() PrometheusRuleInformer {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return &prometheusRuleInformer{factory: v.factory, namespace: v.namespace, tweakListOptions: v.tweakListOptions}
 }
 func (v *version) ServiceMonitors() ServiceMonitorInformer {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()

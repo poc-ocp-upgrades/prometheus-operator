@@ -20,6 +20,8 @@ func PathToOSFile(relativPath string) (*os.File, error) {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	path, err := filepath.Abs(relativPath)
 	if err != nil {
 		return nil, errors.Wrap(err, fmt.Sprintf("failed generate absolut file path of %s", relativPath))
@@ -31,6 +33,8 @@ func PathToOSFile(relativPath string) (*os.File, error) {
 	return manifest, nil
 }
 func WaitForPodsReady(kubeClient kubernetes.Interface, namespace string, timeout time.Duration, expectedReplicas int, opts metav1.ListOptions) error {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -61,6 +65,8 @@ func WaitForPodsRunImage(kubeClient kubernetes.Interface, namespace string, expe
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return wait.Poll(time.Second, time.Minute*5, func() (bool, error) {
 		pl, err := kubeClient.Core().Pods(namespace).List(opts)
 		if err != nil {
@@ -83,6 +89,8 @@ func WaitForHTTPSuccessStatusCode(timeout time.Duration, url string) error {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	var resp *http.Response
 	err := wait.Poll(time.Second, timeout, func() (bool, error) {
 		var err error
@@ -99,6 +107,8 @@ func podRunsImage(p v1.Pod, image string) bool {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	for _, c := range p.Spec.Containers {
 		if image == c.Image {
 			return true
@@ -111,6 +121,8 @@ func GetLogs(kubeClient kubernetes.Interface, namespace string, podName, contain
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	logs, err := kubeClient.Core().RESTClient().Get().Resource("pods").Namespace(namespace).Name(podName).SubResource("log").Param("container", containerName).Do().Raw()
 	if err != nil {
 		return "", err
@@ -118,6 +130,8 @@ func GetLogs(kubeClient kubernetes.Interface, namespace string, podName, contain
 	return string(logs), err
 }
 func (f *Framework) Poll(timeout, pollInterval time.Duration, pollFunc func() (bool, error)) error {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -145,9 +159,13 @@ func ProxyGetPod(kubeClient kubernetes.Interface, namespace, podName, port, path
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return kubeClient.CoreV1().RESTClient().Get().Namespace(namespace).Resource("pods").SubResource("proxy").Name(podName).Suffix(path)
 }
 func ProxyPostPod(kubeClient kubernetes.Interface, namespace, podName, port, path, body string) *rest.Request {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()

@@ -23,6 +23,8 @@ func (c *FakeAlertmanagers) Get(name string, options v1.GetOptions) (result *mon
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	obj, err := c.Fake.Invokes(testing.NewGetAction(alertmanagersResource, c.ns, name), &monitoring_v1.Alertmanager{})
 	if obj == nil {
 		return nil, err
@@ -30,6 +32,8 @@ func (c *FakeAlertmanagers) Get(name string, options v1.GetOptions) (result *mon
 	return obj.(*monitoring_v1.Alertmanager), err
 }
 func (c *FakeAlertmanagers) List(opts v1.ListOptions) (result *monitoring_v1.AlertmanagerList, err error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -55,9 +59,13 @@ func (c *FakeAlertmanagers) Watch(opts v1.ListOptions) (watch.Interface, error) 
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return c.Fake.InvokesWatch(testing.NewWatchAction(alertmanagersResource, c.ns, opts))
 }
 func (c *FakeAlertmanagers) Create(alertmanager *monitoring_v1.Alertmanager) (result *monitoring_v1.Alertmanager, err error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -73,6 +81,8 @@ func (c *FakeAlertmanagers) Update(alertmanager *monitoring_v1.Alertmanager) (re
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	obj, err := c.Fake.Invokes(testing.NewUpdateAction(alertmanagersResource, c.ns, alertmanager), &monitoring_v1.Alertmanager{})
 	if obj == nil {
 		return nil, err
@@ -80,6 +90,8 @@ func (c *FakeAlertmanagers) Update(alertmanager *monitoring_v1.Alertmanager) (re
 	return obj.(*monitoring_v1.Alertmanager), err
 }
 func (c *FakeAlertmanagers) UpdateStatus(alertmanager *monitoring_v1.Alertmanager) (*monitoring_v1.Alertmanager, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -95,10 +107,14 @@ func (c *FakeAlertmanagers) Delete(name string, options *v1.DeleteOptions) error
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_, err := c.Fake.Invokes(testing.NewDeleteAction(alertmanagersResource, c.ns, name), &monitoring_v1.Alertmanager{})
 	return err
 }
 func (c *FakeAlertmanagers) DeleteCollection(options *v1.DeleteOptions, listOptions v1.ListOptions) error {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -108,6 +124,8 @@ func (c *FakeAlertmanagers) DeleteCollection(options *v1.DeleteOptions, listOpti
 	return err
 }
 func (c *FakeAlertmanagers) Patch(name string, pt types.PatchType, data []byte, subresources ...string) (result *monitoring_v1.Alertmanager, err error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()

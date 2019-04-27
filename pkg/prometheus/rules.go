@@ -24,6 +24,8 @@ func (c *Operator) createOrUpdateRuleConfigMaps(p *monitoringv1.Prometheus) ([]s
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	cClient := c.kclient.CoreV1().ConfigMaps(p.Namespace)
 	namespaces, err := c.selectRuleNamespaces(p)
 	if err != nil {
@@ -91,9 +93,13 @@ func prometheusRulesConfigMapSelector(prometheusName string) metav1.ListOptions 
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return metav1.ListOptions{LabelSelector: fmt.Sprintf("%v=%v", labelPrometheusName, prometheusName)}
 }
 func (c *Operator) selectRuleNamespaces(p *monitoringv1.Prometheus) ([]string, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -115,6 +121,8 @@ func (c *Operator) selectRuleNamespaces(p *monitoringv1.Prometheus) ([]string, e
 	return namespaces, nil
 }
 func (c *Operator) selectRules(p *monitoringv1.Prometheus, namespaces []string) (map[string]string, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -154,6 +162,8 @@ func makeRulesConfigMaps(p *monitoringv1.Prometheus, ruleFiles map[string]string
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	for filename, file := range ruleFiles {
 		if len(file) > maxConfigMapDataSize {
 			return nil, errors.Errorf("rule file '%v' is too large for a single Kubernetes ConfigMap", filename)
@@ -186,6 +196,8 @@ func bucketSize(bucket map[string]string) int {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	totalSize := 0
 	for _, v := range bucket {
 		totalSize += len(v)
@@ -193,6 +205,8 @@ func bucketSize(bucket map[string]string) int {
 	return totalSize
 }
 func makeRulesConfigMap(p *monitoringv1.Prometheus, ruleFiles map[string]string) v1.ConfigMap {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -205,6 +219,8 @@ func makeRulesConfigMap(p *monitoringv1.Prometheus, ruleFiles map[string]string)
 	return v1.ConfigMap{ObjectMeta: metav1.ObjectMeta{Name: prometheusRuleConfigMapName(p.Name), Labels: labels, OwnerReferences: []metav1.OwnerReference{{APIVersion: p.APIVersion, BlockOwnerDeletion: &boolTrue, Controller: &boolTrue, Kind: p.Kind, Name: p.Name, UID: p.UID}}}, Data: ruleFiles}
 }
 func prometheusRuleConfigMapName(prometheusName string) string {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()

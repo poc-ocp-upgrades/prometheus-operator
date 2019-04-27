@@ -20,6 +20,8 @@ func TestMain(m *testing.M) {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	kubeconfig := flag.String("kubeconfig", "", "kube config path, e.g. $HOME/.kube/config")
 	opImage = flag.String("operator-image", "", "operator image, e.g. quay.io/coreos/prometheus-operator")
 	flag.Parse()
@@ -35,6 +37,8 @@ func TestMain(m *testing.M) {
 	os.Exit(exitCode)
 }
 func TestAllNS(t *testing.T) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -73,12 +77,16 @@ func testAllNS(t *testing.T) {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	testFuncs := map[string]func(t *testing.T){"AMCreateDeleteCluster": testAMCreateDeleteCluster, "AMScaling": testAMScaling, "AMVersionMigration": testAMVersionMigration, "AMStorageUpdate": testAMStorageUpdate, "AMExposingWithKubernetesAPI": testAMExposingWithKubernetesAPI, "AMMeshInitialization": testAMMeshInitialization, "AMClusterGossipSilences": testAMClusterGossipSilences, "AMReloadConfig": testAMReloadConfig, "AMZeroDowntimeRollingDeployment": testAMZeroDowntimeRollingDeployment, "PromCreateDeleteCluster": testPromCreateDeleteCluster, "PromScaleUpDownCluster": testPromScaleUpDownCluster, "PromNoServiceMonitorSelector": testPromNoServiceMonitorSelector, "PromVersionMigration": testPromVersionMigration, "PromResourceUpdate": testPromResourceUpdate, "PromStorageUpdate": testPromStorageUpdate, "PromReloadConfig": testPromReloadConfig, "PromAdditionalScrapeConfig": testPromAdditionalScrapeConfig, "PromAdditionalAlertManagerConfig": testPromAdditionalAlertManagerConfig, "PromReloadRules": testPromReloadRules, "PromMultiplePrometheusRulesSameNS": testPromMultiplePrometheusRulesSameNS, "PromMultiplePrometheusRulesDifferentNS": testPromMultiplePrometheusRulesDifferentNS, "PromRulesExceedingConfigMapLimit": testPromRulesExceedingConfigMapLimit, "PromOnlyUpdatedOnRelevantChanges": testPromOnlyUpdatedOnRelevantChanges, "PromWhenDeleteCRDCleanUpViaOwnerRef": testPromWhenDeleteCRDCleanUpViaOwnerRef, "PromDiscovery": testPromDiscovery, "PromAlertmanagerDiscovery": testPromAlertmanagerDiscovery, "PromExposingWithKubernetesAPI": testPromExposingWithKubernetesAPI, "PromDiscoverTargetPort": testPromDiscoverTargetPort, "PromOpMatchPromAndServMonInDiffNSs": testPromOpMatchPromAndServMonInDiffNSs, "PromGetBasicAuthSecret": testPromGetBasicAuthSecret, "Thanos": testThanos}
 	for name, f := range testFuncs {
 		t.Run(name, f)
 	}
 }
 func TestMultiNS(t *testing.T) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()

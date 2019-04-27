@@ -10,6 +10,8 @@ func (f *Framework) PrintEvents() error {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	events, err := f.KubeClient.CoreV1().Events("").List(metav1.ListOptions{})
 	if err != nil {
 		return err

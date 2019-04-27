@@ -22,6 +22,8 @@ func TestStatefulSetLabelingAndAnnotations(t *testing.T) {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	labels := map[string]string{"testlabel": "testlabelvalue"}
 	annotations := map[string]string{"testannotation": "testannotationvalue"}
 	sset, err := makeStatefulSet(monitoringv1.Prometheus{ObjectMeta: metav1.ObjectMeta{Labels: labels, Annotations: annotations}}, defaultTestConfig, nil, "")
@@ -44,6 +46,8 @@ func TestPodLabelsAnnotations(t *testing.T) {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	annotations := map[string]string{"testannotation": "testvalue"}
 	labels := map[string]string{"testlabel": "testvalue"}
 	sset, err := makeStatefulSet(monitoringv1.Prometheus{ObjectMeta: metav1.ObjectMeta{}, Spec: monitoringv1.PrometheusSpec{PodMetadata: &metav1.ObjectMeta{Annotations: annotations, Labels: labels}}}, defaultTestConfig, nil, "")
@@ -56,6 +60,8 @@ func TestPodLabelsAnnotations(t *testing.T) {
 	}
 }
 func TestStatefulSetPVC(t *testing.T) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -76,6 +82,8 @@ func TestStatefulSetEmptyDir(t *testing.T) {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	labels := map[string]string{"testlabel": "testlabelvalue"}
 	annotations := map[string]string{"testannotation": "testannotationvalue"}
 	emptyDir := v1.EmptyDirVolumeSource{Medium: v1.StorageMediumMemory}
@@ -87,6 +95,8 @@ func TestStatefulSetEmptyDir(t *testing.T) {
 	}
 }
 func TestStatefulSetVolumeInitial(t *testing.T) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -108,6 +118,8 @@ func TestMemoryRequestNotAdjustedWhenLimitLarger2Gi(t *testing.T) {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	sset, err := makeStatefulSet(monitoringv1.Prometheus{Spec: monitoringv1.PrometheusSpec{Version: "v1.8.2", Resources: v1.ResourceRequirements{Limits: v1.ResourceList{v1.ResourceMemory: resource.MustParse("3Gi")}}}}, defaultTestConfig, nil, "")
 	if err != nil {
 		t.Fatalf("Unexpected error while making StatefulSet: %v", err)
@@ -124,6 +136,8 @@ func TestMemoryRequestNotAdjustedWhenLimitLarger2Gi(t *testing.T) {
 	}
 }
 func TestAdditionalConfigMap(t *testing.T) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -156,6 +170,8 @@ func TestMemoryRequestAdjustedWhenOnlyLimitGiven(t *testing.T) {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	sset, err := makeStatefulSet(monitoringv1.Prometheus{Spec: monitoringv1.PrometheusSpec{Version: "v1.8.2", Resources: v1.ResourceRequirements{Limits: v1.ResourceList{v1.ResourceMemory: resource.MustParse("1Gi")}}}}, defaultTestConfig, nil, "")
 	if err != nil {
 		t.Fatalf("Unexpected error while making StatefulSet: %v", err)
@@ -172,6 +188,8 @@ func TestMemoryRequestAdjustedWhenOnlyLimitGiven(t *testing.T) {
 	}
 }
 func TestListenLocal(t *testing.T) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -200,6 +218,8 @@ func TestListenLocal(t *testing.T) {
 	}
 }
 func TestTagAndShaAndVersion(t *testing.T) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -240,6 +260,8 @@ func TestTagAndShaAndVersion(t *testing.T) {
 	}
 }
 func TestThanosTagAndShaAndVersion(t *testing.T) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -292,6 +314,8 @@ func TestThanosResourcesNotSet(t *testing.T) {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	sset, err := makeStatefulSet(monitoringv1.Prometheus{Spec: monitoringv1.PrometheusSpec{Thanos: &monitoringv1.ThanosSpec{}}}, defaultTestConfig, nil, "")
 	if err != nil {
 		t.Fatalf("Unexpected error while making StatefulSet: %v", err)
@@ -302,6 +326,8 @@ func TestThanosResourcesNotSet(t *testing.T) {
 	}
 }
 func TestThanosResourcesSet(t *testing.T) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -317,6 +343,8 @@ func TestThanosResourcesSet(t *testing.T) {
 	}
 }
 func TestRetention(t *testing.T) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()

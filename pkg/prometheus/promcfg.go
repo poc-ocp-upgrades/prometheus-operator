@@ -25,6 +25,8 @@ func NewConfigGenerator(logger log.Logger) *configGenerator {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	cg := &configGenerator{logger: logger}
 	return cg
 }
@@ -33,9 +35,13 @@ func sanitizeLabelName(name string) string {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return invalidLabelCharRE.ReplaceAllString(name, "_")
 }
 func stringMapToMapSlice(m map[string]string) yaml.MapSlice {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -52,6 +58,8 @@ func stringMapToMapSlice(m map[string]string) yaml.MapSlice {
 	return res
 }
 func addTLStoYaml(cfg yaml.MapSlice, tls *v1.TLSConfig) yaml.MapSlice {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -79,6 +87,8 @@ func buildExternalLabels(p *v1.Prometheus) yaml.MapSlice {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	m := map[string]string{}
 	m["prometheus"] = fmt.Sprintf("%s/%s", p.Namespace, p.Name)
 	m["prometheus_replica"] = "$(POD_NAME)"
@@ -88,6 +98,8 @@ func buildExternalLabels(p *v1.Prometheus) yaml.MapSlice {
 	return stringMapToMapSlice(m)
 }
 func (cg *configGenerator) generateConfig(p *v1.Prometheus, mons map[string]*v1.ServiceMonitor, basicAuthSecrets map[string]BasicAuthCredentials, additionalScrapeConfigs []byte, additionalAlertRelabelConfigs []byte, additionalAlertManagerConfigs []byte, ruleConfigMapNames []string) ([]byte, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -166,6 +178,8 @@ func (cg *configGenerator) generateConfig(p *v1.Prometheus, mons map[string]*v1.
 	return yaml.Marshal(cfg)
 }
 func (cg *configGenerator) generateServiceMonitorConfig(version semver.Version, m *v1.ServiceMonitor, ep v1.Endpoint, i int, apiserverConfig *v1.APIServerConfig, basicAuthSecrets map[string]BasicAuthCredentials) yaml.MapSlice {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -287,6 +301,8 @@ func generateRelabelConfig(c *v1.RelabelConfig) yaml.MapSlice {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	relabeling := yaml.MapSlice{}
 	if len(c.SourceLabels) > 0 {
 		relabeling = append(relabeling, yaml.MapItem{Key: "source_labels", Value: c.SourceLabels})
@@ -316,6 +332,8 @@ func getNamespacesFromServiceMonitor(m *v1.ServiceMonitor) []string {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	nsel := m.Spec.NamespaceSelector
 	namespaces := []string{}
 	if !nsel.Any && len(nsel.MatchNames) == 0 {
@@ -329,6 +347,8 @@ func getNamespacesFromServiceMonitor(m *v1.ServiceMonitor) []string {
 	return namespaces
 }
 func (cg *configGenerator) generateK8SSDConfig(namespaces []string, apiserverConfig *v1.APIServerConfig, basicAuthSecrets map[string]BasicAuthCredentials) yaml.MapItem {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -355,6 +375,8 @@ func (cg *configGenerator) generateK8SSDConfig(namespaces []string, apiserverCon
 	return yaml.MapItem{Key: "kubernetes_sd_configs", Value: []yaml.MapSlice{k8sSDConfig}}
 }
 func (cg *configGenerator) generateAlertmanagerConfig(version semver.Version, am v1.AlertmanagerEndpoints, apiserverConfig *v1.APIServerConfig, basicAuthSecrets map[string]BasicAuthCredentials) yaml.MapSlice {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -401,6 +423,8 @@ func (cg *configGenerator) generateRemoteReadConfig(version semver.Version, spec
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	cfgs := []yaml.MapSlice{}
 	for i, spec := range specs {
 		if spec.RemoteTimeout == "" {
@@ -433,6 +457,8 @@ func (cg *configGenerator) generateRemoteReadConfig(version semver.Version, spec
 	return yaml.MapItem{Key: "remote_read", Value: cfgs}
 }
 func (cg *configGenerator) generateRemoteWriteConfig(version semver.Version, specs []v1.RemoteWriteSpec, basicAuthSecrets map[string]BasicAuthCredentials) yaml.MapItem {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()

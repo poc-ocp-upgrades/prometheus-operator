@@ -37,6 +37,8 @@ func makeStatefulSet(am *monitoringv1.Alertmanager, old *appsv1.StatefulSet, con
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	if am.Spec.BaseImage == "" {
 		am.Spec.BaseImage = config.AlertmanagerDefaultBaseImage
 	}
@@ -94,10 +96,14 @@ func makeStatefulSetService(p *monitoringv1.Alertmanager, config Config) *v1.Ser
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	svc := &v1.Service{ObjectMeta: metav1.ObjectMeta{Name: governingServiceName, Labels: config.Labels.Merge(map[string]string{"operated-alertmanager": "true"}), OwnerReferences: []metav1.OwnerReference{metav1.OwnerReference{Name: p.GetName(), Kind: p.Kind, APIVersion: p.APIVersion, UID: p.GetUID()}}}, Spec: v1.ServiceSpec{ClusterIP: "None", Ports: []v1.ServicePort{{Name: "web", Port: 9093, TargetPort: intstr.FromInt(9093), Protocol: v1.ProtocolTCP}, {Name: "mesh", Port: 6783, TargetPort: intstr.FromInt(6783), Protocol: v1.ProtocolTCP}}, Selector: map[string]string{"app": "alertmanager"}}}
 	return svc
 }
 func makeStatefulSetSpec(a *monitoringv1.Alertmanager, config Config) (*appsv1.StatefulSetSpec, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -221,9 +227,13 @@ func configSecretName(name string) string {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return prefixedName(name)
 }
 func volumeName(name string) string {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -235,9 +245,13 @@ func prefixedName(name string) string {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return fmt.Sprintf("alertmanager-%s", name)
 }
 func subPathForStorage(s *monitoringv1.StorageSpec) string {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -248,6 +262,8 @@ func subPathForStorage(s *monitoringv1.StorageSpec) string {
 	return "alertmanager-db"
 }
 func filter(strings []string, f func(string) bool) []string {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()

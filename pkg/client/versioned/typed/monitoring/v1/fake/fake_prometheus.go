@@ -23,6 +23,8 @@ func (c *FakePrometheuses) Get(name string, options v1.GetOptions) (result *moni
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	obj, err := c.Fake.Invokes(testing.NewGetAction(prometheusesResource, c.ns, name), &monitoring_v1.Prometheus{})
 	if obj == nil {
 		return nil, err
@@ -30,6 +32,8 @@ func (c *FakePrometheuses) Get(name string, options v1.GetOptions) (result *moni
 	return obj.(*monitoring_v1.Prometheus), err
 }
 func (c *FakePrometheuses) List(opts v1.ListOptions) (result *monitoring_v1.PrometheusList, err error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -55,9 +59,13 @@ func (c *FakePrometheuses) Watch(opts v1.ListOptions) (watch.Interface, error) {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return c.Fake.InvokesWatch(testing.NewWatchAction(prometheusesResource, c.ns, opts))
 }
 func (c *FakePrometheuses) Create(prometheus *monitoring_v1.Prometheus) (result *monitoring_v1.Prometheus, err error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -73,6 +81,8 @@ func (c *FakePrometheuses) Update(prometheus *monitoring_v1.Prometheus) (result 
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	obj, err := c.Fake.Invokes(testing.NewUpdateAction(prometheusesResource, c.ns, prometheus), &monitoring_v1.Prometheus{})
 	if obj == nil {
 		return nil, err
@@ -80,6 +90,8 @@ func (c *FakePrometheuses) Update(prometheus *monitoring_v1.Prometheus) (result 
 	return obj.(*monitoring_v1.Prometheus), err
 }
 func (c *FakePrometheuses) UpdateStatus(prometheus *monitoring_v1.Prometheus) (*monitoring_v1.Prometheus, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -95,10 +107,14 @@ func (c *FakePrometheuses) Delete(name string, options *v1.DeleteOptions) error 
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_, err := c.Fake.Invokes(testing.NewDeleteAction(prometheusesResource, c.ns, name), &monitoring_v1.Prometheus{})
 	return err
 }
 func (c *FakePrometheuses) DeleteCollection(options *v1.DeleteOptions, listOptions v1.ListOptions) error {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -108,6 +124,8 @@ func (c *FakePrometheuses) DeleteCollection(options *v1.DeleteOptions, listOptio
 	return err
 }
 func (c *FakePrometheuses) Patch(name string, pt types.PatchType, data []byte, subresources ...string) (result *monitoring_v1.Prometheus, err error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()

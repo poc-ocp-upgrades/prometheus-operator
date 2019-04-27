@@ -20,6 +20,8 @@ func TestStatefulSetLabelingAndAnnotations(t *testing.T) {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	labels := map[string]string{"testlabel": "testlabelvalue"}
 	annotations := map[string]string{"testannotation": "testannotationvalue"}
 	sset, err := makeStatefulSet(&monitoringv1.Alertmanager{ObjectMeta: metav1.ObjectMeta{Labels: labels, Annotations: annotations}}, nil, defaultTestConfig)
@@ -29,6 +31,8 @@ func TestStatefulSetLabelingAndAnnotations(t *testing.T) {
 	}
 }
 func TestStatefulSetStoragePath(t *testing.T) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -54,6 +58,8 @@ func TestPodLabelsAnnotations(t *testing.T) {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	annotations := map[string]string{"testannotation": "testvalue"}
 	labels := map[string]string{"testlabel": "testvalue"}
 	sset, err := makeStatefulSet(&monitoringv1.Alertmanager{ObjectMeta: metav1.ObjectMeta{}, Spec: monitoringv1.AlertmanagerSpec{PodMetadata: &metav1.ObjectMeta{Annotations: annotations, Labels: labels}}}, nil, defaultTestConfig)
@@ -66,6 +72,8 @@ func TestPodLabelsAnnotations(t *testing.T) {
 	}
 }
 func TestStatefulSetPVC(t *testing.T) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -86,6 +94,8 @@ func TestStatefulEmptyDir(t *testing.T) {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	labels := map[string]string{"testlabel": "testlabelvalue"}
 	annotations := map[string]string{"testannotation": "testannotationvalue"}
 	emptyDir := v1.EmptyDirVolumeSource{Medium: v1.StorageMediumMemory}
@@ -97,6 +107,8 @@ func TestStatefulEmptyDir(t *testing.T) {
 	}
 }
 func TestListenLocal(t *testing.T) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -129,6 +141,8 @@ func TestMakeStatefulSetSpecSingleDoubleDashedArgs(t *testing.T) {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	tests := []struct {
 		version	string
 		prefix	string
@@ -152,6 +166,8 @@ func TestMakeStatefulSetSpecSingleDoubleDashedArgs(t *testing.T) {
 	}
 }
 func TestMakeStatefulSetSpecWebRoutePrefix(t *testing.T) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -182,6 +198,8 @@ func TestMakeStatefulSetSpecWebRoutePrefix(t *testing.T) {
 	}
 }
 func TestMakeStatefulSetSpecMeshClusterFlags(t *testing.T) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -217,6 +235,8 @@ func TestMakeStatefulSetSpecPeerFlagPort(t *testing.T) {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	tests := []struct {
 		version		string
 		portNeeded	bool
@@ -245,6 +265,8 @@ func TestMakeStatefulSetSpecAdditionalPeers(t *testing.T) {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	a := monitoringv1.Alertmanager{}
 	a.Spec.Version = "v0.15.3"
 	replicas := int32(1)
@@ -266,6 +288,8 @@ func TestMakeStatefulSetSpecAdditionalPeers(t *testing.T) {
 	}
 }
 func TestAdditionalSecretsMounted(t *testing.T) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -303,6 +327,8 @@ func TestAdditionalSecretsMounted(t *testing.T) {
 	}
 }
 func TestSHAAndTagAndVersion(t *testing.T) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -347,6 +373,8 @@ func TestRetention(t *testing.T) {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	tests := []struct {
 		specRetention		string
 		expectedRetention	string
@@ -375,6 +403,8 @@ func TestAdditionalConfigMap(t *testing.T) {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	sset, err := makeStatefulSet(&monitoringv1.Alertmanager{Spec: monitoringv1.AlertmanagerSpec{ConfigMaps: []string{"test-cm1"}}}, nil, defaultTestConfig)
 	if err != nil {
 		t.Fatalf("Unexpected error while making StatefulSet: %v", err)
@@ -399,6 +429,8 @@ func TestAdditionalConfigMap(t *testing.T) {
 	}
 }
 func sliceContains(slice []string, match string) bool {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()

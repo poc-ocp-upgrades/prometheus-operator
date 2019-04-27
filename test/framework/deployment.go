@@ -17,6 +17,8 @@ func MakeDeployment(pathToYaml string) (*appsv1.Deployment, error) {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	manifest, err := PathToOSFile(pathToYaml)
 	if err != nil {
 		return nil, err
@@ -32,6 +34,8 @@ func CreateDeployment(kubeClient kubernetes.Interface, namespace string, d *apps
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	d.Namespace = namespace
 	_, err := kubeClient.AppsV1beta2().Deployments(namespace).Create(d)
 	if err != nil {
@@ -40,6 +44,8 @@ func CreateDeployment(kubeClient kubernetes.Interface, namespace string, d *apps
 	return nil
 }
 func DeleteDeployment(kubeClient kubernetes.Interface, namespace, name string) error {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -57,6 +63,8 @@ func DeleteDeployment(kubeClient kubernetes.Interface, namespace, name string) e
 	return kubeClient.AppsV1beta2().Deployments(namespace).Delete(d.Name, &metav1.DeleteOptions{})
 }
 func WaitUntilDeploymentGone(kubeClient kubernetes.Interface, namespace, name string, timeout time.Duration) error {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()

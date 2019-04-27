@@ -11,6 +11,8 @@ func CreateServiceAccount(kubeClient kubernetes.Interface, namespace string, rel
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	finalizerFn := func() error {
 		return DeleteServiceAccount(kubeClient, namespace, relativPath)
 	}
@@ -30,6 +32,8 @@ func parseServiceAccountYaml(relativPath string) (*v1.ServiceAccount, error) {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	manifest, err := PathToOSFile(relativPath)
 	if err != nil {
 		return nil, err
@@ -41,6 +45,8 @@ func parseServiceAccountYaml(relativPath string) (*v1.ServiceAccount, error) {
 	return &serviceAccount, nil
 }
 func DeleteServiceAccount(kubeClient kubernetes.Interface, namespace string, relativPath string) error {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()

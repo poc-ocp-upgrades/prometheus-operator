@@ -14,6 +14,8 @@ func TestListOptions(t *testing.T) {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	for i := 0; i < 1000; i++ {
 		o := ListOptions("test")
 		if o.LabelSelector != "app=prometheus,prometheus=test" && o.LabelSelector != "prometheus=test,app=prometheus" {
@@ -22,6 +24,8 @@ func TestListOptions(t *testing.T) {
 	}
 }
 func TestCreateStatefulSetInputHash(t *testing.T) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -44,6 +48,8 @@ func TestCreateStatefulSetInputHash(t *testing.T) {
 	}
 }
 func TestGetNodeAddresses(t *testing.T) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()

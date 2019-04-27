@@ -18,6 +18,8 @@ func TestConfigGeneration(t *testing.T) {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	for _, v := range CompatibilityMatrix {
 		cfg, err := generateTestConfig(v)
 		if err != nil {
@@ -35,6 +37,8 @@ func TestConfigGeneration(t *testing.T) {
 	}
 }
 func TestNamespaceSetCorrectly(t *testing.T) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -58,6 +62,8 @@ func TestNamespaceSetCorrectly(t *testing.T) {
 	}
 }
 func TestK8SSDConfigGeneration(t *testing.T) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -98,6 +104,8 @@ func TestK8SSDConfigGeneration(t *testing.T) {
 	}
 }
 func TestAlertmanagerBearerToken(t *testing.T) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -145,6 +153,8 @@ alerting:
 	}
 }
 func TestAdditionalAlertRelabelConfigs(t *testing.T) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -203,6 +213,8 @@ func TestAdditionalAlertmanagers(t *testing.T) {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	cg := &configGenerator{}
 	cfg, err := cg.generateConfig(&monitoringv1.Prometheus{ObjectMeta: metav1.ObjectMeta{Name: "test", Namespace: "default"}, Spec: monitoringv1.PrometheusSpec{Alerting: &monitoringv1.AlertingSpec{Alertmanagers: []monitoringv1.AlertmanagerEndpoints{{Name: "alertmanager-main", Namespace: "default", Port: intstr.FromString("web")}}}}}, nil, map[string]BasicAuthCredentials{}, nil, nil, []byte(`- static_configs:
   - targets:
@@ -251,6 +263,8 @@ alerting:
 	}
 }
 func TestTargetLabels(t *testing.T) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -337,6 +351,8 @@ func TestPodTargetLabels(t *testing.T) {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	cg := &configGenerator{}
 	cfg, err := cg.generateConfig(&monitoringv1.Prometheus{ObjectMeta: metav1.ObjectMeta{Name: "test", Namespace: "default"}, Spec: monitoringv1.PrometheusSpec{ServiceMonitorSelector: &metav1.LabelSelector{MatchLabels: map[string]string{"group": "group1"}}}}, map[string]*monitoringv1.ServiceMonitor{"testservicemonitor1": &monitoringv1.ServiceMonitor{ObjectMeta: metav1.ObjectMeta{Name: "testservicemonitor1", Namespace: "default", Labels: map[string]string{"group": "group1"}}, Spec: monitoringv1.ServiceMonitorSpec{PodTargetLabels: []string{"example", "env"}, Endpoints: []monitoringv1.Endpoint{{Port: "web", Interval: "30s"}}}}}, map[string]BasicAuthCredentials{}, nil, nil, nil, nil)
 	if err != nil {
@@ -419,11 +435,15 @@ func generateTestConfig(version string) ([]byte, error) {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	cg := &configGenerator{}
 	replicas := int32(1)
 	return cg.generateConfig(&monitoringv1.Prometheus{ObjectMeta: metav1.ObjectMeta{Name: "test", Namespace: "default"}, Spec: monitoringv1.PrometheusSpec{Alerting: &monitoringv1.AlertingSpec{Alertmanagers: []monitoringv1.AlertmanagerEndpoints{{Name: "alertmanager-main", Namespace: "default", Port: intstr.FromString("web")}}}, ExternalLabels: map[string]string{"label1": "value1", "label2": "value2"}, Version: version, Replicas: &replicas, ServiceMonitorSelector: &metav1.LabelSelector{MatchLabels: map[string]string{"group": "group1"}}, RuleSelector: &metav1.LabelSelector{MatchLabels: map[string]string{"role": "rulefile"}}, Resources: v1.ResourceRequirements{Requests: v1.ResourceList{v1.ResourceMemory: resource.MustParse("400Mi")}}, RemoteRead: []monitoringv1.RemoteReadSpec{{URL: "https://example.com/remote_read"}}, RemoteWrite: []monitoringv1.RemoteWriteSpec{{URL: "https://example.com/remote_write"}}}}, makeServiceMonitors(), map[string]BasicAuthCredentials{}, nil, nil, nil, nil)
 }
 func makeServiceMonitors() map[string]*monitoringv1.ServiceMonitor {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()

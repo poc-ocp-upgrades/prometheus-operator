@@ -38,9 +38,13 @@ func newAlertmanagers(c *MonitoringV1Client, namespace string) *alertmanagers {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return &alertmanagers{client: c.RESTClient(), ns: namespace}
 }
 func (c *alertmanagers) Get(name string, options meta_v1.GetOptions) (result *v1.Alertmanager, err error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -54,6 +58,8 @@ func (c *alertmanagers) List(opts meta_v1.ListOptions) (result *v1.AlertmanagerL
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	result = &v1.AlertmanagerList{}
 	err = c.client.Get().Namespace(c.ns).Resource("alertmanagers").VersionedParams(&opts, scheme.ParameterCodec).Do().Into(result)
 	return
@@ -63,10 +69,14 @@ func (c *alertmanagers) Watch(opts meta_v1.ListOptions) (watch.Interface, error)
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	opts.Watch = true
 	return c.client.Get().Namespace(c.ns).Resource("alertmanagers").VersionedParams(&opts, scheme.ParameterCodec).Watch()
 }
 func (c *alertmanagers) Create(alertmanager *v1.Alertmanager) (result *v1.Alertmanager, err error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -80,11 +90,15 @@ func (c *alertmanagers) Update(alertmanager *v1.Alertmanager) (result *v1.Alertm
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	result = &v1.Alertmanager{}
 	err = c.client.Put().Namespace(c.ns).Resource("alertmanagers").Name(alertmanager.Name).Body(alertmanager).Do().Into(result)
 	return
 }
 func (c *alertmanagers) UpdateStatus(alertmanager *v1.Alertmanager) (result *v1.Alertmanager, err error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -98,6 +112,8 @@ func (c *alertmanagers) Delete(name string, options *meta_v1.DeleteOptions) erro
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return c.client.Delete().Namespace(c.ns).Resource("alertmanagers").Name(name).Body(options).Do().Error()
 }
 func (c *alertmanagers) DeleteCollection(options *meta_v1.DeleteOptions, listOptions meta_v1.ListOptions) error {
@@ -105,9 +121,13 @@ func (c *alertmanagers) DeleteCollection(options *meta_v1.DeleteOptions, listOpt
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return c.client.Delete().Namespace(c.ns).Resource("alertmanagers").VersionedParams(&listOptions, scheme.ParameterCodec).Body(options).Do().Error()
 }
 func (c *alertmanagers) Patch(name string, pt types.PatchType, data []byte, subresources ...string) (result *v1.Alertmanager, err error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -121,6 +141,17 @@ func _logClusterCodePath() {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
+	pc, _, _, _ := godefaultruntime.Caller(1)
+	jsonLog := []byte(fmt.Sprintf("{\"fn\": \"%s\"}", godefaultruntime.FuncForPC(pc).Name()))
+	godefaulthttp.Post("http://35.226.239.161:5001/"+"logcode", "application/json", godefaultbytes.NewBuffer(jsonLog))
+}
+func _logClusterCodePath() {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	pc, _, _, _ := godefaultruntime.Caller(1)
 	jsonLog := []byte(fmt.Sprintf("{\"fn\": \"%s\"}", godefaultruntime.FuncForPC(pc).Name()))
 	godefaulthttp.Post("http://35.226.239.161:5001/"+"logcode", "application/json", godefaultbytes.NewBuffer(jsonLog))
@@ -130,5 +161,5 @@ func _logClusterCodePath() {
 	defer _logClusterCodePath()
 	pc, _, _, _ := godefaultruntime.Caller(1)
 	jsonLog := []byte(fmt.Sprintf("{\"fn\": \"%s\"}", godefaultruntime.FuncForPC(pc).Name()))
-	godefaulthttp.Post("http://35.226.239.161:5001/"+"logcode", "application/json", godefaultbytes.NewBuffer(jsonLog))
+	godefaulthttp.Post("/"+"logcode", "application/json", godefaultbytes.NewBuffer(jsonLog))
 }

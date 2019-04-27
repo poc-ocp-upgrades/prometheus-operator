@@ -15,6 +15,8 @@ func CreateServiceAndWaitUntilReady(kubeClient kubernetes.Interface, namespace s
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	finalizerFn := func() error {
 		return DeleteServiceAndWaitUntilGone(kubeClient, namespace, service.Name)
 	}
@@ -27,6 +29,8 @@ func CreateServiceAndWaitUntilReady(kubeClient kubernetes.Interface, namespace s
 	return finalizerFn, nil
 }
 func WaitForServiceReady(kubeClient kubernetes.Interface, namespace string, serviceName string) error {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -48,6 +52,8 @@ func DeleteServiceAndWaitUntilGone(kubeClient kubernetes.Interface, namespace st
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	if err := kubeClient.CoreV1().Services(namespace).Delete(serviceName, nil); err != nil {
 		return errors.Wrap(err, fmt.Sprintf("deleting service %v failed", serviceName))
 	}
@@ -64,6 +70,8 @@ func DeleteServiceAndWaitUntilGone(kubeClient kubernetes.Interface, namespace st
 	return nil
 }
 func getEndpoints(kubeClient kubernetes.Interface, namespace, serviceName string) (*v1.Endpoints, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()

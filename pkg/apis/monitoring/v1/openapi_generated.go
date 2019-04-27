@@ -11,9 +11,13 @@ func GetOpenAPIDefinitions(ref common.ReferenceCallback) map[string]common.OpenA
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return map[string]common.OpenAPIDefinition{"github.com/coreos/prometheus-operator/pkg/apis/monitoring/v1.APIServerConfig": schema_pkg_apis_monitoring_v1_APIServerConfig(ref), "github.com/coreos/prometheus-operator/pkg/apis/monitoring/v1.AlertingSpec": schema_pkg_apis_monitoring_v1_AlertingSpec(ref), "github.com/coreos/prometheus-operator/pkg/apis/monitoring/v1.Alertmanager": schema_pkg_apis_monitoring_v1_Alertmanager(ref), "github.com/coreos/prometheus-operator/pkg/apis/monitoring/v1.AlertmanagerEndpoints": schema_pkg_apis_monitoring_v1_AlertmanagerEndpoints(ref), "github.com/coreos/prometheus-operator/pkg/apis/monitoring/v1.AlertmanagerList": schema_pkg_apis_monitoring_v1_AlertmanagerList(ref), "github.com/coreos/prometheus-operator/pkg/apis/monitoring/v1.AlertmanagerSpec": schema_pkg_apis_monitoring_v1_AlertmanagerSpec(ref), "github.com/coreos/prometheus-operator/pkg/apis/monitoring/v1.AlertmanagerStatus": schema_pkg_apis_monitoring_v1_AlertmanagerStatus(ref), "github.com/coreos/prometheus-operator/pkg/apis/monitoring/v1.BasicAuth": schema_pkg_apis_monitoring_v1_BasicAuth(ref), "github.com/coreos/prometheus-operator/pkg/apis/monitoring/v1.Endpoint": schema_pkg_apis_monitoring_v1_Endpoint(ref), "github.com/coreos/prometheus-operator/pkg/apis/monitoring/v1.NamespaceSelector": schema_pkg_apis_monitoring_v1_NamespaceSelector(ref), "github.com/coreos/prometheus-operator/pkg/apis/monitoring/v1.Prometheus": schema_pkg_apis_monitoring_v1_Prometheus(ref), "github.com/coreos/prometheus-operator/pkg/apis/monitoring/v1.PrometheusList": schema_pkg_apis_monitoring_v1_PrometheusList(ref), "github.com/coreos/prometheus-operator/pkg/apis/monitoring/v1.PrometheusRule": schema_pkg_apis_monitoring_v1_PrometheusRule(ref), "github.com/coreos/prometheus-operator/pkg/apis/monitoring/v1.PrometheusRuleList": schema_pkg_apis_monitoring_v1_PrometheusRuleList(ref), "github.com/coreos/prometheus-operator/pkg/apis/monitoring/v1.PrometheusRuleSpec": schema_pkg_apis_monitoring_v1_PrometheusRuleSpec(ref), "github.com/coreos/prometheus-operator/pkg/apis/monitoring/v1.PrometheusSpec": schema_pkg_apis_monitoring_v1_PrometheusSpec(ref), "github.com/coreos/prometheus-operator/pkg/apis/monitoring/v1.PrometheusStatus": schema_pkg_apis_monitoring_v1_PrometheusStatus(ref), "github.com/coreos/prometheus-operator/pkg/apis/monitoring/v1.QuerySpec": schema_pkg_apis_monitoring_v1_QuerySpec(ref), "github.com/coreos/prometheus-operator/pkg/apis/monitoring/v1.QueueConfig": schema_pkg_apis_monitoring_v1_QueueConfig(ref), "github.com/coreos/prometheus-operator/pkg/apis/monitoring/v1.RelabelConfig": schema_pkg_apis_monitoring_v1_RelabelConfig(ref), "github.com/coreos/prometheus-operator/pkg/apis/monitoring/v1.RemoteReadSpec": schema_pkg_apis_monitoring_v1_RemoteReadSpec(ref), "github.com/coreos/prometheus-operator/pkg/apis/monitoring/v1.RemoteWriteSpec": schema_pkg_apis_monitoring_v1_RemoteWriteSpec(ref), "github.com/coreos/prometheus-operator/pkg/apis/monitoring/v1.Rule": schema_pkg_apis_monitoring_v1_Rule(ref), "github.com/coreos/prometheus-operator/pkg/apis/monitoring/v1.RuleGroup": schema_pkg_apis_monitoring_v1_RuleGroup(ref), "github.com/coreos/prometheus-operator/pkg/apis/monitoring/v1.ServiceMonitor": schema_pkg_apis_monitoring_v1_ServiceMonitor(ref), "github.com/coreos/prometheus-operator/pkg/apis/monitoring/v1.ServiceMonitorList": schema_pkg_apis_monitoring_v1_ServiceMonitorList(ref), "github.com/coreos/prometheus-operator/pkg/apis/monitoring/v1.ServiceMonitorSpec": schema_pkg_apis_monitoring_v1_ServiceMonitorSpec(ref), "github.com/coreos/prometheus-operator/pkg/apis/monitoring/v1.StorageSpec": schema_pkg_apis_monitoring_v1_StorageSpec(ref), "github.com/coreos/prometheus-operator/pkg/apis/monitoring/v1.TLSConfig": schema_pkg_apis_monitoring_v1_TLSConfig(ref), "github.com/coreos/prometheus-operator/pkg/apis/monitoring/v1.ThanosGCSSpec": schema_pkg_apis_monitoring_v1_ThanosGCSSpec(ref), "github.com/coreos/prometheus-operator/pkg/apis/monitoring/v1.ThanosS3Spec": schema_pkg_apis_monitoring_v1_ThanosS3Spec(ref), "github.com/coreos/prometheus-operator/pkg/apis/monitoring/v1.ThanosSpec": schema_pkg_apis_monitoring_v1_ThanosSpec(ref), "k8s.io/api/core/v1.AWSElasticBlockStoreVolumeSource": schema_k8sio_api_core_v1_AWSElasticBlockStoreVolumeSource(ref), "k8s.io/api/core/v1.Affinity": schema_k8sio_api_core_v1_Affinity(ref), "k8s.io/api/core/v1.AttachedVolume": schema_k8sio_api_core_v1_AttachedVolume(ref), "k8s.io/api/core/v1.AvoidPods": schema_k8sio_api_core_v1_AvoidPods(ref), "k8s.io/api/core/v1.AzureDiskVolumeSource": schema_k8sio_api_core_v1_AzureDiskVolumeSource(ref), "k8s.io/api/core/v1.AzureFilePersistentVolumeSource": schema_k8sio_api_core_v1_AzureFilePersistentVolumeSource(ref), "k8s.io/api/core/v1.AzureFileVolumeSource": schema_k8sio_api_core_v1_AzureFileVolumeSource(ref), "k8s.io/api/core/v1.Binding": schema_k8sio_api_core_v1_Binding(ref), "k8s.io/api/core/v1.CSIPersistentVolumeSource": schema_k8sio_api_core_v1_CSIPersistentVolumeSource(ref), "k8s.io/api/core/v1.Capabilities": schema_k8sio_api_core_v1_Capabilities(ref), "k8s.io/api/core/v1.CephFSPersistentVolumeSource": schema_k8sio_api_core_v1_CephFSPersistentVolumeSource(ref), "k8s.io/api/core/v1.CephFSVolumeSource": schema_k8sio_api_core_v1_CephFSVolumeSource(ref), "k8s.io/api/core/v1.CinderPersistentVolumeSource": schema_k8sio_api_core_v1_CinderPersistentVolumeSource(ref), "k8s.io/api/core/v1.CinderVolumeSource": schema_k8sio_api_core_v1_CinderVolumeSource(ref), "k8s.io/api/core/v1.ClientIPConfig": schema_k8sio_api_core_v1_ClientIPConfig(ref), "k8s.io/api/core/v1.ComponentCondition": schema_k8sio_api_core_v1_ComponentCondition(ref), "k8s.io/api/core/v1.ComponentStatus": schema_k8sio_api_core_v1_ComponentStatus(ref), "k8s.io/api/core/v1.ComponentStatusList": schema_k8sio_api_core_v1_ComponentStatusList(ref), "k8s.io/api/core/v1.ConfigMap": schema_k8sio_api_core_v1_ConfigMap(ref), "k8s.io/api/core/v1.ConfigMapEnvSource": schema_k8sio_api_core_v1_ConfigMapEnvSource(ref), "k8s.io/api/core/v1.ConfigMapKeySelector": schema_k8sio_api_core_v1_ConfigMapKeySelector(ref), "k8s.io/api/core/v1.ConfigMapList": schema_k8sio_api_core_v1_ConfigMapList(ref), "k8s.io/api/core/v1.ConfigMapNodeConfigSource": schema_k8sio_api_core_v1_ConfigMapNodeConfigSource(ref), "k8s.io/api/core/v1.ConfigMapProjection": schema_k8sio_api_core_v1_ConfigMapProjection(ref), "k8s.io/api/core/v1.ConfigMapVolumeSource": schema_k8sio_api_core_v1_ConfigMapVolumeSource(ref), "k8s.io/api/core/v1.Container": schema_k8sio_api_core_v1_Container(ref), "k8s.io/api/core/v1.ContainerImage": schema_k8sio_api_core_v1_ContainerImage(ref), "k8s.io/api/core/v1.ContainerPort": schema_k8sio_api_core_v1_ContainerPort(ref), "k8s.io/api/core/v1.ContainerState": schema_k8sio_api_core_v1_ContainerState(ref), "k8s.io/api/core/v1.ContainerStateRunning": schema_k8sio_api_core_v1_ContainerStateRunning(ref), "k8s.io/api/core/v1.ContainerStateTerminated": schema_k8sio_api_core_v1_ContainerStateTerminated(ref), "k8s.io/api/core/v1.ContainerStateWaiting": schema_k8sio_api_core_v1_ContainerStateWaiting(ref), "k8s.io/api/core/v1.ContainerStatus": schema_k8sio_api_core_v1_ContainerStatus(ref), "k8s.io/api/core/v1.DaemonEndpoint": schema_k8sio_api_core_v1_DaemonEndpoint(ref), "k8s.io/api/core/v1.DownwardAPIProjection": schema_k8sio_api_core_v1_DownwardAPIProjection(ref), "k8s.io/api/core/v1.DownwardAPIVolumeFile": schema_k8sio_api_core_v1_DownwardAPIVolumeFile(ref), "k8s.io/api/core/v1.DownwardAPIVolumeSource": schema_k8sio_api_core_v1_DownwardAPIVolumeSource(ref), "k8s.io/api/core/v1.EmptyDirVolumeSource": schema_k8sio_api_core_v1_EmptyDirVolumeSource(ref), "k8s.io/api/core/v1.EndpointAddress": schema_k8sio_api_core_v1_EndpointAddress(ref), "k8s.io/api/core/v1.EndpointPort": schema_k8sio_api_core_v1_EndpointPort(ref), "k8s.io/api/core/v1.EndpointSubset": schema_k8sio_api_core_v1_EndpointSubset(ref), "k8s.io/api/core/v1.Endpoints": schema_k8sio_api_core_v1_Endpoints(ref), "k8s.io/api/core/v1.EndpointsList": schema_k8sio_api_core_v1_EndpointsList(ref), "k8s.io/api/core/v1.EnvFromSource": schema_k8sio_api_core_v1_EnvFromSource(ref), "k8s.io/api/core/v1.EnvVar": schema_k8sio_api_core_v1_EnvVar(ref), "k8s.io/api/core/v1.EnvVarSource": schema_k8sio_api_core_v1_EnvVarSource(ref), "k8s.io/api/core/v1.Event": schema_k8sio_api_core_v1_Event(ref), "k8s.io/api/core/v1.EventList": schema_k8sio_api_core_v1_EventList(ref), "k8s.io/api/core/v1.EventSeries": schema_k8sio_api_core_v1_EventSeries(ref), "k8s.io/api/core/v1.EventSource": schema_k8sio_api_core_v1_EventSource(ref), "k8s.io/api/core/v1.ExecAction": schema_k8sio_api_core_v1_ExecAction(ref), "k8s.io/api/core/v1.FCVolumeSource": schema_k8sio_api_core_v1_FCVolumeSource(ref), "k8s.io/api/core/v1.FlexPersistentVolumeSource": schema_k8sio_api_core_v1_FlexPersistentVolumeSource(ref), "k8s.io/api/core/v1.FlexVolumeSource": schema_k8sio_api_core_v1_FlexVolumeSource(ref), "k8s.io/api/core/v1.FlockerVolumeSource": schema_k8sio_api_core_v1_FlockerVolumeSource(ref), "k8s.io/api/core/v1.GCEPersistentDiskVolumeSource": schema_k8sio_api_core_v1_GCEPersistentDiskVolumeSource(ref), "k8s.io/api/core/v1.GitRepoVolumeSource": schema_k8sio_api_core_v1_GitRepoVolumeSource(ref), "k8s.io/api/core/v1.GlusterfsVolumeSource": schema_k8sio_api_core_v1_GlusterfsVolumeSource(ref), "k8s.io/api/core/v1.HTTPGetAction": schema_k8sio_api_core_v1_HTTPGetAction(ref), "k8s.io/api/core/v1.HTTPHeader": schema_k8sio_api_core_v1_HTTPHeader(ref), "k8s.io/api/core/v1.Handler": schema_k8sio_api_core_v1_Handler(ref), "k8s.io/api/core/v1.HostAlias": schema_k8sio_api_core_v1_HostAlias(ref), "k8s.io/api/core/v1.HostPathVolumeSource": schema_k8sio_api_core_v1_HostPathVolumeSource(ref), "k8s.io/api/core/v1.ISCSIPersistentVolumeSource": schema_k8sio_api_core_v1_ISCSIPersistentVolumeSource(ref), "k8s.io/api/core/v1.ISCSIVolumeSource": schema_k8sio_api_core_v1_ISCSIVolumeSource(ref), "k8s.io/api/core/v1.KeyToPath": schema_k8sio_api_core_v1_KeyToPath(ref), "k8s.io/api/core/v1.Lifecycle": schema_k8sio_api_core_v1_Lifecycle(ref), "k8s.io/api/core/v1.LimitRange": schema_k8sio_api_core_v1_LimitRange(ref), "k8s.io/api/core/v1.LimitRangeItem": schema_k8sio_api_core_v1_LimitRangeItem(ref), "k8s.io/api/core/v1.LimitRangeList": schema_k8sio_api_core_v1_LimitRangeList(ref), "k8s.io/api/core/v1.LimitRangeSpec": schema_k8sio_api_core_v1_LimitRangeSpec(ref), "k8s.io/api/core/v1.List": schema_k8sio_api_core_v1_List(ref), "k8s.io/api/core/v1.LoadBalancerIngress": schema_k8sio_api_core_v1_LoadBalancerIngress(ref), "k8s.io/api/core/v1.LoadBalancerStatus": schema_k8sio_api_core_v1_LoadBalancerStatus(ref), "k8s.io/api/core/v1.LocalObjectReference": schema_k8sio_api_core_v1_LocalObjectReference(ref), "k8s.io/api/core/v1.LocalVolumeSource": schema_k8sio_api_core_v1_LocalVolumeSource(ref), "k8s.io/api/core/v1.NFSVolumeSource": schema_k8sio_api_core_v1_NFSVolumeSource(ref), "k8s.io/api/core/v1.Namespace": schema_k8sio_api_core_v1_Namespace(ref), "k8s.io/api/core/v1.NamespaceList": schema_k8sio_api_core_v1_NamespaceList(ref), "k8s.io/api/core/v1.NamespaceSpec": schema_k8sio_api_core_v1_NamespaceSpec(ref), "k8s.io/api/core/v1.NamespaceStatus": schema_k8sio_api_core_v1_NamespaceStatus(ref), "k8s.io/api/core/v1.Node": schema_k8sio_api_core_v1_Node(ref), "k8s.io/api/core/v1.NodeAddress": schema_k8sio_api_core_v1_NodeAddress(ref), "k8s.io/api/core/v1.NodeAffinity": schema_k8sio_api_core_v1_NodeAffinity(ref), "k8s.io/api/core/v1.NodeCondition": schema_k8sio_api_core_v1_NodeCondition(ref), "k8s.io/api/core/v1.NodeConfigSource": schema_k8sio_api_core_v1_NodeConfigSource(ref), "k8s.io/api/core/v1.NodeConfigStatus": schema_k8sio_api_core_v1_NodeConfigStatus(ref), "k8s.io/api/core/v1.NodeDaemonEndpoints": schema_k8sio_api_core_v1_NodeDaemonEndpoints(ref), "k8s.io/api/core/v1.NodeList": schema_k8sio_api_core_v1_NodeList(ref), "k8s.io/api/core/v1.NodeProxyOptions": schema_k8sio_api_core_v1_NodeProxyOptions(ref), "k8s.io/api/core/v1.NodeResources": schema_k8sio_api_core_v1_NodeResources(ref), "k8s.io/api/core/v1.NodeSelector": schema_k8sio_api_core_v1_NodeSelector(ref), "k8s.io/api/core/v1.NodeSelectorRequirement": schema_k8sio_api_core_v1_NodeSelectorRequirement(ref), "k8s.io/api/core/v1.NodeSelectorTerm": schema_k8sio_api_core_v1_NodeSelectorTerm(ref), "k8s.io/api/core/v1.NodeSpec": schema_k8sio_api_core_v1_NodeSpec(ref), "k8s.io/api/core/v1.NodeStatus": schema_k8sio_api_core_v1_NodeStatus(ref), "k8s.io/api/core/v1.NodeSystemInfo": schema_k8sio_api_core_v1_NodeSystemInfo(ref), "k8s.io/api/core/v1.ObjectFieldSelector": schema_k8sio_api_core_v1_ObjectFieldSelector(ref), "k8s.io/api/core/v1.ObjectReference": schema_k8sio_api_core_v1_ObjectReference(ref), "k8s.io/api/core/v1.PersistentVolume": schema_k8sio_api_core_v1_PersistentVolume(ref), "k8s.io/api/core/v1.PersistentVolumeClaim": schema_k8sio_api_core_v1_PersistentVolumeClaim(ref), "k8s.io/api/core/v1.PersistentVolumeClaimCondition": schema_k8sio_api_core_v1_PersistentVolumeClaimCondition(ref), "k8s.io/api/core/v1.PersistentVolumeClaimList": schema_k8sio_api_core_v1_PersistentVolumeClaimList(ref), "k8s.io/api/core/v1.PersistentVolumeClaimSpec": schema_k8sio_api_core_v1_PersistentVolumeClaimSpec(ref), "k8s.io/api/core/v1.PersistentVolumeClaimStatus": schema_k8sio_api_core_v1_PersistentVolumeClaimStatus(ref), "k8s.io/api/core/v1.PersistentVolumeClaimVolumeSource": schema_k8sio_api_core_v1_PersistentVolumeClaimVolumeSource(ref), "k8s.io/api/core/v1.PersistentVolumeList": schema_k8sio_api_core_v1_PersistentVolumeList(ref), "k8s.io/api/core/v1.PersistentVolumeSource": schema_k8sio_api_core_v1_PersistentVolumeSource(ref), "k8s.io/api/core/v1.PersistentVolumeSpec": schema_k8sio_api_core_v1_PersistentVolumeSpec(ref), "k8s.io/api/core/v1.PersistentVolumeStatus": schema_k8sio_api_core_v1_PersistentVolumeStatus(ref), "k8s.io/api/core/v1.PhotonPersistentDiskVolumeSource": schema_k8sio_api_core_v1_PhotonPersistentDiskVolumeSource(ref), "k8s.io/api/core/v1.Pod": schema_k8sio_api_core_v1_Pod(ref), "k8s.io/api/core/v1.PodAffinity": schema_k8sio_api_core_v1_PodAffinity(ref), "k8s.io/api/core/v1.PodAffinityTerm": schema_k8sio_api_core_v1_PodAffinityTerm(ref), "k8s.io/api/core/v1.PodAntiAffinity": schema_k8sio_api_core_v1_PodAntiAffinity(ref), "k8s.io/api/core/v1.PodAttachOptions": schema_k8sio_api_core_v1_PodAttachOptions(ref), "k8s.io/api/core/v1.PodCondition": schema_k8sio_api_core_v1_PodCondition(ref), "k8s.io/api/core/v1.PodDNSConfig": schema_k8sio_api_core_v1_PodDNSConfig(ref), "k8s.io/api/core/v1.PodDNSConfigOption": schema_k8sio_api_core_v1_PodDNSConfigOption(ref), "k8s.io/api/core/v1.PodExecOptions": schema_k8sio_api_core_v1_PodExecOptions(ref), "k8s.io/api/core/v1.PodList": schema_k8sio_api_core_v1_PodList(ref), "k8s.io/api/core/v1.PodLogOptions": schema_k8sio_api_core_v1_PodLogOptions(ref), "k8s.io/api/core/v1.PodPortForwardOptions": schema_k8sio_api_core_v1_PodPortForwardOptions(ref), "k8s.io/api/core/v1.PodProxyOptions": schema_k8sio_api_core_v1_PodProxyOptions(ref), "k8s.io/api/core/v1.PodReadinessGate": schema_k8sio_api_core_v1_PodReadinessGate(ref), "k8s.io/api/core/v1.PodSecurityContext": schema_k8sio_api_core_v1_PodSecurityContext(ref), "k8s.io/api/core/v1.PodSignature": schema_k8sio_api_core_v1_PodSignature(ref), "k8s.io/api/core/v1.PodSpec": schema_k8sio_api_core_v1_PodSpec(ref), "k8s.io/api/core/v1.PodStatus": schema_k8sio_api_core_v1_PodStatus(ref), "k8s.io/api/core/v1.PodStatusResult": schema_k8sio_api_core_v1_PodStatusResult(ref), "k8s.io/api/core/v1.PodTemplate": schema_k8sio_api_core_v1_PodTemplate(ref), "k8s.io/api/core/v1.PodTemplateList": schema_k8sio_api_core_v1_PodTemplateList(ref), "k8s.io/api/core/v1.PodTemplateSpec": schema_k8sio_api_core_v1_PodTemplateSpec(ref), "k8s.io/api/core/v1.PortworxVolumeSource": schema_k8sio_api_core_v1_PortworxVolumeSource(ref), "k8s.io/api/core/v1.PreferAvoidPodsEntry": schema_k8sio_api_core_v1_PreferAvoidPodsEntry(ref), "k8s.io/api/core/v1.PreferredSchedulingTerm": schema_k8sio_api_core_v1_PreferredSchedulingTerm(ref), "k8s.io/api/core/v1.Probe": schema_k8sio_api_core_v1_Probe(ref), "k8s.io/api/core/v1.ProjectedVolumeSource": schema_k8sio_api_core_v1_ProjectedVolumeSource(ref), "k8s.io/api/core/v1.QuobyteVolumeSource": schema_k8sio_api_core_v1_QuobyteVolumeSource(ref), "k8s.io/api/core/v1.RBDPersistentVolumeSource": schema_k8sio_api_core_v1_RBDPersistentVolumeSource(ref), "k8s.io/api/core/v1.RBDVolumeSource": schema_k8sio_api_core_v1_RBDVolumeSource(ref), "k8s.io/api/core/v1.RangeAllocation": schema_k8sio_api_core_v1_RangeAllocation(ref), "k8s.io/api/core/v1.ReplicationController": schema_k8sio_api_core_v1_ReplicationController(ref), "k8s.io/api/core/v1.ReplicationControllerCondition": schema_k8sio_api_core_v1_ReplicationControllerCondition(ref), "k8s.io/api/core/v1.ReplicationControllerList": schema_k8sio_api_core_v1_ReplicationControllerList(ref), "k8s.io/api/core/v1.ReplicationControllerSpec": schema_k8sio_api_core_v1_ReplicationControllerSpec(ref), "k8s.io/api/core/v1.ReplicationControllerStatus": schema_k8sio_api_core_v1_ReplicationControllerStatus(ref), "k8s.io/api/core/v1.ResourceFieldSelector": schema_k8sio_api_core_v1_ResourceFieldSelector(ref), "k8s.io/api/core/v1.ResourceQuota": schema_k8sio_api_core_v1_ResourceQuota(ref), "k8s.io/api/core/v1.ResourceQuotaList": schema_k8sio_api_core_v1_ResourceQuotaList(ref), "k8s.io/api/core/v1.ResourceQuotaSpec": schema_k8sio_api_core_v1_ResourceQuotaSpec(ref), "k8s.io/api/core/v1.ResourceQuotaStatus": schema_k8sio_api_core_v1_ResourceQuotaStatus(ref), "k8s.io/api/core/v1.ResourceRequirements": schema_k8sio_api_core_v1_ResourceRequirements(ref), "k8s.io/api/core/v1.SELinuxOptions": schema_k8sio_api_core_v1_SELinuxOptions(ref), "k8s.io/api/core/v1.ScaleIOPersistentVolumeSource": schema_k8sio_api_core_v1_ScaleIOPersistentVolumeSource(ref), "k8s.io/api/core/v1.ScaleIOVolumeSource": schema_k8sio_api_core_v1_ScaleIOVolumeSource(ref), "k8s.io/api/core/v1.ScopeSelector": schema_k8sio_api_core_v1_ScopeSelector(ref), "k8s.io/api/core/v1.ScopedResourceSelectorRequirement": schema_k8sio_api_core_v1_ScopedResourceSelectorRequirement(ref), "k8s.io/api/core/v1.Secret": schema_k8sio_api_core_v1_Secret(ref), "k8s.io/api/core/v1.SecretEnvSource": schema_k8sio_api_core_v1_SecretEnvSource(ref), "k8s.io/api/core/v1.SecretKeySelector": schema_k8sio_api_core_v1_SecretKeySelector(ref), "k8s.io/api/core/v1.SecretList": schema_k8sio_api_core_v1_SecretList(ref), "k8s.io/api/core/v1.SecretProjection": schema_k8sio_api_core_v1_SecretProjection(ref), "k8s.io/api/core/v1.SecretReference": schema_k8sio_api_core_v1_SecretReference(ref), "k8s.io/api/core/v1.SecretVolumeSource": schema_k8sio_api_core_v1_SecretVolumeSource(ref), "k8s.io/api/core/v1.SecurityContext": schema_k8sio_api_core_v1_SecurityContext(ref), "k8s.io/api/core/v1.SerializedReference": schema_k8sio_api_core_v1_SerializedReference(ref), "k8s.io/api/core/v1.Service": schema_k8sio_api_core_v1_Service(ref), "k8s.io/api/core/v1.ServiceAccount": schema_k8sio_api_core_v1_ServiceAccount(ref), "k8s.io/api/core/v1.ServiceAccountList": schema_k8sio_api_core_v1_ServiceAccountList(ref), "k8s.io/api/core/v1.ServiceAccountTokenProjection": schema_k8sio_api_core_v1_ServiceAccountTokenProjection(ref), "k8s.io/api/core/v1.ServiceList": schema_k8sio_api_core_v1_ServiceList(ref), "k8s.io/api/core/v1.ServicePort": schema_k8sio_api_core_v1_ServicePort(ref), "k8s.io/api/core/v1.ServiceProxyOptions": schema_k8sio_api_core_v1_ServiceProxyOptions(ref), "k8s.io/api/core/v1.ServiceSpec": schema_k8sio_api_core_v1_ServiceSpec(ref), "k8s.io/api/core/v1.ServiceStatus": schema_k8sio_api_core_v1_ServiceStatus(ref), "k8s.io/api/core/v1.SessionAffinityConfig": schema_k8sio_api_core_v1_SessionAffinityConfig(ref), "k8s.io/api/core/v1.StorageOSPersistentVolumeSource": schema_k8sio_api_core_v1_StorageOSPersistentVolumeSource(ref), "k8s.io/api/core/v1.StorageOSVolumeSource": schema_k8sio_api_core_v1_StorageOSVolumeSource(ref), "k8s.io/api/core/v1.Sysctl": schema_k8sio_api_core_v1_Sysctl(ref), "k8s.io/api/core/v1.TCPSocketAction": schema_k8sio_api_core_v1_TCPSocketAction(ref), "k8s.io/api/core/v1.Taint": schema_k8sio_api_core_v1_Taint(ref), "k8s.io/api/core/v1.Toleration": schema_k8sio_api_core_v1_Toleration(ref), "k8s.io/api/core/v1.TopologySelectorLabelRequirement": schema_k8sio_api_core_v1_TopologySelectorLabelRequirement(ref), "k8s.io/api/core/v1.TopologySelectorTerm": schema_k8sio_api_core_v1_TopologySelectorTerm(ref), "k8s.io/api/core/v1.TypedLocalObjectReference": schema_k8sio_api_core_v1_TypedLocalObjectReference(ref), "k8s.io/api/core/v1.Volume": schema_k8sio_api_core_v1_Volume(ref), "k8s.io/api/core/v1.VolumeDevice": schema_k8sio_api_core_v1_VolumeDevice(ref), "k8s.io/api/core/v1.VolumeMount": schema_k8sio_api_core_v1_VolumeMount(ref), "k8s.io/api/core/v1.VolumeNodeAffinity": schema_k8sio_api_core_v1_VolumeNodeAffinity(ref), "k8s.io/api/core/v1.VolumeProjection": schema_k8sio_api_core_v1_VolumeProjection(ref), "k8s.io/api/core/v1.VolumeSource": schema_k8sio_api_core_v1_VolumeSource(ref), "k8s.io/api/core/v1.VsphereVirtualDiskVolumeSource": schema_k8sio_api_core_v1_VsphereVirtualDiskVolumeSource(ref), "k8s.io/api/core/v1.WeightedPodAffinityTerm": schema_k8sio_api_core_v1_WeightedPodAffinityTerm(ref), "k8s.io/apimachinery/pkg/apis/meta/v1.APIGroup": schema_pkg_apis_meta_v1_APIGroup(ref), "k8s.io/apimachinery/pkg/apis/meta/v1.APIGroupList": schema_pkg_apis_meta_v1_APIGroupList(ref), "k8s.io/apimachinery/pkg/apis/meta/v1.APIResource": schema_pkg_apis_meta_v1_APIResource(ref), "k8s.io/apimachinery/pkg/apis/meta/v1.APIResourceList": schema_pkg_apis_meta_v1_APIResourceList(ref), "k8s.io/apimachinery/pkg/apis/meta/v1.APIVersions": schema_pkg_apis_meta_v1_APIVersions(ref), "k8s.io/apimachinery/pkg/apis/meta/v1.CreateOptions": schema_pkg_apis_meta_v1_CreateOptions(ref), "k8s.io/apimachinery/pkg/apis/meta/v1.DeleteOptions": schema_pkg_apis_meta_v1_DeleteOptions(ref), "k8s.io/apimachinery/pkg/apis/meta/v1.Duration": schema_pkg_apis_meta_v1_Duration(ref), "k8s.io/apimachinery/pkg/apis/meta/v1.ExportOptions": schema_pkg_apis_meta_v1_ExportOptions(ref), "k8s.io/apimachinery/pkg/apis/meta/v1.GetOptions": schema_pkg_apis_meta_v1_GetOptions(ref), "k8s.io/apimachinery/pkg/apis/meta/v1.GroupKind": schema_pkg_apis_meta_v1_GroupKind(ref), "k8s.io/apimachinery/pkg/apis/meta/v1.GroupResource": schema_pkg_apis_meta_v1_GroupResource(ref), "k8s.io/apimachinery/pkg/apis/meta/v1.GroupVersion": schema_pkg_apis_meta_v1_GroupVersion(ref), "k8s.io/apimachinery/pkg/apis/meta/v1.GroupVersionForDiscovery": schema_pkg_apis_meta_v1_GroupVersionForDiscovery(ref), "k8s.io/apimachinery/pkg/apis/meta/v1.GroupVersionKind": schema_pkg_apis_meta_v1_GroupVersionKind(ref), "k8s.io/apimachinery/pkg/apis/meta/v1.GroupVersionResource": schema_pkg_apis_meta_v1_GroupVersionResource(ref), "k8s.io/apimachinery/pkg/apis/meta/v1.Initializer": schema_pkg_apis_meta_v1_Initializer(ref), "k8s.io/apimachinery/pkg/apis/meta/v1.Initializers": schema_pkg_apis_meta_v1_Initializers(ref), "k8s.io/apimachinery/pkg/apis/meta/v1.InternalEvent": schema_pkg_apis_meta_v1_InternalEvent(ref), "k8s.io/apimachinery/pkg/apis/meta/v1.LabelSelector": schema_pkg_apis_meta_v1_LabelSelector(ref), "k8s.io/apimachinery/pkg/apis/meta/v1.LabelSelectorRequirement": schema_pkg_apis_meta_v1_LabelSelectorRequirement(ref), "k8s.io/apimachinery/pkg/apis/meta/v1.List": schema_pkg_apis_meta_v1_List(ref), "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta": schema_pkg_apis_meta_v1_ListMeta(ref), "k8s.io/apimachinery/pkg/apis/meta/v1.ListOptions": schema_pkg_apis_meta_v1_ListOptions(ref), "k8s.io/apimachinery/pkg/apis/meta/v1.MicroTime": schema_pkg_apis_meta_v1_MicroTime(ref), "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta": schema_pkg_apis_meta_v1_ObjectMeta(ref), "k8s.io/apimachinery/pkg/apis/meta/v1.OwnerReference": schema_pkg_apis_meta_v1_OwnerReference(ref), "k8s.io/apimachinery/pkg/apis/meta/v1.Patch": schema_pkg_apis_meta_v1_Patch(ref), "k8s.io/apimachinery/pkg/apis/meta/v1.Preconditions": schema_pkg_apis_meta_v1_Preconditions(ref), "k8s.io/apimachinery/pkg/apis/meta/v1.RootPaths": schema_pkg_apis_meta_v1_RootPaths(ref), "k8s.io/apimachinery/pkg/apis/meta/v1.ServerAddressByClientCIDR": schema_pkg_apis_meta_v1_ServerAddressByClientCIDR(ref), "k8s.io/apimachinery/pkg/apis/meta/v1.Status": schema_pkg_apis_meta_v1_Status(ref), "k8s.io/apimachinery/pkg/apis/meta/v1.StatusCause": schema_pkg_apis_meta_v1_StatusCause(ref), "k8s.io/apimachinery/pkg/apis/meta/v1.StatusDetails": schema_pkg_apis_meta_v1_StatusDetails(ref), "k8s.io/apimachinery/pkg/apis/meta/v1.Time": schema_pkg_apis_meta_v1_Time(ref), "k8s.io/apimachinery/pkg/apis/meta/v1.Timestamp": schema_pkg_apis_meta_v1_Timestamp(ref), "k8s.io/apimachinery/pkg/apis/meta/v1.TypeMeta": schema_pkg_apis_meta_v1_TypeMeta(ref), "k8s.io/apimachinery/pkg/apis/meta/v1.UpdateOptions": schema_pkg_apis_meta_v1_UpdateOptions(ref), "k8s.io/apimachinery/pkg/apis/meta/v1.WatchEvent": schema_pkg_apis_meta_v1_WatchEvent(ref)}
 }
 func schema_pkg_apis_monitoring_v1_APIServerConfig(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -25,9 +29,13 @@ func schema_pkg_apis_monitoring_v1_AlertingSpec(ref common.ReferenceCallback) co
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "AlertingSpec defines parameters for alerting configuration of Prometheus servers.", Properties: map[string]spec.Schema{"alertmanagers": {SchemaProps: spec.SchemaProps{Description: "AlertmanagerEndpoints Prometheus should fire alerts against.", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Ref: ref("github.com/coreos/prometheus-operator/pkg/apis/monitoring/v1.AlertmanagerEndpoints")}}}}}}, Required: []string{"alertmanagers"}}}, Dependencies: []string{"github.com/coreos/prometheus-operator/pkg/apis/monitoring/v1.AlertmanagerEndpoints"}}
 }
 func schema_pkg_apis_monitoring_v1_Alertmanager(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -39,9 +47,13 @@ func schema_pkg_apis_monitoring_v1_AlertmanagerEndpoints(ref common.ReferenceCal
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "AlertmanagerEndpoints defines a selection of a single Endpoints object containing alertmanager IPs to fire alerts against.", Properties: map[string]spec.Schema{"namespace": {SchemaProps: spec.SchemaProps{Description: "Namespace of Endpoints object.", Type: []string{"string"}, Format: ""}}, "name": {SchemaProps: spec.SchemaProps{Description: "Name of Endpoints object in Namespace.", Type: []string{"string"}, Format: ""}}, "port": {SchemaProps: spec.SchemaProps{Description: "Port the Alertmanager API is exposed on.", Ref: ref("k8s.io/apimachinery/pkg/util/intstr.IntOrString")}}, "scheme": {SchemaProps: spec.SchemaProps{Description: "Scheme to use when firing alerts.", Type: []string{"string"}, Format: ""}}, "pathPrefix": {SchemaProps: spec.SchemaProps{Description: "Prefix for the HTTP path alerts are pushed to.", Type: []string{"string"}, Format: ""}}, "tlsConfig": {SchemaProps: spec.SchemaProps{Description: "TLS Config to use for alertmanager connection.", Ref: ref("github.com/coreos/prometheus-operator/pkg/apis/monitoring/v1.TLSConfig")}}, "bearerTokenFile": {SchemaProps: spec.SchemaProps{Description: "BearerTokenFile to read from filesystem to use when authenticating to Alertmanager.", Type: []string{"string"}, Format: ""}}}, Required: []string{"namespace", "name", "port"}}}, Dependencies: []string{"github.com/coreos/prometheus-operator/pkg/apis/monitoring/v1.TLSConfig", "k8s.io/apimachinery/pkg/util/intstr.IntOrString"}}
 }
 func schema_pkg_apis_monitoring_v1_AlertmanagerList(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -53,9 +65,13 @@ func schema_pkg_apis_monitoring_v1_AlertmanagerSpec(ref common.ReferenceCallback
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "AlertmanagerSpec is a specification of the desired behavior of the Alertmanager cluster. More info: https://github.com/kubernetes/community/blob/master/contributors/devel/api-conventions.md#spec-and-status", Properties: map[string]spec.Schema{"podMetadata": {SchemaProps: spec.SchemaProps{Description: "Standard object’s metadata. More info: https://github.com/kubernetes/community/blob/master/contributors/devel/api-conventions.md#metadata Metadata Labels and Annotations gets propagated to the prometheus pods.", Ref: ref("k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta")}}, "image": {SchemaProps: spec.SchemaProps{Description: "Image if specified has precedence over baseImage, tag and sha combinations. Specifying the version is still necessary to ensure the Prometheus Operator knows what version of Alertmanager is being configured.", Type: []string{"string"}, Format: ""}}, "version": {SchemaProps: spec.SchemaProps{Description: "Version the cluster should be on.", Type: []string{"string"}, Format: ""}}, "tag": {SchemaProps: spec.SchemaProps{Description: "Tag of Alertmanager container image to be deployed. Defaults to the value of `version`. Version is ignored if Tag is set.", Type: []string{"string"}, Format: ""}}, "sha": {SchemaProps: spec.SchemaProps{Description: "SHA of Alertmanager container image to be deployed. Defaults to the value of `version`. Similar to a tag, but the SHA explicitly deploys an immutable container image. Version and Tag are ignored if SHA is set.", Type: []string{"string"}, Format: ""}}, "baseImage": {SchemaProps: spec.SchemaProps{Description: "Base image that is used to deploy pods, without tag.", Type: []string{"string"}, Format: ""}}, "imagePullSecrets": {SchemaProps: spec.SchemaProps{Description: "An optional list of references to secrets in the same namespace to use for pulling prometheus and alertmanager images from registries see http://kubernetes.io/docs/user-guide/images#specifying-imagepullsecrets-on-a-pod", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Ref: ref("k8s.io/api/core/v1.LocalObjectReference")}}}}}, "secrets": {SchemaProps: spec.SchemaProps{Description: "Secrets is a list of Secrets in the same namespace as the Alertmanager object, which shall be mounted into the Alertmanager Pods. The Secrets are mounted into /etc/alertmanager/secrets/<secret-name>.", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Type: []string{"string"}, Format: ""}}}}}, "configMaps": {SchemaProps: spec.SchemaProps{Description: "ConfigMaps is a list of ConfigMaps in the same namespace as the Alertmanager object, which shall be mounted into the Alertmanager Pods. The ConfigMaps are mounted into /etc/alertmanager/configmaps/<configmap-name>.", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Type: []string{"string"}, Format: ""}}}}}, "logLevel": {SchemaProps: spec.SchemaProps{Description: "Log level for Alertmanager to be configured with.", Type: []string{"string"}, Format: ""}}, "replicas": {SchemaProps: spec.SchemaProps{Description: "Size is the expected size of the alertmanager cluster. The controller will eventually make the size of the running cluster equal to the expected size.", Type: []string{"integer"}, Format: "int32"}}, "retention": {SchemaProps: spec.SchemaProps{Description: "Time duration Alertmanager shall retain data for. Default is '120h', and must match the regular expression `[0-9]+(ms|s|m|h)` (milliseconds seconds minutes hours).", Type: []string{"string"}, Format: ""}}, "storage": {SchemaProps: spec.SchemaProps{Description: "Storage is the definition of how storage will be used by the Alertmanager instances.", Ref: ref("github.com/coreos/prometheus-operator/pkg/apis/monitoring/v1.StorageSpec")}}, "externalUrl": {SchemaProps: spec.SchemaProps{Description: "The external URL the Alertmanager instances will be available under. This is necessary to generate correct URLs. This is necessary if Alertmanager is not served from root of a DNS name.", Type: []string{"string"}, Format: ""}}, "routePrefix": {SchemaProps: spec.SchemaProps{Description: "The route prefix Alertmanager registers HTTP handlers for. This is useful, if using ExternalURL and a proxy is rewriting HTTP routes of a request, and the actual ExternalURL is still true, but the server serves requests under a different route prefix. For example for use with `kubectl proxy`.", Type: []string{"string"}, Format: ""}}, "paused": {SchemaProps: spec.SchemaProps{Description: "If set to true all actions on the underlaying managed objects are not goint to be performed, except for delete actions.", Type: []string{"boolean"}, Format: ""}}, "nodeSelector": {SchemaProps: spec.SchemaProps{Description: "Define which Nodes the Pods are scheduled on.", Type: []string{"object"}, AdditionalProperties: &spec.SchemaOrBool{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Type: []string{"string"}, Format: ""}}}}}, "resources": {SchemaProps: spec.SchemaProps{Description: "Define resources requests and limits for single Pods.", Ref: ref("k8s.io/api/core/v1.ResourceRequirements")}}, "affinity": {SchemaProps: spec.SchemaProps{Description: "If specified, the pod's scheduling constraints.", Ref: ref("k8s.io/api/core/v1.Affinity")}}, "tolerations": {SchemaProps: spec.SchemaProps{Description: "If specified, the pod's tolerations.", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Ref: ref("k8s.io/api/core/v1.Toleration")}}}}}, "securityContext": {SchemaProps: spec.SchemaProps{Description: "SecurityContext holds pod-level security attributes and common container settings. This defaults to non root user with uid 1000 and gid 2000.", Ref: ref("k8s.io/api/core/v1.PodSecurityContext")}}, "serviceAccountName": {SchemaProps: spec.SchemaProps{Description: "ServiceAccountName is the name of the ServiceAccount to use to run the Prometheus Pods.", Type: []string{"string"}, Format: ""}}, "listenLocal": {SchemaProps: spec.SchemaProps{Description: "ListenLocal makes the Alertmanager server listen on loopback, so that it does not bind against the Pod IP. Note this is only for the Alertmanager UI, not the gossip communication.", Type: []string{"boolean"}, Format: ""}}, "containers": {SchemaProps: spec.SchemaProps{Description: "Containers allows injecting additional containers. This is meant to allow adding an authentication proxy to an Alertmanager pod.", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Ref: ref("k8s.io/api/core/v1.Container")}}}}}, "priorityClassName": {SchemaProps: spec.SchemaProps{Description: "Priority class assigned to the Pods", Type: []string{"string"}, Format: ""}}, "additionalPeers": {SchemaProps: spec.SchemaProps{Description: "AdditionalPeers allows injecting a set of additional Alertmanagers to peer with to form a highly available cluster.", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Type: []string{"string"}, Format: ""}}}}}}}}, Dependencies: []string{"github.com/coreos/prometheus-operator/pkg/apis/monitoring/v1.StorageSpec", "k8s.io/api/core/v1.Affinity", "k8s.io/api/core/v1.Container", "k8s.io/api/core/v1.LocalObjectReference", "k8s.io/api/core/v1.PodSecurityContext", "k8s.io/api/core/v1.ResourceRequirements", "k8s.io/api/core/v1.Toleration", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"}}
 }
 func schema_pkg_apis_monitoring_v1_AlertmanagerStatus(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -67,9 +83,13 @@ func schema_pkg_apis_monitoring_v1_BasicAuth(ref common.ReferenceCallback) commo
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "BasicAuth allow an endpoint to authenticate over basic authentication More info: https://prometheus.io/docs/operating/configuration/#endpoints", Properties: map[string]spec.Schema{"username": {SchemaProps: spec.SchemaProps{Description: "The secret that contains the username for authenticate", Ref: ref("k8s.io/api/core/v1.SecretKeySelector")}}, "password": {SchemaProps: spec.SchemaProps{Description: "The secret that contains the password for authenticate", Ref: ref("k8s.io/api/core/v1.SecretKeySelector")}}}}}, Dependencies: []string{"k8s.io/api/core/v1.SecretKeySelector"}}
 }
 func schema_pkg_apis_monitoring_v1_Endpoint(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -81,9 +101,13 @@ func schema_pkg_apis_monitoring_v1_NamespaceSelector(ref common.ReferenceCallbac
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "NamespaceSelector is a selector for selecting either all namespaces or a list of namespaces.", Properties: map[string]spec.Schema{"any": {SchemaProps: spec.SchemaProps{Description: "Boolean describing whether all namespaces are selected in contrast to a list restricting them.", Type: []string{"boolean"}, Format: ""}}, "matchNames": {SchemaProps: spec.SchemaProps{Description: "List of namespace names.", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Type: []string{"string"}, Format: ""}}}}}}}}, Dependencies: []string{}}
 }
 func schema_pkg_apis_monitoring_v1_Prometheus(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -95,9 +119,13 @@ func schema_pkg_apis_monitoring_v1_PrometheusList(ref common.ReferenceCallback) 
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "PrometheusList is a list of Prometheuses.", Properties: map[string]spec.Schema{"kind": {SchemaProps: spec.SchemaProps{Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds", Type: []string{"string"}, Format: ""}}, "apiVersion": {SchemaProps: spec.SchemaProps{Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources", Type: []string{"string"}, Format: ""}}, "metadata": {SchemaProps: spec.SchemaProps{Description: "Standard list metadata More info: https://github.com/kubernetes/community/blob/master/contributors/devel/api-conventions.md#metadata", Ref: ref("k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta")}}, "items": {SchemaProps: spec.SchemaProps{Description: "List of Prometheuses", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Ref: ref("github.com/coreos/prometheus-operator/pkg/apis/monitoring/v1.Prometheus")}}}}}}, Required: []string{"items"}}}, Dependencies: []string{"github.com/coreos/prometheus-operator/pkg/apis/monitoring/v1.Prometheus", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"}}
 }
 func schema_pkg_apis_monitoring_v1_PrometheusRule(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -109,9 +137,13 @@ func schema_pkg_apis_monitoring_v1_PrometheusRuleList(ref common.ReferenceCallba
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "PrometheusRuleList is a list of PrometheusRules.", Properties: map[string]spec.Schema{"kind": {SchemaProps: spec.SchemaProps{Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds", Type: []string{"string"}, Format: ""}}, "apiVersion": {SchemaProps: spec.SchemaProps{Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources", Type: []string{"string"}, Format: ""}}, "metadata": {SchemaProps: spec.SchemaProps{Description: "Standard list metadata More info: http://releases.k8s.io/HEAD/docs/devel/api-conventions.md#metadata", Ref: ref("k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta")}}, "items": {SchemaProps: spec.SchemaProps{Description: "List of Rules", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Ref: ref("github.com/coreos/prometheus-operator/pkg/apis/monitoring/v1.PrometheusRule")}}}}}}, Required: []string{"items"}}}, Dependencies: []string{"github.com/coreos/prometheus-operator/pkg/apis/monitoring/v1.PrometheusRule", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"}}
 }
 func schema_pkg_apis_monitoring_v1_PrometheusRuleSpec(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -123,9 +155,13 @@ func schema_pkg_apis_monitoring_v1_PrometheusSpec(ref common.ReferenceCallback) 
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "PrometheusSpec is a specification of the desired behavior of the Prometheus cluster. More info: https://github.com/kubernetes/community/blob/master/contributors/devel/api-conventions.md#spec-and-status", Properties: map[string]spec.Schema{"podMetadata": {SchemaProps: spec.SchemaProps{Description: "Standard object’s metadata. More info: https://github.com/kubernetes/community/blob/master/contributors/devel/api-conventions.md#metadata Metadata Labels and Annotations gets propagated to the prometheus pods.", Ref: ref("k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta")}}, "serviceMonitorSelector": {SchemaProps: spec.SchemaProps{Description: "ServiceMonitors to be selected for target discovery.", Ref: ref("k8s.io/apimachinery/pkg/apis/meta/v1.LabelSelector")}}, "serviceMonitorNamespaceSelector": {SchemaProps: spec.SchemaProps{Description: "Namespaces to be selected for ServiceMonitor discovery. If nil, only check own namespace.", Ref: ref("k8s.io/apimachinery/pkg/apis/meta/v1.LabelSelector")}}, "version": {SchemaProps: spec.SchemaProps{Description: "Version of Prometheus to be deployed.", Type: []string{"string"}, Format: ""}}, "tag": {SchemaProps: spec.SchemaProps{Description: "Tag of Prometheus container image to be deployed. Defaults to the value of `version`. Version is ignored if Tag is set.", Type: []string{"string"}, Format: ""}}, "sha": {SchemaProps: spec.SchemaProps{Description: "SHA of Prometheus container image to be deployed. Defaults to the value of `version`. Similar to a tag, but the SHA explicitly deploys an immutable container image. Version and Tag are ignored if SHA is set.", Type: []string{"string"}, Format: ""}}, "paused": {SchemaProps: spec.SchemaProps{Description: "When a Prometheus deployment is paused, no actions except for deletion will be performed on the underlying objects.", Type: []string{"boolean"}, Format: ""}}, "image": {SchemaProps: spec.SchemaProps{Description: "Image if specified has precedence over baseImage, tag and sha combinations. Specifying the version is still necessary to ensure the Prometheus Operator knows what version of Prometheus is being configured.", Type: []string{"string"}, Format: ""}}, "baseImage": {SchemaProps: spec.SchemaProps{Description: "Base image to use for a Prometheus deployment.", Type: []string{"string"}, Format: ""}}, "imagePullSecrets": {SchemaProps: spec.SchemaProps{Description: "An optional list of references to secrets in the same namespace to use for pulling prometheus and alertmanager images from registries see http://kubernetes.io/docs/user-guide/images#specifying-imagepullsecrets-on-a-pod", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Ref: ref("k8s.io/api/core/v1.LocalObjectReference")}}}}}, "replicas": {SchemaProps: spec.SchemaProps{Description: "Number of instances to deploy for a Prometheus deployment.", Type: []string{"integer"}, Format: "int32"}}, "retention": {SchemaProps: spec.SchemaProps{Description: "Time duration Prometheus shall retain data for. Default is '24h', and must match the regular expression `[0-9]+(ms|s|m|h|d|w|y)` (milliseconds seconds minutes hours days weeks years).", Type: []string{"string"}, Format: ""}}, "logLevel": {SchemaProps: spec.SchemaProps{Description: "Log level for Prometheus to be configured with.", Type: []string{"string"}, Format: ""}}, "scrapeInterval": {SchemaProps: spec.SchemaProps{Description: "Interval between consecutive scrapes.", Type: []string{"string"}, Format: ""}}, "evaluationInterval": {SchemaProps: spec.SchemaProps{Description: "Interval between consecutive evaluations.", Type: []string{"string"}, Format: ""}}, "externalLabels": {SchemaProps: spec.SchemaProps{Description: "The labels to add to any time series or alerts when communicating with external systems (federation, remote storage, Alertmanager).", Type: []string{"object"}, AdditionalProperties: &spec.SchemaOrBool{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Type: []string{"string"}, Format: ""}}}}}, "externalUrl": {SchemaProps: spec.SchemaProps{Description: "The external URL the Prometheus instances will be available under. This is necessary to generate correct URLs. This is necessary if Prometheus is not served from root of a DNS name.", Type: []string{"string"}, Format: ""}}, "routePrefix": {SchemaProps: spec.SchemaProps{Description: "The route prefix Prometheus registers HTTP handlers for. This is useful, if using ExternalURL and a proxy is rewriting HTTP routes of a request, and the actual ExternalURL is still true, but the server serves requests under a different route prefix. For example for use with `kubectl proxy`.", Type: []string{"string"}, Format: ""}}, "query": {SchemaProps: spec.SchemaProps{Description: "QuerySpec defines the query command line flags when starting Prometheus.", Ref: ref("github.com/coreos/prometheus-operator/pkg/apis/monitoring/v1.QuerySpec")}}, "storage": {SchemaProps: spec.SchemaProps{Description: "Storage spec to specify how storage shall be used.", Ref: ref("github.com/coreos/prometheus-operator/pkg/apis/monitoring/v1.StorageSpec")}}, "ruleSelector": {SchemaProps: spec.SchemaProps{Description: "A selector to select which PrometheusRules to mount for loading alerting rules from. Until (excluding) Prometheus Operator v0.24.0 Prometheus Operator will migrate any legacy rule ConfigMaps to PrometheusRule custom resources selected by RuleSelector. Make sure it does not match any config maps that you do not want to be migrated.", Ref: ref("k8s.io/apimachinery/pkg/apis/meta/v1.LabelSelector")}}, "ruleNamespaceSelector": {SchemaProps: spec.SchemaProps{Description: "Namespaces to be selected for PrometheusRules discovery. If unspecified, only the same namespace as the Prometheus object is in is used.", Ref: ref("k8s.io/apimachinery/pkg/apis/meta/v1.LabelSelector")}}, "alerting": {SchemaProps: spec.SchemaProps{Description: "Define details regarding alerting.", Ref: ref("github.com/coreos/prometheus-operator/pkg/apis/monitoring/v1.AlertingSpec")}}, "resources": {SchemaProps: spec.SchemaProps{Description: "Define resources requests and limits for single Pods.", Ref: ref("k8s.io/api/core/v1.ResourceRequirements")}}, "nodeSelector": {SchemaProps: spec.SchemaProps{Description: "Define which Nodes the Pods are scheduled on.", Type: []string{"object"}, AdditionalProperties: &spec.SchemaOrBool{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Type: []string{"string"}, Format: ""}}}}}, "serviceAccountName": {SchemaProps: spec.SchemaProps{Description: "ServiceAccountName is the name of the ServiceAccount to use to run the Prometheus Pods.", Type: []string{"string"}, Format: ""}}, "secrets": {SchemaProps: spec.SchemaProps{Description: "Secrets is a list of Secrets in the same namespace as the Prometheus object, which shall be mounted into the Prometheus Pods. The Secrets are mounted into /etc/prometheus/secrets/<secret-name>.", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Type: []string{"string"}, Format: ""}}}}}, "configMaps": {SchemaProps: spec.SchemaProps{Description: "ConfigMaps is a list of ConfigMaps in the same namespace as the Prometheus object, which shall be mounted into the Prometheus Pods. The ConfigMaps are mounted into /etc/prometheus/configmaps/<configmap-name>.", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Type: []string{"string"}, Format: ""}}}}}, "affinity": {SchemaProps: spec.SchemaProps{Description: "If specified, the pod's scheduling constraints.", Ref: ref("k8s.io/api/core/v1.Affinity")}}, "tolerations": {SchemaProps: spec.SchemaProps{Description: "If specified, the pod's tolerations.", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Ref: ref("k8s.io/api/core/v1.Toleration")}}}}}, "remoteWrite": {SchemaProps: spec.SchemaProps{Description: "If specified, the remote_write spec. This is an experimental feature, it may change in any upcoming release in a breaking way.", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Ref: ref("github.com/coreos/prometheus-operator/pkg/apis/monitoring/v1.RemoteWriteSpec")}}}}}, "remoteRead": {SchemaProps: spec.SchemaProps{Description: "If specified, the remote_read spec. This is an experimental feature, it may change in any upcoming release in a breaking way.", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Ref: ref("github.com/coreos/prometheus-operator/pkg/apis/monitoring/v1.RemoteReadSpec")}}}}}, "securityContext": {SchemaProps: spec.SchemaProps{Description: "SecurityContext holds pod-level security attributes and common container settings. This defaults to non root user with uid 1000 and gid 2000 for Prometheus >v2.0 and default PodSecurityContext for other versions.", Ref: ref("k8s.io/api/core/v1.PodSecurityContext")}}, "listenLocal": {SchemaProps: spec.SchemaProps{Description: "ListenLocal makes the Prometheus server listen on loopback, so that it does not bind against the Pod IP.", Type: []string{"boolean"}, Format: ""}}, "containers": {SchemaProps: spec.SchemaProps{Description: "Containers allows injecting additional containers. This is meant to allow adding an authentication proxy to a Prometheus pod.", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Ref: ref("k8s.io/api/core/v1.Container")}}}}}, "additionalScrapeConfigs": {SchemaProps: spec.SchemaProps{Description: "AdditionalScrapeConfigs allows specifying a key of a Secret containing additional Prometheus scrape configurations. Scrape configurations specified are appended to the configurations generated by the Prometheus Operator. Job configurations specified must have the form as specified in the official Prometheus documentation: https://prometheus.io/docs/prometheus/latest/configuration/configuration/#<scrape_config>. As scrape configs are appended, the user is responsible to make sure it is valid. Note that using this feature may expose the possibility to break upgrades of Prometheus. It is advised to review Prometheus release notes to ensure that no incompatible scrape configs are going to break Prometheus after the upgrade.", Ref: ref("k8s.io/api/core/v1.SecretKeySelector")}}, "additionalAlertRelabelConfigs": {SchemaProps: spec.SchemaProps{Description: "AdditionalAlertRelabelConfigs allows specifying a key of a Secret containing additional Prometheus alert relabel configurations. Alert relabel configurations specified are appended to the configurations generated by the Prometheus Operator. Alert relabel configurations specified must have the form as specified in the official Prometheus documentation: https://prometheus.io/docs/prometheus/latest/configuration/configuration/#alert_relabel_configs. As alert relabel configs are appended, the user is responsible to make sure it is valid. Note that using this feature may expose the possibility to break upgrades of Prometheus. It is advised to review Prometheus release notes to ensure that no incompatible alert relabel configs are going to break Prometheus after the upgrade.", Ref: ref("k8s.io/api/core/v1.SecretKeySelector")}}, "additionalAlertManagerConfigs": {SchemaProps: spec.SchemaProps{Description: "AdditionalAlertManagerConfigs allows specifying a key of a Secret containing additional Prometheus AlertManager configurations. AlertManager configurations specified are appended to the configurations generated by the Prometheus Operator. Job configurations specified must have the form as specified in the official Prometheus documentation: https://prometheus.io/docs/prometheus/latest/configuration/configuration/#<alertmanager_config>. As AlertManager configs are appended, the user is responsible to make sure it is valid. Note that using this feature may expose the possibility to break upgrades of Prometheus. It is advised to review Prometheus release notes to ensure that no incompatible AlertManager configs are going to break Prometheus after the upgrade.", Ref: ref("k8s.io/api/core/v1.SecretKeySelector")}}, "apiserverConfig": {SchemaProps: spec.SchemaProps{Description: "APIServerConfig allows specifying a host and auth methods to access apiserver. If left empty, Prometheus is assumed to run inside of the cluster and will discover API servers automatically and use the pod's CA certificate and bearer token file at /var/run/secrets/kubernetes.io/serviceaccount/.", Ref: ref("github.com/coreos/prometheus-operator/pkg/apis/monitoring/v1.APIServerConfig")}}, "thanos": {SchemaProps: spec.SchemaProps{Description: "Thanos configuration allows configuring various aspects of a Prometheus server in a Thanos environment.\n\nThis section is experimental, it may change significantly without deprecation notice in any release.\n\nThis is experimental and may change significantly without backward compatibility in any release.", Ref: ref("github.com/coreos/prometheus-operator/pkg/apis/monitoring/v1.ThanosSpec")}}, "priorityClassName": {SchemaProps: spec.SchemaProps{Description: "Priority class assigned to the Pods", Type: []string{"string"}, Format: ""}}}}}, Dependencies: []string{"github.com/coreos/prometheus-operator/pkg/apis/monitoring/v1.APIServerConfig", "github.com/coreos/prometheus-operator/pkg/apis/monitoring/v1.AlertingSpec", "github.com/coreos/prometheus-operator/pkg/apis/monitoring/v1.QuerySpec", "github.com/coreos/prometheus-operator/pkg/apis/monitoring/v1.RemoteReadSpec", "github.com/coreos/prometheus-operator/pkg/apis/monitoring/v1.RemoteWriteSpec", "github.com/coreos/prometheus-operator/pkg/apis/monitoring/v1.StorageSpec", "github.com/coreos/prometheus-operator/pkg/apis/monitoring/v1.ThanosSpec", "k8s.io/api/core/v1.Affinity", "k8s.io/api/core/v1.Container", "k8s.io/api/core/v1.LocalObjectReference", "k8s.io/api/core/v1.PodSecurityContext", "k8s.io/api/core/v1.ResourceRequirements", "k8s.io/api/core/v1.SecretKeySelector", "k8s.io/api/core/v1.Toleration", "k8s.io/apimachinery/pkg/apis/meta/v1.LabelSelector", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"}}
 }
 func schema_pkg_apis_monitoring_v1_PrometheusStatus(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -137,9 +173,13 @@ func schema_pkg_apis_monitoring_v1_QuerySpec(ref common.ReferenceCallback) commo
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "QuerySpec defines the query command line flags when starting Prometheus.", Properties: map[string]spec.Schema{"lookbackDelta": {SchemaProps: spec.SchemaProps{Description: "The delta difference allowed for retrieving metrics during expression evaluations.", Type: []string{"string"}, Format: ""}}, "maxConcurrency": {SchemaProps: spec.SchemaProps{Description: "Number of concurrent queries that can be run at once.", Type: []string{"integer"}, Format: "int32"}}, "timeout": {SchemaProps: spec.SchemaProps{Description: "Maximum time a query may take before being aborted.", Type: []string{"string"}, Format: ""}}}}}, Dependencies: []string{}}
 }
 func schema_pkg_apis_monitoring_v1_QueueConfig(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -151,9 +191,13 @@ func schema_pkg_apis_monitoring_v1_RelabelConfig(ref common.ReferenceCallback) c
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "RelabelConfig allows dynamic rewriting of the label set, being applied to samples before ingestion. It defines `<metric_relabel_configs>`-section of Prometheus configuration. More info: https://prometheus.io/docs/prometheus/latest/configuration/configuration/#metric_relabel_configs", Properties: map[string]spec.Schema{"sourceLabels": {SchemaProps: spec.SchemaProps{Description: "The source labels select values from existing labels. Their content is concatenated using the configured separator and matched against the configured regular expression for the replace, keep, and drop actions.", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Type: []string{"string"}, Format: ""}}}}}, "separator": {SchemaProps: spec.SchemaProps{Description: "Separator placed between concatenated source label values. default is ';'.", Type: []string{"string"}, Format: ""}}, "targetLabel": {SchemaProps: spec.SchemaProps{Description: "Label to which the resulting value is written in a replace action. It is mandatory for replace actions. Regex capture groups are available.", Type: []string{"string"}, Format: ""}}, "regex": {SchemaProps: spec.SchemaProps{Description: "Regular expression against which the extracted value is matched. defailt is '(.*)'", Type: []string{"string"}, Format: ""}}, "modulus": {SchemaProps: spec.SchemaProps{Description: "Modulus to take of the hash of the source label values.", Type: []string{"integer"}, Format: "int64"}}, "replacement": {SchemaProps: spec.SchemaProps{Description: "Replacement value against which a regex replace is performed if the regular expression matches. Regex capture groups are available. Default is '$1'", Type: []string{"string"}, Format: ""}}, "action": {SchemaProps: spec.SchemaProps{Description: "Action to perform based on regex matching. Default is 'replace'", Type: []string{"string"}, Format: ""}}}}}, Dependencies: []string{}}
 }
 func schema_pkg_apis_monitoring_v1_RemoteReadSpec(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -165,9 +209,13 @@ func schema_pkg_apis_monitoring_v1_RemoteWriteSpec(ref common.ReferenceCallback)
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "RemoteWriteSpec defines the remote_write configuration for prometheus.", Properties: map[string]spec.Schema{"url": {SchemaProps: spec.SchemaProps{Description: "The URL of the endpoint to send samples to.", Type: []string{"string"}, Format: ""}}, "remoteTimeout": {SchemaProps: spec.SchemaProps{Description: "Timeout for requests to the remote write endpoint.", Type: []string{"string"}, Format: ""}}, "writeRelabelConfigs": {SchemaProps: spec.SchemaProps{Description: "The list of remote write relabel configurations.", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Ref: ref("github.com/coreos/prometheus-operator/pkg/apis/monitoring/v1.RelabelConfig")}}}}}, "basicAuth": {SchemaProps: spec.SchemaProps{Description: "BasicAuth for the URL.", Ref: ref("github.com/coreos/prometheus-operator/pkg/apis/monitoring/v1.BasicAuth")}}, "bearerToken": {SchemaProps: spec.SchemaProps{Description: "File to read bearer token for remote write.", Type: []string{"string"}, Format: ""}}, "bearerTokenFile": {SchemaProps: spec.SchemaProps{Description: "File to read bearer token for remote write.", Type: []string{"string"}, Format: ""}}, "tlsConfig": {SchemaProps: spec.SchemaProps{Description: "TLS Config to use for remote write.", Ref: ref("github.com/coreos/prometheus-operator/pkg/apis/monitoring/v1.TLSConfig")}}, "proxyUrl": {SchemaProps: spec.SchemaProps{Description: "Optional ProxyURL", Type: []string{"string"}, Format: ""}}, "queueConfig": {SchemaProps: spec.SchemaProps{Description: "QueueConfig allows tuning of the remote write queue parameters.", Ref: ref("github.com/coreos/prometheus-operator/pkg/apis/monitoring/v1.QueueConfig")}}}, Required: []string{"url"}}}, Dependencies: []string{"github.com/coreos/prometheus-operator/pkg/apis/monitoring/v1.BasicAuth", "github.com/coreos/prometheus-operator/pkg/apis/monitoring/v1.QueueConfig", "github.com/coreos/prometheus-operator/pkg/apis/monitoring/v1.RelabelConfig", "github.com/coreos/prometheus-operator/pkg/apis/monitoring/v1.TLSConfig"}}
 }
 func schema_pkg_apis_monitoring_v1_Rule(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -179,9 +227,13 @@ func schema_pkg_apis_monitoring_v1_RuleGroup(ref common.ReferenceCallback) commo
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "RuleGroup is a list of sequentially evaluated recording and alerting rules.", Properties: map[string]spec.Schema{"name": {SchemaProps: spec.SchemaProps{Type: []string{"string"}, Format: ""}}, "interval": {SchemaProps: spec.SchemaProps{Type: []string{"string"}, Format: ""}}, "rules": {SchemaProps: spec.SchemaProps{Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Ref: ref("github.com/coreos/prometheus-operator/pkg/apis/monitoring/v1.Rule")}}}}}}, Required: []string{"name", "rules"}}}, Dependencies: []string{"github.com/coreos/prometheus-operator/pkg/apis/monitoring/v1.Rule"}}
 }
 func schema_pkg_apis_monitoring_v1_ServiceMonitor(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -193,9 +245,13 @@ func schema_pkg_apis_monitoring_v1_ServiceMonitorList(ref common.ReferenceCallba
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "ServiceMonitorList is a list of ServiceMonitors.", Properties: map[string]spec.Schema{"kind": {SchemaProps: spec.SchemaProps{Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds", Type: []string{"string"}, Format: ""}}, "apiVersion": {SchemaProps: spec.SchemaProps{Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources", Type: []string{"string"}, Format: ""}}, "metadata": {SchemaProps: spec.SchemaProps{Description: "Standard list metadata More info: https://github.com/kubernetes/community/blob/master/contributors/devel/api-conventions.md#metadata", Ref: ref("k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta")}}, "items": {SchemaProps: spec.SchemaProps{Description: "List of ServiceMonitors", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Ref: ref("github.com/coreos/prometheus-operator/pkg/apis/monitoring/v1.ServiceMonitor")}}}}}}, Required: []string{"items"}}}, Dependencies: []string{"github.com/coreos/prometheus-operator/pkg/apis/monitoring/v1.ServiceMonitor", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"}}
 }
 func schema_pkg_apis_monitoring_v1_ServiceMonitorSpec(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -207,9 +263,13 @@ func schema_pkg_apis_monitoring_v1_StorageSpec(ref common.ReferenceCallback) com
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "StorageSpec defines the configured storage for a group Prometheus servers. If neither `emptyDir` nor `volumeClaimTemplate` is specified, then by default an [EmptyDir](https://kubernetes.io/docs/concepts/storage/volumes/#emptydir) will be used.", Properties: map[string]spec.Schema{"emptyDir": {SchemaProps: spec.SchemaProps{Description: "EmptyDirVolumeSource to be used by the Prometheus StatefulSets. If specified, used in place of any volumeClaimTemplate. More info: https://kubernetes.io/docs/concepts/storage/volumes/#emptydir", Ref: ref("k8s.io/api/core/v1.EmptyDirVolumeSource")}}, "volumeClaimTemplate": {SchemaProps: spec.SchemaProps{Description: "A PVC spec to be used by the Prometheus StatefulSets.", Ref: ref("k8s.io/api/core/v1.PersistentVolumeClaim")}}}}}, Dependencies: []string{"k8s.io/api/core/v1.EmptyDirVolumeSource", "k8s.io/api/core/v1.PersistentVolumeClaim"}}
 }
 func schema_pkg_apis_monitoring_v1_TLSConfig(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -221,9 +281,13 @@ func schema_pkg_apis_monitoring_v1_ThanosGCSSpec(ref common.ReferenceCallback) c
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "ThanosGCSSpec defines parameters for use of Google Cloud Storage (GCS) with Thanos.", Properties: map[string]spec.Schema{"bucket": {SchemaProps: spec.SchemaProps{Description: "Google Cloud Storage bucket name for stored blocks. If empty it won't store any block inside Google Cloud Storage.", Type: []string{"string"}, Format: ""}}, "credentials": {SchemaProps: spec.SchemaProps{Description: "Secret to access our Bucket.", Ref: ref("k8s.io/api/core/v1.SecretKeySelector")}}}}}, Dependencies: []string{"k8s.io/api/core/v1.SecretKeySelector"}}
 }
 func schema_pkg_apis_monitoring_v1_ThanosS3Spec(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -235,9 +299,13 @@ func schema_pkg_apis_monitoring_v1_ThanosSpec(ref common.ReferenceCallback) comm
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "ThanosSpec defines parameters for a Prometheus server within a Thanos deployment.", Properties: map[string]spec.Schema{"peers": {SchemaProps: spec.SchemaProps{Description: "Peers is a DNS name for Thanos to discover peers through.", Type: []string{"string"}, Format: ""}}, "image": {SchemaProps: spec.SchemaProps{Description: "Image if specified has precedence over baseImage, tag and sha combinations. Specifying the version is still necessary to ensure the Prometheus Operator knows what version of Thanos is being configured.", Type: []string{"string"}, Format: ""}}, "version": {SchemaProps: spec.SchemaProps{Description: "Version describes the version of Thanos to use.", Type: []string{"string"}, Format: ""}}, "tag": {SchemaProps: spec.SchemaProps{Description: "Tag of Thanos sidecar container image to be deployed. Defaults to the value of `version`. Version is ignored if Tag is set.", Type: []string{"string"}, Format: ""}}, "sha": {SchemaProps: spec.SchemaProps{Description: "SHA of Thanos container image to be deployed. Defaults to the value of `version`. Similar to a tag, but the SHA explicitly deploys an immutable container image. Version and Tag are ignored if SHA is set.", Type: []string{"string"}, Format: ""}}, "baseImage": {SchemaProps: spec.SchemaProps{Description: "Thanos base image if other than default.", Type: []string{"string"}, Format: ""}}, "resources": {SchemaProps: spec.SchemaProps{Description: "Resources defines the resource requirements for the Thanos sidecar. If not provided, no requests/limits will be set", Ref: ref("k8s.io/api/core/v1.ResourceRequirements")}}, "gcs": {SchemaProps: spec.SchemaProps{Description: "GCS configures use of GCS in Thanos.", Ref: ref("github.com/coreos/prometheus-operator/pkg/apis/monitoring/v1.ThanosGCSSpec")}}, "s3": {SchemaProps: spec.SchemaProps{Description: "S3 configures use of S3 in Thanos.", Ref: ref("github.com/coreos/prometheus-operator/pkg/apis/monitoring/v1.ThanosS3Spec")}}}}}, Dependencies: []string{"github.com/coreos/prometheus-operator/pkg/apis/monitoring/v1.ThanosGCSSpec", "github.com/coreos/prometheus-operator/pkg/apis/monitoring/v1.ThanosS3Spec", "k8s.io/api/core/v1.ResourceRequirements"}}
 }
 func schema_k8sio_api_core_v1_AWSElasticBlockStoreVolumeSource(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -249,9 +317,13 @@ func schema_k8sio_api_core_v1_Affinity(ref common.ReferenceCallback) common.Open
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "Affinity is a group of affinity scheduling rules.", Properties: map[string]spec.Schema{"nodeAffinity": {SchemaProps: spec.SchemaProps{Description: "Describes node affinity scheduling rules for the pod.", Ref: ref("k8s.io/api/core/v1.NodeAffinity")}}, "podAffinity": {SchemaProps: spec.SchemaProps{Description: "Describes pod affinity scheduling rules (e.g. co-locate this pod in the same node, zone, etc. as some other pod(s)).", Ref: ref("k8s.io/api/core/v1.PodAffinity")}}, "podAntiAffinity": {SchemaProps: spec.SchemaProps{Description: "Describes pod anti-affinity scheduling rules (e.g. avoid putting this pod in the same node, zone, etc. as some other pod(s)).", Ref: ref("k8s.io/api/core/v1.PodAntiAffinity")}}}}}, Dependencies: []string{"k8s.io/api/core/v1.NodeAffinity", "k8s.io/api/core/v1.PodAffinity", "k8s.io/api/core/v1.PodAntiAffinity"}}
 }
 func schema_k8sio_api_core_v1_AttachedVolume(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -263,9 +335,13 @@ func schema_k8sio_api_core_v1_AvoidPods(ref common.ReferenceCallback) common.Ope
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "AvoidPods describes pods that should avoid this node. This is the value for a Node annotation with key scheduler.alpha.kubernetes.io/preferAvoidPods and will eventually become a field of NodeStatus.", Properties: map[string]spec.Schema{"preferAvoidPods": {SchemaProps: spec.SchemaProps{Description: "Bounded-sized list of signatures of pods that should avoid this node, sorted in timestamp order from oldest to newest. Size of the slice is unspecified.", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Ref: ref("k8s.io/api/core/v1.PreferAvoidPodsEntry")}}}}}}}}, Dependencies: []string{"k8s.io/api/core/v1.PreferAvoidPodsEntry"}}
 }
 func schema_k8sio_api_core_v1_AzureDiskVolumeSource(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -277,9 +353,13 @@ func schema_k8sio_api_core_v1_AzureFilePersistentVolumeSource(ref common.Referen
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "AzureFile represents an Azure File Service mount on the host and bind mount to the pod.", Properties: map[string]spec.Schema{"secretName": {SchemaProps: spec.SchemaProps{Description: "the name of secret that contains Azure Storage Account Name and Key", Type: []string{"string"}, Format: ""}}, "shareName": {SchemaProps: spec.SchemaProps{Description: "Share Name", Type: []string{"string"}, Format: ""}}, "readOnly": {SchemaProps: spec.SchemaProps{Description: "Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.", Type: []string{"boolean"}, Format: ""}}, "secretNamespace": {SchemaProps: spec.SchemaProps{Description: "the namespace of the secret that contains Azure Storage Account Name and Key default is the same as the Pod", Type: []string{"string"}, Format: ""}}}, Required: []string{"secretName", "shareName"}}}, Dependencies: []string{}}
 }
 func schema_k8sio_api_core_v1_AzureFileVolumeSource(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -291,9 +371,13 @@ func schema_k8sio_api_core_v1_Binding(ref common.ReferenceCallback) common.OpenA
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "Binding ties one object to another; for example, a pod is bound to a node by a scheduler. Deprecated in 1.7, please use the bindings subresource of pods instead.", Properties: map[string]spec.Schema{"kind": {SchemaProps: spec.SchemaProps{Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds", Type: []string{"string"}, Format: ""}}, "apiVersion": {SchemaProps: spec.SchemaProps{Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources", Type: []string{"string"}, Format: ""}}, "metadata": {SchemaProps: spec.SchemaProps{Description: "Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata", Ref: ref("k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta")}}, "target": {SchemaProps: spec.SchemaProps{Description: "The target object that you want to bind to the standard object.", Ref: ref("k8s.io/api/core/v1.ObjectReference")}}}, Required: []string{"target"}}}, Dependencies: []string{"k8s.io/api/core/v1.ObjectReference", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"}}
 }
 func schema_k8sio_api_core_v1_CSIPersistentVolumeSource(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -305,9 +389,13 @@ func schema_k8sio_api_core_v1_Capabilities(ref common.ReferenceCallback) common.
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "Adds and removes POSIX capabilities from running containers.", Properties: map[string]spec.Schema{"add": {SchemaProps: spec.SchemaProps{Description: "Added capabilities", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Type: []string{"string"}, Format: ""}}}}}, "drop": {SchemaProps: spec.SchemaProps{Description: "Removed capabilities", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Type: []string{"string"}, Format: ""}}}}}}}}, Dependencies: []string{}}
 }
 func schema_k8sio_api_core_v1_CephFSPersistentVolumeSource(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -319,9 +407,13 @@ func schema_k8sio_api_core_v1_CephFSVolumeSource(ref common.ReferenceCallback) c
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "Represents a Ceph Filesystem mount that lasts the lifetime of a pod Cephfs volumes do not support ownership management or SELinux relabeling.", Properties: map[string]spec.Schema{"monitors": {SchemaProps: spec.SchemaProps{Description: "Required: Monitors is a collection of Ceph monitors More info: https://releases.k8s.io/HEAD/examples/volumes/cephfs/README.md#how-to-use-it", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Type: []string{"string"}, Format: ""}}}}}, "path": {SchemaProps: spec.SchemaProps{Description: "Optional: Used as the mounted root, rather than the full Ceph tree, default is /", Type: []string{"string"}, Format: ""}}, "user": {SchemaProps: spec.SchemaProps{Description: "Optional: User is the rados user name, default is admin More info: https://releases.k8s.io/HEAD/examples/volumes/cephfs/README.md#how-to-use-it", Type: []string{"string"}, Format: ""}}, "secretFile": {SchemaProps: spec.SchemaProps{Description: "Optional: SecretFile is the path to key ring for User, default is /etc/ceph/user.secret More info: https://releases.k8s.io/HEAD/examples/volumes/cephfs/README.md#how-to-use-it", Type: []string{"string"}, Format: ""}}, "secretRef": {SchemaProps: spec.SchemaProps{Description: "Optional: SecretRef is reference to the authentication secret for User, default is empty. More info: https://releases.k8s.io/HEAD/examples/volumes/cephfs/README.md#how-to-use-it", Ref: ref("k8s.io/api/core/v1.LocalObjectReference")}}, "readOnly": {SchemaProps: spec.SchemaProps{Description: "Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts. More info: https://releases.k8s.io/HEAD/examples/volumes/cephfs/README.md#how-to-use-it", Type: []string{"boolean"}, Format: ""}}}, Required: []string{"monitors"}}}, Dependencies: []string{"k8s.io/api/core/v1.LocalObjectReference"}}
 }
 func schema_k8sio_api_core_v1_CinderPersistentVolumeSource(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -333,9 +425,13 @@ func schema_k8sio_api_core_v1_CinderVolumeSource(ref common.ReferenceCallback) c
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "Represents a cinder volume resource in Openstack. A Cinder volume must exist before mounting to a container. The volume must also be in the same region as the kubelet. Cinder volumes support ownership management and SELinux relabeling.", Properties: map[string]spec.Schema{"volumeID": {SchemaProps: spec.SchemaProps{Description: "volume id used to identify the volume in cinder More info: https://releases.k8s.io/HEAD/examples/mysql-cinder-pd/README.md", Type: []string{"string"}, Format: ""}}, "fsType": {SchemaProps: spec.SchemaProps{Description: "Filesystem type to mount. Must be a filesystem type supported by the host operating system. Examples: \"ext4\", \"xfs\", \"ntfs\". Implicitly inferred to be \"ext4\" if unspecified. More info: https://releases.k8s.io/HEAD/examples/mysql-cinder-pd/README.md", Type: []string{"string"}, Format: ""}}, "readOnly": {SchemaProps: spec.SchemaProps{Description: "Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts. More info: https://releases.k8s.io/HEAD/examples/mysql-cinder-pd/README.md", Type: []string{"boolean"}, Format: ""}}, "secretRef": {SchemaProps: spec.SchemaProps{Description: "Optional: points to a secret object containing parameters used to connect to OpenStack.", Ref: ref("k8s.io/api/core/v1.LocalObjectReference")}}}, Required: []string{"volumeID"}}}, Dependencies: []string{"k8s.io/api/core/v1.LocalObjectReference"}}
 }
 func schema_k8sio_api_core_v1_ClientIPConfig(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -347,9 +443,13 @@ func schema_k8sio_api_core_v1_ComponentCondition(ref common.ReferenceCallback) c
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "Information about the condition of a component.", Properties: map[string]spec.Schema{"type": {SchemaProps: spec.SchemaProps{Description: "Type of condition for a component. Valid value: \"Healthy\"", Type: []string{"string"}, Format: ""}}, "status": {SchemaProps: spec.SchemaProps{Description: "Status of the condition for a component. Valid values for \"Healthy\": \"True\", \"False\", or \"Unknown\".", Type: []string{"string"}, Format: ""}}, "message": {SchemaProps: spec.SchemaProps{Description: "Message about the condition for a component. For example, information about a health check.", Type: []string{"string"}, Format: ""}}, "error": {SchemaProps: spec.SchemaProps{Description: "Condition error code for a component. For example, a health check error code.", Type: []string{"string"}, Format: ""}}}, Required: []string{"type", "status"}}}, Dependencies: []string{}}
 }
 func schema_k8sio_api_core_v1_ComponentStatus(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -361,9 +461,13 @@ func schema_k8sio_api_core_v1_ComponentStatusList(ref common.ReferenceCallback) 
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "Status of all the conditions for the component as a list of ComponentStatus objects.", Properties: map[string]spec.Schema{"kind": {SchemaProps: spec.SchemaProps{Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds", Type: []string{"string"}, Format: ""}}, "apiVersion": {SchemaProps: spec.SchemaProps{Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources", Type: []string{"string"}, Format: ""}}, "metadata": {SchemaProps: spec.SchemaProps{Description: "Standard list metadata. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds", Ref: ref("k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta")}}, "items": {SchemaProps: spec.SchemaProps{Description: "List of ComponentStatus objects.", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Ref: ref("k8s.io/api/core/v1.ComponentStatus")}}}}}}, Required: []string{"items"}}}, Dependencies: []string{"k8s.io/api/core/v1.ComponentStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"}}
 }
 func schema_k8sio_api_core_v1_ConfigMap(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -375,9 +479,13 @@ func schema_k8sio_api_core_v1_ConfigMapEnvSource(ref common.ReferenceCallback) c
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "ConfigMapEnvSource selects a ConfigMap to populate the environment variables with.\n\nThe contents of the target ConfigMap's Data field will represent the key-value pairs as environment variables.", Properties: map[string]spec.Schema{"name": {SchemaProps: spec.SchemaProps{Description: "Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names", Type: []string{"string"}, Format: ""}}, "optional": {SchemaProps: spec.SchemaProps{Description: "Specify whether the ConfigMap must be defined", Type: []string{"boolean"}, Format: ""}}}}}, Dependencies: []string{}}
 }
 func schema_k8sio_api_core_v1_ConfigMapKeySelector(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -389,9 +497,13 @@ func schema_k8sio_api_core_v1_ConfigMapList(ref common.ReferenceCallback) common
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "ConfigMapList is a resource containing a list of ConfigMap objects.", Properties: map[string]spec.Schema{"kind": {SchemaProps: spec.SchemaProps{Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds", Type: []string{"string"}, Format: ""}}, "apiVersion": {SchemaProps: spec.SchemaProps{Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources", Type: []string{"string"}, Format: ""}}, "metadata": {SchemaProps: spec.SchemaProps{Description: "More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata", Ref: ref("k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta")}}, "items": {SchemaProps: spec.SchemaProps{Description: "Items is the list of ConfigMaps.", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Ref: ref("k8s.io/api/core/v1.ConfigMap")}}}}}}, Required: []string{"items"}}}, Dependencies: []string{"k8s.io/api/core/v1.ConfigMap", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"}}
 }
 func schema_k8sio_api_core_v1_ConfigMapNodeConfigSource(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -403,9 +515,13 @@ func schema_k8sio_api_core_v1_ConfigMapProjection(ref common.ReferenceCallback) 
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "Adapts a ConfigMap into a projected volume.\n\nThe contents of the target ConfigMap's Data field will be presented in a projected volume as files using the keys in the Data field as the file names, unless the items element is populated with specific mappings of keys to paths. Note that this is identical to a configmap volume source without the default mode.", Properties: map[string]spec.Schema{"name": {SchemaProps: spec.SchemaProps{Description: "Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names", Type: []string{"string"}, Format: ""}}, "items": {SchemaProps: spec.SchemaProps{Description: "If unspecified, each key-value pair in the Data field of the referenced ConfigMap will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the ConfigMap, the volume setup will error unless it is marked optional. Paths must be relative and may not contain the '..' path or start with '..'.", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Ref: ref("k8s.io/api/core/v1.KeyToPath")}}}}}, "optional": {SchemaProps: spec.SchemaProps{Description: "Specify whether the ConfigMap or it's keys must be defined", Type: []string{"boolean"}, Format: ""}}}}}, Dependencies: []string{"k8s.io/api/core/v1.KeyToPath"}}
 }
 func schema_k8sio_api_core_v1_ConfigMapVolumeSource(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -417,9 +533,13 @@ func schema_k8sio_api_core_v1_Container(ref common.ReferenceCallback) common.Ope
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "A single application container that you want to run within a pod.", Properties: map[string]spec.Schema{"name": {SchemaProps: spec.SchemaProps{Description: "Name of the container specified as a DNS_LABEL. Each container in a pod must have a unique name (DNS_LABEL). Cannot be updated.", Type: []string{"string"}, Format: ""}}, "image": {SchemaProps: spec.SchemaProps{Description: "Docker image name. More info: https://kubernetes.io/docs/concepts/containers/images This field is optional to allow higher level config management to default or override container images in workload controllers like Deployments and StatefulSets.", Type: []string{"string"}, Format: ""}}, "command": {SchemaProps: spec.SchemaProps{Description: "Entrypoint array. Not executed within a shell. The docker image's ENTRYPOINT is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Type: []string{"string"}, Format: ""}}}}}, "args": {SchemaProps: spec.SchemaProps{Description: "Arguments to the entrypoint. The docker image's CMD is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Type: []string{"string"}, Format: ""}}}}}, "workingDir": {SchemaProps: spec.SchemaProps{Description: "Container's working directory. If not specified, the container runtime's default will be used, which might be configured in the container image. Cannot be updated.", Type: []string{"string"}, Format: ""}}, "ports": {VendorExtensible: spec.VendorExtensible{Extensions: spec.Extensions{"x-kubernetes-patch-merge-key": "containerPort", "x-kubernetes-patch-strategy": "merge"}}, SchemaProps: spec.SchemaProps{Description: "List of ports to expose from the container. Exposing a port here gives the system additional information about the network connections a container uses, but is primarily informational. Not specifying a port here DOES NOT prevent that port from being exposed. Any port which is listening on the default \"0.0.0.0\" address inside a container will be accessible from the network. Cannot be updated.", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Ref: ref("k8s.io/api/core/v1.ContainerPort")}}}}}, "envFrom": {SchemaProps: spec.SchemaProps{Description: "List of sources to populate environment variables in the container. The keys defined within a source must be a C_IDENTIFIER. All invalid keys will be reported as an event when the container is starting. When a key exists in multiple sources, the value associated with the last source will take precedence. Values defined by an Env with a duplicate key will take precedence. Cannot be updated.", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Ref: ref("k8s.io/api/core/v1.EnvFromSource")}}}}}, "env": {VendorExtensible: spec.VendorExtensible{Extensions: spec.Extensions{"x-kubernetes-patch-merge-key": "name", "x-kubernetes-patch-strategy": "merge"}}, SchemaProps: spec.SchemaProps{Description: "List of environment variables to set in the container. Cannot be updated.", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Ref: ref("k8s.io/api/core/v1.EnvVar")}}}}}, "resources": {SchemaProps: spec.SchemaProps{Description: "Compute Resources required by this container. Cannot be updated. More info: https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/", Ref: ref("k8s.io/api/core/v1.ResourceRequirements")}}, "volumeMounts": {VendorExtensible: spec.VendorExtensible{Extensions: spec.Extensions{"x-kubernetes-patch-merge-key": "mountPath", "x-kubernetes-patch-strategy": "merge"}}, SchemaProps: spec.SchemaProps{Description: "Pod volumes to mount into the container's filesystem. Cannot be updated.", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Ref: ref("k8s.io/api/core/v1.VolumeMount")}}}}}, "volumeDevices": {VendorExtensible: spec.VendorExtensible{Extensions: spec.Extensions{"x-kubernetes-patch-merge-key": "devicePath", "x-kubernetes-patch-strategy": "merge"}}, SchemaProps: spec.SchemaProps{Description: "volumeDevices is the list of block devices to be used by the container. This is an alpha feature and may change in the future.", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Ref: ref("k8s.io/api/core/v1.VolumeDevice")}}}}}, "livenessProbe": {SchemaProps: spec.SchemaProps{Description: "Periodic probe of container liveness. Container will be restarted if the probe fails. Cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes", Ref: ref("k8s.io/api/core/v1.Probe")}}, "readinessProbe": {SchemaProps: spec.SchemaProps{Description: "Periodic probe of container service readiness. Container will be removed from service endpoints if the probe fails. Cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes", Ref: ref("k8s.io/api/core/v1.Probe")}}, "lifecycle": {SchemaProps: spec.SchemaProps{Description: "Actions that the management system should take in response to container lifecycle events. Cannot be updated.", Ref: ref("k8s.io/api/core/v1.Lifecycle")}}, "terminationMessagePath": {SchemaProps: spec.SchemaProps{Description: "Optional: Path at which the file to which the container's termination message will be written is mounted into the container's filesystem. Message written is intended to be brief final status, such as an assertion failure message. Will be truncated by the node if greater than 4096 bytes. The total message length across all containers will be limited to 12kb. Defaults to /dev/termination-log. Cannot be updated.", Type: []string{"string"}, Format: ""}}, "terminationMessagePolicy": {SchemaProps: spec.SchemaProps{Description: "Indicate how the termination message should be populated. File will use the contents of terminationMessagePath to populate the container status message on both success and failure. FallbackToLogsOnError will use the last chunk of container log output if the termination message file is empty and the container exited with an error. The log output is limited to 2048 bytes or 80 lines, whichever is smaller. Defaults to File. Cannot be updated.", Type: []string{"string"}, Format: ""}}, "imagePullPolicy": {SchemaProps: spec.SchemaProps{Description: "Image pull policy. One of Always, Never, IfNotPresent. Defaults to Always if :latest tag is specified, or IfNotPresent otherwise. Cannot be updated. More info: https://kubernetes.io/docs/concepts/containers/images#updating-images", Type: []string{"string"}, Format: ""}}, "securityContext": {SchemaProps: spec.SchemaProps{Description: "Security options the pod should run with. More info: https://kubernetes.io/docs/concepts/policy/security-context/ More info: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/", Ref: ref("k8s.io/api/core/v1.SecurityContext")}}, "stdin": {SchemaProps: spec.SchemaProps{Description: "Whether this container should allocate a buffer for stdin in the container runtime. If this is not set, reads from stdin in the container will always result in EOF. Default is false.", Type: []string{"boolean"}, Format: ""}}, "stdinOnce": {SchemaProps: spec.SchemaProps{Description: "Whether the container runtime should close the stdin channel after it has been opened by a single attach. When stdin is true the stdin stream will remain open across multiple attach sessions. If stdinOnce is set to true, stdin is opened on container start, is empty until the first client attaches to stdin, and then remains open and accepts data until the client disconnects, at which time stdin is closed and remains closed until the container is restarted. If this flag is false, a container processes that reads from stdin will never receive an EOF. Default is false", Type: []string{"boolean"}, Format: ""}}, "tty": {SchemaProps: spec.SchemaProps{Description: "Whether this container should allocate a TTY for itself, also requires 'stdin' to be true. Default is false.", Type: []string{"boolean"}, Format: ""}}}, Required: []string{"name"}}}, Dependencies: []string{"k8s.io/api/core/v1.ContainerPort", "k8s.io/api/core/v1.EnvFromSource", "k8s.io/api/core/v1.EnvVar", "k8s.io/api/core/v1.Lifecycle", "k8s.io/api/core/v1.Probe", "k8s.io/api/core/v1.ResourceRequirements", "k8s.io/api/core/v1.SecurityContext", "k8s.io/api/core/v1.VolumeDevice", "k8s.io/api/core/v1.VolumeMount"}}
 }
 func schema_k8sio_api_core_v1_ContainerImage(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -431,9 +551,13 @@ func schema_k8sio_api_core_v1_ContainerPort(ref common.ReferenceCallback) common
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "ContainerPort represents a network port in a single container.", Properties: map[string]spec.Schema{"name": {SchemaProps: spec.SchemaProps{Description: "If specified, this must be an IANA_SVC_NAME and unique within the pod. Each named port in a pod must have a unique name. Name for the port that can be referred to by services.", Type: []string{"string"}, Format: ""}}, "hostPort": {SchemaProps: spec.SchemaProps{Description: "Number of port to expose on the host. If specified, this must be a valid port number, 0 < x < 65536. If HostNetwork is specified, this must match ContainerPort. Most containers do not need this.", Type: []string{"integer"}, Format: "int32"}}, "containerPort": {SchemaProps: spec.SchemaProps{Description: "Number of port to expose on the pod's IP address. This must be a valid port number, 0 < x < 65536.", Type: []string{"integer"}, Format: "int32"}}, "protocol": {SchemaProps: spec.SchemaProps{Description: "Protocol for port. Must be UDP, TCP, or SCTP. Defaults to \"TCP\".", Type: []string{"string"}, Format: ""}}, "hostIP": {SchemaProps: spec.SchemaProps{Description: "What host IP to bind the external port to.", Type: []string{"string"}, Format: ""}}}, Required: []string{"containerPort"}}}, Dependencies: []string{}}
 }
 func schema_k8sio_api_core_v1_ContainerState(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -445,9 +569,13 @@ func schema_k8sio_api_core_v1_ContainerStateRunning(ref common.ReferenceCallback
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "ContainerStateRunning is a running state of a container.", Properties: map[string]spec.Schema{"startedAt": {SchemaProps: spec.SchemaProps{Description: "Time at which the container was last (re-)started", Ref: ref("k8s.io/apimachinery/pkg/apis/meta/v1.Time")}}}}}, Dependencies: []string{"k8s.io/apimachinery/pkg/apis/meta/v1.Time"}}
 }
 func schema_k8sio_api_core_v1_ContainerStateTerminated(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -459,9 +587,13 @@ func schema_k8sio_api_core_v1_ContainerStateWaiting(ref common.ReferenceCallback
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "ContainerStateWaiting is a waiting state of a container.", Properties: map[string]spec.Schema{"reason": {SchemaProps: spec.SchemaProps{Description: "(brief) reason the container is not yet running.", Type: []string{"string"}, Format: ""}}, "message": {SchemaProps: spec.SchemaProps{Description: "Message regarding why the container is not yet running.", Type: []string{"string"}, Format: ""}}}}}, Dependencies: []string{}}
 }
 func schema_k8sio_api_core_v1_ContainerStatus(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -473,9 +605,13 @@ func schema_k8sio_api_core_v1_DaemonEndpoint(ref common.ReferenceCallback) commo
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "DaemonEndpoint contains information about a single Daemon endpoint.", Properties: map[string]spec.Schema{"Port": {SchemaProps: spec.SchemaProps{Description: "Port number of the given endpoint.", Type: []string{"integer"}, Format: "int32"}}}, Required: []string{"Port"}}}, Dependencies: []string{}}
 }
 func schema_k8sio_api_core_v1_DownwardAPIProjection(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -487,9 +623,13 @@ func schema_k8sio_api_core_v1_DownwardAPIVolumeFile(ref common.ReferenceCallback
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "DownwardAPIVolumeFile represents information to create the file containing the pod field", Properties: map[string]spec.Schema{"path": {SchemaProps: spec.SchemaProps{Description: "Required: Path is  the relative path name of the file to be created. Must not be absolute or contain the '..' path. Must be utf-8 encoded. The first item of the relative path must not start with '..'", Type: []string{"string"}, Format: ""}}, "fieldRef": {SchemaProps: spec.SchemaProps{Description: "Required: Selects a field of the pod: only annotations, labels, name and namespace are supported.", Ref: ref("k8s.io/api/core/v1.ObjectFieldSelector")}}, "resourceFieldRef": {SchemaProps: spec.SchemaProps{Description: "Selects a resource of the container: only resources limits and requests (limits.cpu, limits.memory, requests.cpu and requests.memory) are currently supported.", Ref: ref("k8s.io/api/core/v1.ResourceFieldSelector")}}, "mode": {SchemaProps: spec.SchemaProps{Description: "Optional: mode bits to use on this file, must be a value between 0 and 0777. If not specified, the volume defaultMode will be used. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.", Type: []string{"integer"}, Format: "int32"}}}, Required: []string{"path"}}}, Dependencies: []string{"k8s.io/api/core/v1.ObjectFieldSelector", "k8s.io/api/core/v1.ResourceFieldSelector"}}
 }
 func schema_k8sio_api_core_v1_DownwardAPIVolumeSource(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -501,9 +641,13 @@ func schema_k8sio_api_core_v1_EmptyDirVolumeSource(ref common.ReferenceCallback)
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "Represents an empty directory for a pod. Empty directory volumes support ownership management and SELinux relabeling.", Properties: map[string]spec.Schema{"medium": {SchemaProps: spec.SchemaProps{Description: "What type of storage medium should back this directory. The default is \"\" which means to use the node's default medium. Must be an empty string (default) or Memory. More info: https://kubernetes.io/docs/concepts/storage/volumes#emptydir", Type: []string{"string"}, Format: ""}}, "sizeLimit": {SchemaProps: spec.SchemaProps{Description: "Total amount of local storage required for this EmptyDir volume. The size limit is also applicable for memory medium. The maximum usage on memory medium EmptyDir would be the minimum value between the SizeLimit specified here and the sum of memory limits of all containers in a pod. The default is nil which means that the limit is undefined. More info: http://kubernetes.io/docs/user-guide/volumes#emptydir", Ref: ref("k8s.io/apimachinery/pkg/api/resource.Quantity")}}}}}, Dependencies: []string{"k8s.io/apimachinery/pkg/api/resource.Quantity"}}
 }
 func schema_k8sio_api_core_v1_EndpointAddress(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -515,9 +659,13 @@ func schema_k8sio_api_core_v1_EndpointPort(ref common.ReferenceCallback) common.
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "EndpointPort is a tuple that describes a single port.", Properties: map[string]spec.Schema{"name": {SchemaProps: spec.SchemaProps{Description: "The name of this port (corresponds to ServicePort.Name). Must be a DNS_LABEL. Optional only if one port is defined.", Type: []string{"string"}, Format: ""}}, "port": {SchemaProps: spec.SchemaProps{Description: "The port number of the endpoint.", Type: []string{"integer"}, Format: "int32"}}, "protocol": {SchemaProps: spec.SchemaProps{Description: "The IP protocol for this port. Must be UDP, TCP, or SCTP. Default is TCP.", Type: []string{"string"}, Format: ""}}}, Required: []string{"port"}}}, Dependencies: []string{}}
 }
 func schema_k8sio_api_core_v1_EndpointSubset(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -529,9 +677,13 @@ func schema_k8sio_api_core_v1_Endpoints(ref common.ReferenceCallback) common.Ope
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "Endpoints is a collection of endpoints that implement the actual service. Example:\n  Name: \"mysvc\",\n  Subsets: [\n    {\n      Addresses: [{\"ip\": \"10.10.1.1\"}, {\"ip\": \"10.10.2.2\"}],\n      Ports: [{\"name\": \"a\", \"port\": 8675}, {\"name\": \"b\", \"port\": 309}]\n    },\n    {\n      Addresses: [{\"ip\": \"10.10.3.3\"}],\n      Ports: [{\"name\": \"a\", \"port\": 93}, {\"name\": \"b\", \"port\": 76}]\n    },\n ]", Properties: map[string]spec.Schema{"kind": {SchemaProps: spec.SchemaProps{Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds", Type: []string{"string"}, Format: ""}}, "apiVersion": {SchemaProps: spec.SchemaProps{Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources", Type: []string{"string"}, Format: ""}}, "metadata": {SchemaProps: spec.SchemaProps{Description: "Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata", Ref: ref("k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta")}}, "subsets": {SchemaProps: spec.SchemaProps{Description: "The set of all endpoints is the union of all subsets. Addresses are placed into subsets according to the IPs they share. A single address with multiple ports, some of which are ready and some of which are not (because they come from different containers) will result in the address being displayed in different subsets for the different ports. No address will appear in both Addresses and NotReadyAddresses in the same subset. Sets of addresses and ports that comprise a service.", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Ref: ref("k8s.io/api/core/v1.EndpointSubset")}}}}}}}}, Dependencies: []string{"k8s.io/api/core/v1.EndpointSubset", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"}}
 }
 func schema_k8sio_api_core_v1_EndpointsList(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -543,9 +695,13 @@ func schema_k8sio_api_core_v1_EnvFromSource(ref common.ReferenceCallback) common
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "EnvFromSource represents the source of a set of ConfigMaps", Properties: map[string]spec.Schema{"prefix": {SchemaProps: spec.SchemaProps{Description: "An optional identifier to prepend to each key in the ConfigMap. Must be a C_IDENTIFIER.", Type: []string{"string"}, Format: ""}}, "configMapRef": {SchemaProps: spec.SchemaProps{Description: "The ConfigMap to select from", Ref: ref("k8s.io/api/core/v1.ConfigMapEnvSource")}}, "secretRef": {SchemaProps: spec.SchemaProps{Description: "The Secret to select from", Ref: ref("k8s.io/api/core/v1.SecretEnvSource")}}}}}, Dependencies: []string{"k8s.io/api/core/v1.ConfigMapEnvSource", "k8s.io/api/core/v1.SecretEnvSource"}}
 }
 func schema_k8sio_api_core_v1_EnvVar(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -557,9 +713,13 @@ func schema_k8sio_api_core_v1_EnvVarSource(ref common.ReferenceCallback) common.
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "EnvVarSource represents a source for the value of an EnvVar.", Properties: map[string]spec.Schema{"fieldRef": {SchemaProps: spec.SchemaProps{Description: "Selects a field of the pod: supports metadata.name, metadata.namespace, metadata.labels, metadata.annotations, spec.nodeName, spec.serviceAccountName, status.hostIP, status.podIP.", Ref: ref("k8s.io/api/core/v1.ObjectFieldSelector")}}, "resourceFieldRef": {SchemaProps: spec.SchemaProps{Description: "Selects a resource of the container: only resources limits and requests (limits.cpu, limits.memory, limits.ephemeral-storage, requests.cpu, requests.memory and requests.ephemeral-storage) are currently supported.", Ref: ref("k8s.io/api/core/v1.ResourceFieldSelector")}}, "configMapKeyRef": {SchemaProps: spec.SchemaProps{Description: "Selects a key of a ConfigMap.", Ref: ref("k8s.io/api/core/v1.ConfigMapKeySelector")}}, "secretKeyRef": {SchemaProps: spec.SchemaProps{Description: "Selects a key of a secret in the pod's namespace", Ref: ref("k8s.io/api/core/v1.SecretKeySelector")}}}}}, Dependencies: []string{"k8s.io/api/core/v1.ConfigMapKeySelector", "k8s.io/api/core/v1.ObjectFieldSelector", "k8s.io/api/core/v1.ResourceFieldSelector", "k8s.io/api/core/v1.SecretKeySelector"}}
 }
 func schema_k8sio_api_core_v1_Event(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -571,9 +731,13 @@ func schema_k8sio_api_core_v1_EventList(ref common.ReferenceCallback) common.Ope
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "EventList is a list of events.", Properties: map[string]spec.Schema{"kind": {SchemaProps: spec.SchemaProps{Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds", Type: []string{"string"}, Format: ""}}, "apiVersion": {SchemaProps: spec.SchemaProps{Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources", Type: []string{"string"}, Format: ""}}, "metadata": {SchemaProps: spec.SchemaProps{Description: "Standard list metadata. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds", Ref: ref("k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta")}}, "items": {SchemaProps: spec.SchemaProps{Description: "List of events", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Ref: ref("k8s.io/api/core/v1.Event")}}}}}}, Required: []string{"items"}}}, Dependencies: []string{"k8s.io/api/core/v1.Event", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"}}
 }
 func schema_k8sio_api_core_v1_EventSeries(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -585,9 +749,13 @@ func schema_k8sio_api_core_v1_EventSource(ref common.ReferenceCallback) common.O
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "EventSource contains information for an event.", Properties: map[string]spec.Schema{"component": {SchemaProps: spec.SchemaProps{Description: "Component from which the event is generated.", Type: []string{"string"}, Format: ""}}, "host": {SchemaProps: spec.SchemaProps{Description: "Node name on which the event is generated.", Type: []string{"string"}, Format: ""}}}}}, Dependencies: []string{}}
 }
 func schema_k8sio_api_core_v1_ExecAction(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -599,9 +767,13 @@ func schema_k8sio_api_core_v1_FCVolumeSource(ref common.ReferenceCallback) commo
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "Represents a Fibre Channel volume. Fibre Channel volumes can only be mounted as read/write once. Fibre Channel volumes support ownership management and SELinux relabeling.", Properties: map[string]spec.Schema{"targetWWNs": {SchemaProps: spec.SchemaProps{Description: "Optional: FC target worldwide names (WWNs)", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Type: []string{"string"}, Format: ""}}}}}, "lun": {SchemaProps: spec.SchemaProps{Description: "Optional: FC target lun number", Type: []string{"integer"}, Format: "int32"}}, "fsType": {SchemaProps: spec.SchemaProps{Description: "Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. \"ext4\", \"xfs\", \"ntfs\". Implicitly inferred to be \"ext4\" if unspecified.", Type: []string{"string"}, Format: ""}}, "readOnly": {SchemaProps: spec.SchemaProps{Description: "Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.", Type: []string{"boolean"}, Format: ""}}, "wwids": {SchemaProps: spec.SchemaProps{Description: "Optional: FC volume world wide identifiers (wwids) Either wwids or combination of targetWWNs and lun must be set, but not both simultaneously.", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Type: []string{"string"}, Format: ""}}}}}}}}, Dependencies: []string{}}
 }
 func schema_k8sio_api_core_v1_FlexPersistentVolumeSource(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -613,9 +785,13 @@ func schema_k8sio_api_core_v1_FlexVolumeSource(ref common.ReferenceCallback) com
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "FlexVolume represents a generic volume resource that is provisioned/attached using an exec based plugin.", Properties: map[string]spec.Schema{"driver": {SchemaProps: spec.SchemaProps{Description: "Driver is the name of the driver to use for this volume.", Type: []string{"string"}, Format: ""}}, "fsType": {SchemaProps: spec.SchemaProps{Description: "Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. \"ext4\", \"xfs\", \"ntfs\". The default filesystem depends on FlexVolume script.", Type: []string{"string"}, Format: ""}}, "secretRef": {SchemaProps: spec.SchemaProps{Description: "Optional: SecretRef is reference to the secret object containing sensitive information to pass to the plugin scripts. This may be empty if no secret object is specified. If the secret object contains more than one secret, all secrets are passed to the plugin scripts.", Ref: ref("k8s.io/api/core/v1.LocalObjectReference")}}, "readOnly": {SchemaProps: spec.SchemaProps{Description: "Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.", Type: []string{"boolean"}, Format: ""}}, "options": {SchemaProps: spec.SchemaProps{Description: "Optional: Extra command options if any.", Type: []string{"object"}, AdditionalProperties: &spec.SchemaOrBool{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Type: []string{"string"}, Format: ""}}}}}}, Required: []string{"driver"}}}, Dependencies: []string{"k8s.io/api/core/v1.LocalObjectReference"}}
 }
 func schema_k8sio_api_core_v1_FlockerVolumeSource(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -627,9 +803,13 @@ func schema_k8sio_api_core_v1_GCEPersistentDiskVolumeSource(ref common.Reference
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "Represents a Persistent Disk resource in Google Compute Engine.\n\nA GCE PD must exist before mounting to a container. The disk must also be in the same GCE project and zone as the kubelet. A GCE PD can only be mounted as read/write once or read-only many times. GCE PDs support ownership management and SELinux relabeling.", Properties: map[string]spec.Schema{"pdName": {SchemaProps: spec.SchemaProps{Description: "Unique name of the PD resource in GCE. Used to identify the disk in GCE. More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk", Type: []string{"string"}, Format: ""}}, "fsType": {SchemaProps: spec.SchemaProps{Description: "Filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: \"ext4\", \"xfs\", \"ntfs\". Implicitly inferred to be \"ext4\" if unspecified. More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk", Type: []string{"string"}, Format: ""}}, "partition": {SchemaProps: spec.SchemaProps{Description: "The partition in the volume that you want to mount. If omitted, the default is to mount by volume name. Examples: For volume /dev/sda1, you specify the partition as \"1\". Similarly, the volume partition for /dev/sda is \"0\" (or you can leave the property empty). More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk", Type: []string{"integer"}, Format: "int32"}}, "readOnly": {SchemaProps: spec.SchemaProps{Description: "ReadOnly here will force the ReadOnly setting in VolumeMounts. Defaults to false. More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk", Type: []string{"boolean"}, Format: ""}}}, Required: []string{"pdName"}}}, Dependencies: []string{}}
 }
 func schema_k8sio_api_core_v1_GitRepoVolumeSource(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -641,9 +821,13 @@ func schema_k8sio_api_core_v1_GlusterfsVolumeSource(ref common.ReferenceCallback
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "Represents a Glusterfs mount that lasts the lifetime of a pod. Glusterfs volumes do not support ownership management or SELinux relabeling.", Properties: map[string]spec.Schema{"endpoints": {SchemaProps: spec.SchemaProps{Description: "EndpointsName is the endpoint name that details Glusterfs topology. More info: https://releases.k8s.io/HEAD/examples/volumes/glusterfs/README.md#create-a-pod", Type: []string{"string"}, Format: ""}}, "path": {SchemaProps: spec.SchemaProps{Description: "Path is the Glusterfs volume path. More info: https://releases.k8s.io/HEAD/examples/volumes/glusterfs/README.md#create-a-pod", Type: []string{"string"}, Format: ""}}, "readOnly": {SchemaProps: spec.SchemaProps{Description: "ReadOnly here will force the Glusterfs volume to be mounted with read-only permissions. Defaults to false. More info: https://releases.k8s.io/HEAD/examples/volumes/glusterfs/README.md#create-a-pod", Type: []string{"boolean"}, Format: ""}}}, Required: []string{"endpoints", "path"}}}, Dependencies: []string{}}
 }
 func schema_k8sio_api_core_v1_HTTPGetAction(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -655,9 +839,13 @@ func schema_k8sio_api_core_v1_HTTPHeader(ref common.ReferenceCallback) common.Op
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "HTTPHeader describes a custom header to be used in HTTP probes", Properties: map[string]spec.Schema{"name": {SchemaProps: spec.SchemaProps{Description: "The header field name", Type: []string{"string"}, Format: ""}}, "value": {SchemaProps: spec.SchemaProps{Description: "The header field value", Type: []string{"string"}, Format: ""}}}, Required: []string{"name", "value"}}}, Dependencies: []string{}}
 }
 func schema_k8sio_api_core_v1_Handler(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -669,9 +857,13 @@ func schema_k8sio_api_core_v1_HostAlias(ref common.ReferenceCallback) common.Ope
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "HostAlias holds the mapping between IP and hostnames that will be injected as an entry in the pod's hosts file.", Properties: map[string]spec.Schema{"ip": {SchemaProps: spec.SchemaProps{Description: "IP address of the host file entry.", Type: []string{"string"}, Format: ""}}, "hostnames": {SchemaProps: spec.SchemaProps{Description: "Hostnames for the above IP address.", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Type: []string{"string"}, Format: ""}}}}}}}}, Dependencies: []string{}}
 }
 func schema_k8sio_api_core_v1_HostPathVolumeSource(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -683,9 +875,13 @@ func schema_k8sio_api_core_v1_ISCSIPersistentVolumeSource(ref common.ReferenceCa
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "ISCSIPersistentVolumeSource represents an ISCSI disk. ISCSI volumes can only be mounted as read/write once. ISCSI volumes support ownership management and SELinux relabeling.", Properties: map[string]spec.Schema{"targetPortal": {SchemaProps: spec.SchemaProps{Description: "iSCSI Target Portal. The Portal is either an IP or ip_addr:port if the port is other than default (typically TCP ports 860 and 3260).", Type: []string{"string"}, Format: ""}}, "iqn": {SchemaProps: spec.SchemaProps{Description: "Target iSCSI Qualified Name.", Type: []string{"string"}, Format: ""}}, "lun": {SchemaProps: spec.SchemaProps{Description: "iSCSI Target Lun number.", Type: []string{"integer"}, Format: "int32"}}, "iscsiInterface": {SchemaProps: spec.SchemaProps{Description: "iSCSI Interface Name that uses an iSCSI transport. Defaults to 'default' (tcp).", Type: []string{"string"}, Format: ""}}, "fsType": {SchemaProps: spec.SchemaProps{Description: "Filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: \"ext4\", \"xfs\", \"ntfs\". Implicitly inferred to be \"ext4\" if unspecified. More info: https://kubernetes.io/docs/concepts/storage/volumes#iscsi", Type: []string{"string"}, Format: ""}}, "readOnly": {SchemaProps: spec.SchemaProps{Description: "ReadOnly here will force the ReadOnly setting in VolumeMounts. Defaults to false.", Type: []string{"boolean"}, Format: ""}}, "portals": {SchemaProps: spec.SchemaProps{Description: "iSCSI Target Portal List. The Portal is either an IP or ip_addr:port if the port is other than default (typically TCP ports 860 and 3260).", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Type: []string{"string"}, Format: ""}}}}}, "chapAuthDiscovery": {SchemaProps: spec.SchemaProps{Description: "whether support iSCSI Discovery CHAP authentication", Type: []string{"boolean"}, Format: ""}}, "chapAuthSession": {SchemaProps: spec.SchemaProps{Description: "whether support iSCSI Session CHAP authentication", Type: []string{"boolean"}, Format: ""}}, "secretRef": {SchemaProps: spec.SchemaProps{Description: "CHAP Secret for iSCSI target and initiator authentication", Ref: ref("k8s.io/api/core/v1.SecretReference")}}, "initiatorName": {SchemaProps: spec.SchemaProps{Description: "Custom iSCSI Initiator Name. If initiatorName is specified with iscsiInterface simultaneously, new iSCSI interface <target portal>:<volume name> will be created for the connection.", Type: []string{"string"}, Format: ""}}}, Required: []string{"targetPortal", "iqn", "lun"}}}, Dependencies: []string{"k8s.io/api/core/v1.SecretReference"}}
 }
 func schema_k8sio_api_core_v1_ISCSIVolumeSource(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -697,9 +893,13 @@ func schema_k8sio_api_core_v1_KeyToPath(ref common.ReferenceCallback) common.Ope
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "Maps a string key to a path within a volume.", Properties: map[string]spec.Schema{"key": {SchemaProps: spec.SchemaProps{Description: "The key to project.", Type: []string{"string"}, Format: ""}}, "path": {SchemaProps: spec.SchemaProps{Description: "The relative path of the file to map the key to. May not be an absolute path. May not contain the path element '..'. May not start with the string '..'.", Type: []string{"string"}, Format: ""}}, "mode": {SchemaProps: spec.SchemaProps{Description: "Optional: mode bits to use on this file, must be a value between 0 and 0777. If not specified, the volume defaultMode will be used. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.", Type: []string{"integer"}, Format: "int32"}}}, Required: []string{"key", "path"}}}, Dependencies: []string{}}
 }
 func schema_k8sio_api_core_v1_Lifecycle(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -711,9 +911,13 @@ func schema_k8sio_api_core_v1_LimitRange(ref common.ReferenceCallback) common.Op
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "LimitRange sets resource usage limits for each kind of resource in a Namespace.", Properties: map[string]spec.Schema{"kind": {SchemaProps: spec.SchemaProps{Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds", Type: []string{"string"}, Format: ""}}, "apiVersion": {SchemaProps: spec.SchemaProps{Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources", Type: []string{"string"}, Format: ""}}, "metadata": {SchemaProps: spec.SchemaProps{Description: "Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata", Ref: ref("k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta")}}, "spec": {SchemaProps: spec.SchemaProps{Description: "Spec defines the limits enforced. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-status", Ref: ref("k8s.io/api/core/v1.LimitRangeSpec")}}}}}, Dependencies: []string{"k8s.io/api/core/v1.LimitRangeSpec", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"}}
 }
 func schema_k8sio_api_core_v1_LimitRangeItem(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -725,9 +929,13 @@ func schema_k8sio_api_core_v1_LimitRangeList(ref common.ReferenceCallback) commo
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "LimitRangeList is a list of LimitRange items.", Properties: map[string]spec.Schema{"kind": {SchemaProps: spec.SchemaProps{Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds", Type: []string{"string"}, Format: ""}}, "apiVersion": {SchemaProps: spec.SchemaProps{Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources", Type: []string{"string"}, Format: ""}}, "metadata": {SchemaProps: spec.SchemaProps{Description: "Standard list metadata. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds", Ref: ref("k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta")}}, "items": {SchemaProps: spec.SchemaProps{Description: "Items is a list of LimitRange objects. More info: https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Ref: ref("k8s.io/api/core/v1.LimitRange")}}}}}}, Required: []string{"items"}}}, Dependencies: []string{"k8s.io/api/core/v1.LimitRange", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"}}
 }
 func schema_k8sio_api_core_v1_LimitRangeSpec(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -739,9 +947,13 @@ func schema_k8sio_api_core_v1_List(ref common.ReferenceCallback) common.OpenAPID
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "List holds a list of objects, which may not be known by the server.", Properties: map[string]spec.Schema{"kind": {SchemaProps: spec.SchemaProps{Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds", Type: []string{"string"}, Format: ""}}, "apiVersion": {SchemaProps: spec.SchemaProps{Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources", Type: []string{"string"}, Format: ""}}, "metadata": {SchemaProps: spec.SchemaProps{Description: "Standard list metadata. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds", Ref: ref("k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta")}}, "items": {SchemaProps: spec.SchemaProps{Description: "List of objects", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Ref: ref("k8s.io/apimachinery/pkg/runtime.RawExtension")}}}}}}, Required: []string{"items"}}}, Dependencies: []string{"k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta", "k8s.io/apimachinery/pkg/runtime.RawExtension"}}
 }
 func schema_k8sio_api_core_v1_LoadBalancerIngress(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -753,9 +965,13 @@ func schema_k8sio_api_core_v1_LoadBalancerStatus(ref common.ReferenceCallback) c
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "LoadBalancerStatus represents the status of a load-balancer.", Properties: map[string]spec.Schema{"ingress": {SchemaProps: spec.SchemaProps{Description: "Ingress is a list containing ingress points for the load-balancer. Traffic intended for the service should be sent to these ingress points.", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Ref: ref("k8s.io/api/core/v1.LoadBalancerIngress")}}}}}}}}, Dependencies: []string{"k8s.io/api/core/v1.LoadBalancerIngress"}}
 }
 func schema_k8sio_api_core_v1_LocalObjectReference(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -767,9 +983,13 @@ func schema_k8sio_api_core_v1_LocalVolumeSource(ref common.ReferenceCallback) co
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "Local represents directly-attached storage with node affinity (Beta feature)", Properties: map[string]spec.Schema{"path": {SchemaProps: spec.SchemaProps{Description: "The full path to the volume on the node. It can be either a directory or block device (disk, partition, ...).", Type: []string{"string"}, Format: ""}}, "fsType": {SchemaProps: spec.SchemaProps{Description: "Filesystem type to mount. It applies only when the Path is a block device. Must be a filesystem type supported by the host operating system. Ex. \"ext4\", \"xfs\", \"ntfs\". The default value is to auto-select a fileystem if unspecified.", Type: []string{"string"}, Format: ""}}}, Required: []string{"path"}}}, Dependencies: []string{}}
 }
 func schema_k8sio_api_core_v1_NFSVolumeSource(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -781,9 +1001,13 @@ func schema_k8sio_api_core_v1_Namespace(ref common.ReferenceCallback) common.Ope
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "Namespace provides a scope for Names. Use of multiple namespaces is optional.", Properties: map[string]spec.Schema{"kind": {SchemaProps: spec.SchemaProps{Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds", Type: []string{"string"}, Format: ""}}, "apiVersion": {SchemaProps: spec.SchemaProps{Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources", Type: []string{"string"}, Format: ""}}, "metadata": {SchemaProps: spec.SchemaProps{Description: "Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata", Ref: ref("k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta")}}, "spec": {SchemaProps: spec.SchemaProps{Description: "Spec defines the behavior of the Namespace. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-status", Ref: ref("k8s.io/api/core/v1.NamespaceSpec")}}, "status": {SchemaProps: spec.SchemaProps{Description: "Status describes the current status of a Namespace. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-status", Ref: ref("k8s.io/api/core/v1.NamespaceStatus")}}}}}, Dependencies: []string{"k8s.io/api/core/v1.NamespaceSpec", "k8s.io/api/core/v1.NamespaceStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"}}
 }
 func schema_k8sio_api_core_v1_NamespaceList(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -795,9 +1019,13 @@ func schema_k8sio_api_core_v1_NamespaceSpec(ref common.ReferenceCallback) common
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "NamespaceSpec describes the attributes on a Namespace.", Properties: map[string]spec.Schema{"finalizers": {SchemaProps: spec.SchemaProps{Description: "Finalizers is an opaque list of values that must be empty to permanently remove object from storage. More info: https://kubernetes.io/docs/tasks/administer-cluster/namespaces/", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Type: []string{"string"}, Format: ""}}}}}}}}, Dependencies: []string{}}
 }
 func schema_k8sio_api_core_v1_NamespaceStatus(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -809,9 +1037,13 @@ func schema_k8sio_api_core_v1_Node(ref common.ReferenceCallback) common.OpenAPID
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "Node is a worker node in Kubernetes. Each node will have a unique identifier in the cache (i.e. in etcd).", Properties: map[string]spec.Schema{"kind": {SchemaProps: spec.SchemaProps{Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds", Type: []string{"string"}, Format: ""}}, "apiVersion": {SchemaProps: spec.SchemaProps{Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources", Type: []string{"string"}, Format: ""}}, "metadata": {SchemaProps: spec.SchemaProps{Description: "Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata", Ref: ref("k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta")}}, "spec": {SchemaProps: spec.SchemaProps{Description: "Spec defines the behavior of a node. https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-status", Ref: ref("k8s.io/api/core/v1.NodeSpec")}}, "status": {SchemaProps: spec.SchemaProps{Description: "Most recently observed status of the node. Populated by the system. Read-only. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-status", Ref: ref("k8s.io/api/core/v1.NodeStatus")}}}}}, Dependencies: []string{"k8s.io/api/core/v1.NodeSpec", "k8s.io/api/core/v1.NodeStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"}}
 }
 func schema_k8sio_api_core_v1_NodeAddress(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -823,9 +1055,13 @@ func schema_k8sio_api_core_v1_NodeAffinity(ref common.ReferenceCallback) common.
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "Node affinity is a group of node affinity scheduling rules.", Properties: map[string]spec.Schema{"requiredDuringSchedulingIgnoredDuringExecution": {SchemaProps: spec.SchemaProps{Description: "If the affinity requirements specified by this field are not met at scheduling time, the pod will not be scheduled onto the node. If the affinity requirements specified by this field cease to be met at some point during pod execution (e.g. due to an update), the system may or may not try to eventually evict the pod from its node.", Ref: ref("k8s.io/api/core/v1.NodeSelector")}}, "preferredDuringSchedulingIgnoredDuringExecution": {SchemaProps: spec.SchemaProps{Description: "The scheduler will prefer to schedule pods to nodes that satisfy the affinity expressions specified by this field, but it may choose a node that violates one or more of the expressions. The node that is most preferred is the one with the greatest sum of weights, i.e. for each node that meets all of the scheduling requirements (resource request, requiredDuringScheduling affinity expressions, etc.), compute a sum by iterating through the elements of this field and adding \"weight\" to the sum if the node matches the corresponding matchExpressions; the node(s) with the highest sum are the most preferred.", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Ref: ref("k8s.io/api/core/v1.PreferredSchedulingTerm")}}}}}}}}, Dependencies: []string{"k8s.io/api/core/v1.NodeSelector", "k8s.io/api/core/v1.PreferredSchedulingTerm"}}
 }
 func schema_k8sio_api_core_v1_NodeCondition(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -837,9 +1073,13 @@ func schema_k8sio_api_core_v1_NodeConfigSource(ref common.ReferenceCallback) com
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "NodeConfigSource specifies a source of node configuration. Exactly one subfield (excluding metadata) must be non-nil.", Properties: map[string]spec.Schema{"configMap": {SchemaProps: spec.SchemaProps{Description: "ConfigMap is a reference to a Node's ConfigMap", Ref: ref("k8s.io/api/core/v1.ConfigMapNodeConfigSource")}}}}}, Dependencies: []string{"k8s.io/api/core/v1.ConfigMapNodeConfigSource"}}
 }
 func schema_k8sio_api_core_v1_NodeConfigStatus(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -851,9 +1091,13 @@ func schema_k8sio_api_core_v1_NodeDaemonEndpoints(ref common.ReferenceCallback) 
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "NodeDaemonEndpoints lists ports opened by daemons running on the Node.", Properties: map[string]spec.Schema{"kubeletEndpoint": {SchemaProps: spec.SchemaProps{Description: "Endpoint on which Kubelet is listening.", Ref: ref("k8s.io/api/core/v1.DaemonEndpoint")}}}}}, Dependencies: []string{"k8s.io/api/core/v1.DaemonEndpoint"}}
 }
 func schema_k8sio_api_core_v1_NodeList(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -865,9 +1109,13 @@ func schema_k8sio_api_core_v1_NodeProxyOptions(ref common.ReferenceCallback) com
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "NodeProxyOptions is the query options to a Node's proxy call.", Properties: map[string]spec.Schema{"kind": {SchemaProps: spec.SchemaProps{Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds", Type: []string{"string"}, Format: ""}}, "apiVersion": {SchemaProps: spec.SchemaProps{Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources", Type: []string{"string"}, Format: ""}}, "path": {SchemaProps: spec.SchemaProps{Description: "Path is the URL path to use for the current proxy request to node.", Type: []string{"string"}, Format: ""}}}}}, Dependencies: []string{}}
 }
 func schema_k8sio_api_core_v1_NodeResources(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -879,9 +1127,13 @@ func schema_k8sio_api_core_v1_NodeSelector(ref common.ReferenceCallback) common.
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "A node selector represents the union of the results of one or more label queries over a set of nodes; that is, it represents the OR of the selectors represented by the node selector terms.", Properties: map[string]spec.Schema{"nodeSelectorTerms": {SchemaProps: spec.SchemaProps{Description: "Required. A list of node selector terms. The terms are ORed.", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Ref: ref("k8s.io/api/core/v1.NodeSelectorTerm")}}}}}}, Required: []string{"nodeSelectorTerms"}}}, Dependencies: []string{"k8s.io/api/core/v1.NodeSelectorTerm"}}
 }
 func schema_k8sio_api_core_v1_NodeSelectorRequirement(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -893,9 +1145,13 @@ func schema_k8sio_api_core_v1_NodeSelectorTerm(ref common.ReferenceCallback) com
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "A null or empty node selector term matches no objects. The requirements of them are ANDed. The TopologySelectorTerm type implements a subset of the NodeSelectorTerm.", Properties: map[string]spec.Schema{"matchExpressions": {SchemaProps: spec.SchemaProps{Description: "A list of node selector requirements by node's labels.", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Ref: ref("k8s.io/api/core/v1.NodeSelectorRequirement")}}}}}, "matchFields": {SchemaProps: spec.SchemaProps{Description: "A list of node selector requirements by node's fields.", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Ref: ref("k8s.io/api/core/v1.NodeSelectorRequirement")}}}}}}}}, Dependencies: []string{"k8s.io/api/core/v1.NodeSelectorRequirement"}}
 }
 func schema_k8sio_api_core_v1_NodeSpec(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -907,9 +1163,13 @@ func schema_k8sio_api_core_v1_NodeStatus(ref common.ReferenceCallback) common.Op
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "NodeStatus is information about the current status of a node.", Properties: map[string]spec.Schema{"capacity": {SchemaProps: spec.SchemaProps{Description: "Capacity represents the total resources of a node. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#capacity", Type: []string{"object"}, AdditionalProperties: &spec.SchemaOrBool{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Ref: ref("k8s.io/apimachinery/pkg/api/resource.Quantity")}}}}}, "allocatable": {SchemaProps: spec.SchemaProps{Description: "Allocatable represents the resources of a node that are available for scheduling. Defaults to Capacity.", Type: []string{"object"}, AdditionalProperties: &spec.SchemaOrBool{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Ref: ref("k8s.io/apimachinery/pkg/api/resource.Quantity")}}}}}, "phase": {SchemaProps: spec.SchemaProps{Description: "NodePhase is the recently observed lifecycle phase of the node. More info: https://kubernetes.io/docs/concepts/nodes/node/#phase The field is never populated, and now is deprecated.", Type: []string{"string"}, Format: ""}}, "conditions": {VendorExtensible: spec.VendorExtensible{Extensions: spec.Extensions{"x-kubernetes-patch-merge-key": "type", "x-kubernetes-patch-strategy": "merge"}}, SchemaProps: spec.SchemaProps{Description: "Conditions is an array of current observed node conditions. More info: https://kubernetes.io/docs/concepts/nodes/node/#condition", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Ref: ref("k8s.io/api/core/v1.NodeCondition")}}}}}, "addresses": {VendorExtensible: spec.VendorExtensible{Extensions: spec.Extensions{"x-kubernetes-patch-merge-key": "type", "x-kubernetes-patch-strategy": "merge"}}, SchemaProps: spec.SchemaProps{Description: "List of addresses reachable to the node. Queried from cloud provider, if available. More info: https://kubernetes.io/docs/concepts/nodes/node/#addresses", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Ref: ref("k8s.io/api/core/v1.NodeAddress")}}}}}, "daemonEndpoints": {SchemaProps: spec.SchemaProps{Description: "Endpoints of daemons running on the Node.", Ref: ref("k8s.io/api/core/v1.NodeDaemonEndpoints")}}, "nodeInfo": {SchemaProps: spec.SchemaProps{Description: "Set of ids/uuids to uniquely identify the node. More info: https://kubernetes.io/docs/concepts/nodes/node/#info", Ref: ref("k8s.io/api/core/v1.NodeSystemInfo")}}, "images": {SchemaProps: spec.SchemaProps{Description: "List of container images on this node", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Ref: ref("k8s.io/api/core/v1.ContainerImage")}}}}}, "volumesInUse": {SchemaProps: spec.SchemaProps{Description: "List of attachable volumes in use (mounted) by the node.", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Type: []string{"string"}, Format: ""}}}}}, "volumesAttached": {SchemaProps: spec.SchemaProps{Description: "List of volumes that are attached to the node.", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Ref: ref("k8s.io/api/core/v1.AttachedVolume")}}}}}, "config": {SchemaProps: spec.SchemaProps{Description: "Status of the config assigned to the node via the dynamic Kubelet config feature.", Ref: ref("k8s.io/api/core/v1.NodeConfigStatus")}}}}}, Dependencies: []string{"k8s.io/api/core/v1.AttachedVolume", "k8s.io/api/core/v1.ContainerImage", "k8s.io/api/core/v1.NodeAddress", "k8s.io/api/core/v1.NodeCondition", "k8s.io/api/core/v1.NodeConfigStatus", "k8s.io/api/core/v1.NodeDaemonEndpoints", "k8s.io/api/core/v1.NodeSystemInfo", "k8s.io/apimachinery/pkg/api/resource.Quantity"}}
 }
 func schema_k8sio_api_core_v1_NodeSystemInfo(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -921,9 +1181,13 @@ func schema_k8sio_api_core_v1_ObjectFieldSelector(ref common.ReferenceCallback) 
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "ObjectFieldSelector selects an APIVersioned field of an object.", Properties: map[string]spec.Schema{"apiVersion": {SchemaProps: spec.SchemaProps{Description: "Version of the schema the FieldPath is written in terms of, defaults to \"v1\".", Type: []string{"string"}, Format: ""}}, "fieldPath": {SchemaProps: spec.SchemaProps{Description: "Path of the field to select in the specified API version.", Type: []string{"string"}, Format: ""}}}, Required: []string{"fieldPath"}}}, Dependencies: []string{}}
 }
 func schema_k8sio_api_core_v1_ObjectReference(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -935,9 +1199,13 @@ func schema_k8sio_api_core_v1_PersistentVolume(ref common.ReferenceCallback) com
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "PersistentVolume (PV) is a storage resource provisioned by an administrator. It is analogous to a node. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes", Properties: map[string]spec.Schema{"kind": {SchemaProps: spec.SchemaProps{Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds", Type: []string{"string"}, Format: ""}}, "apiVersion": {SchemaProps: spec.SchemaProps{Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources", Type: []string{"string"}, Format: ""}}, "metadata": {SchemaProps: spec.SchemaProps{Description: "Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata", Ref: ref("k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta")}}, "spec": {SchemaProps: spec.SchemaProps{Description: "Spec defines a specification of a persistent volume owned by the cluster. Provisioned by an administrator. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistent-volumes", Ref: ref("k8s.io/api/core/v1.PersistentVolumeSpec")}}, "status": {SchemaProps: spec.SchemaProps{Description: "Status represents the current information/status for the persistent volume. Populated by the system. Read-only. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistent-volumes", Ref: ref("k8s.io/api/core/v1.PersistentVolumeStatus")}}}}}, Dependencies: []string{"k8s.io/api/core/v1.PersistentVolumeSpec", "k8s.io/api/core/v1.PersistentVolumeStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"}}
 }
 func schema_k8sio_api_core_v1_PersistentVolumeClaim(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -949,9 +1217,13 @@ func schema_k8sio_api_core_v1_PersistentVolumeClaimCondition(ref common.Referenc
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "PersistentVolumeClaimCondition contails details about state of pvc", Properties: map[string]spec.Schema{"type": {SchemaProps: spec.SchemaProps{Type: []string{"string"}, Format: ""}}, "status": {SchemaProps: spec.SchemaProps{Type: []string{"string"}, Format: ""}}, "lastProbeTime": {SchemaProps: spec.SchemaProps{Description: "Last time we probed the condition.", Ref: ref("k8s.io/apimachinery/pkg/apis/meta/v1.Time")}}, "lastTransitionTime": {SchemaProps: spec.SchemaProps{Description: "Last time the condition transitioned from one status to another.", Ref: ref("k8s.io/apimachinery/pkg/apis/meta/v1.Time")}}, "reason": {SchemaProps: spec.SchemaProps{Description: "Unique, this should be a short, machine understandable string that gives the reason for condition's last transition. If it reports \"ResizeStarted\" that means the underlying persistent volume is being resized.", Type: []string{"string"}, Format: ""}}, "message": {SchemaProps: spec.SchemaProps{Description: "Human-readable message indicating details about last transition.", Type: []string{"string"}, Format: ""}}}, Required: []string{"type", "status"}}}, Dependencies: []string{"k8s.io/apimachinery/pkg/apis/meta/v1.Time"}}
 }
 func schema_k8sio_api_core_v1_PersistentVolumeClaimList(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -963,9 +1235,13 @@ func schema_k8sio_api_core_v1_PersistentVolumeClaimSpec(ref common.ReferenceCall
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "PersistentVolumeClaimSpec describes the common attributes of storage devices and allows a Source for provider-specific attributes", Properties: map[string]spec.Schema{"accessModes": {SchemaProps: spec.SchemaProps{Description: "AccessModes contains the desired access modes the volume should have. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes-1", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Type: []string{"string"}, Format: ""}}}}}, "selector": {SchemaProps: spec.SchemaProps{Description: "A label query over volumes to consider for binding.", Ref: ref("k8s.io/apimachinery/pkg/apis/meta/v1.LabelSelector")}}, "resources": {SchemaProps: spec.SchemaProps{Description: "Resources represents the minimum resources the volume should have. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources", Ref: ref("k8s.io/api/core/v1.ResourceRequirements")}}, "volumeName": {SchemaProps: spec.SchemaProps{Description: "VolumeName is the binding reference to the PersistentVolume backing this claim.", Type: []string{"string"}, Format: ""}}, "storageClassName": {SchemaProps: spec.SchemaProps{Description: "Name of the StorageClass required by the claim. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#class-1", Type: []string{"string"}, Format: ""}}, "volumeMode": {SchemaProps: spec.SchemaProps{Description: "volumeMode defines what type of volume is required by the claim. Value of Filesystem is implied when not included in claim spec. This is an alpha feature and may change in the future.", Type: []string{"string"}, Format: ""}}, "dataSource": {SchemaProps: spec.SchemaProps{Description: "This field requires the VolumeSnapshotDataSource alpha feature gate to be enabled and currently VolumeSnapshot is the only supported data source. If the provisioner can support VolumeSnapshot data source, it will create a new volume and data will be restored to the volume at the same time. If the provisioner does not support VolumeSnapshot data source, volume will not be created and the failure will be reported as an event. In the future, we plan to support more data source types and the behavior of the provisioner may change.", Ref: ref("k8s.io/api/core/v1.TypedLocalObjectReference")}}}}}, Dependencies: []string{"k8s.io/api/core/v1.ResourceRequirements", "k8s.io/api/core/v1.TypedLocalObjectReference", "k8s.io/apimachinery/pkg/apis/meta/v1.LabelSelector"}}
 }
 func schema_k8sio_api_core_v1_PersistentVolumeClaimStatus(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -977,9 +1253,13 @@ func schema_k8sio_api_core_v1_PersistentVolumeClaimVolumeSource(ref common.Refer
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "PersistentVolumeClaimVolumeSource references the user's PVC in the same namespace. This volume finds the bound PV and mounts that volume for the pod. A PersistentVolumeClaimVolumeSource is, essentially, a wrapper around another type of volume that is owned by someone else (the system).", Properties: map[string]spec.Schema{"claimName": {SchemaProps: spec.SchemaProps{Description: "ClaimName is the name of a PersistentVolumeClaim in the same namespace as the pod using this volume. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims", Type: []string{"string"}, Format: ""}}, "readOnly": {SchemaProps: spec.SchemaProps{Description: "Will force the ReadOnly setting in VolumeMounts. Default false.", Type: []string{"boolean"}, Format: ""}}}, Required: []string{"claimName"}}}, Dependencies: []string{}}
 }
 func schema_k8sio_api_core_v1_PersistentVolumeList(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -991,9 +1271,13 @@ func schema_k8sio_api_core_v1_PersistentVolumeSource(ref common.ReferenceCallbac
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "PersistentVolumeSource is similar to VolumeSource but meant for the administrator who creates PVs. Exactly one of its members must be set.", Properties: map[string]spec.Schema{"gcePersistentDisk": {SchemaProps: spec.SchemaProps{Description: "GCEPersistentDisk represents a GCE Disk resource that is attached to a kubelet's host machine and then exposed to the pod. Provisioned by an admin. More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk", Ref: ref("k8s.io/api/core/v1.GCEPersistentDiskVolumeSource")}}, "awsElasticBlockStore": {SchemaProps: spec.SchemaProps{Description: "AWSElasticBlockStore represents an AWS Disk resource that is attached to a kubelet's host machine and then exposed to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore", Ref: ref("k8s.io/api/core/v1.AWSElasticBlockStoreVolumeSource")}}, "hostPath": {SchemaProps: spec.SchemaProps{Description: "HostPath represents a directory on the host. Provisioned by a developer or tester. This is useful for single-node development and testing only! On-host storage is not supported in any way and WILL NOT WORK in a multi-node cluster. More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath", Ref: ref("k8s.io/api/core/v1.HostPathVolumeSource")}}, "glusterfs": {SchemaProps: spec.SchemaProps{Description: "Glusterfs represents a Glusterfs volume that is attached to a host and exposed to the pod. Provisioned by an admin. More info: https://releases.k8s.io/HEAD/examples/volumes/glusterfs/README.md", Ref: ref("k8s.io/api/core/v1.GlusterfsVolumeSource")}}, "nfs": {SchemaProps: spec.SchemaProps{Description: "NFS represents an NFS mount on the host. Provisioned by an admin. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs", Ref: ref("k8s.io/api/core/v1.NFSVolumeSource")}}, "rbd": {SchemaProps: spec.SchemaProps{Description: "RBD represents a Rados Block Device mount on the host that shares a pod's lifetime. More info: https://releases.k8s.io/HEAD/examples/volumes/rbd/README.md", Ref: ref("k8s.io/api/core/v1.RBDPersistentVolumeSource")}}, "iscsi": {SchemaProps: spec.SchemaProps{Description: "ISCSI represents an ISCSI Disk resource that is attached to a kubelet's host machine and then exposed to the pod. Provisioned by an admin.", Ref: ref("k8s.io/api/core/v1.ISCSIPersistentVolumeSource")}}, "cinder": {SchemaProps: spec.SchemaProps{Description: "Cinder represents a cinder volume attached and mounted on kubelets host machine More info: https://releases.k8s.io/HEAD/examples/mysql-cinder-pd/README.md", Ref: ref("k8s.io/api/core/v1.CinderPersistentVolumeSource")}}, "cephfs": {SchemaProps: spec.SchemaProps{Description: "CephFS represents a Ceph FS mount on the host that shares a pod's lifetime", Ref: ref("k8s.io/api/core/v1.CephFSPersistentVolumeSource")}}, "fc": {SchemaProps: spec.SchemaProps{Description: "FC represents a Fibre Channel resource that is attached to a kubelet's host machine and then exposed to the pod.", Ref: ref("k8s.io/api/core/v1.FCVolumeSource")}}, "flocker": {SchemaProps: spec.SchemaProps{Description: "Flocker represents a Flocker volume attached to a kubelet's host machine and exposed to the pod for its usage. This depends on the Flocker control service being running", Ref: ref("k8s.io/api/core/v1.FlockerVolumeSource")}}, "flexVolume": {SchemaProps: spec.SchemaProps{Description: "FlexVolume represents a generic volume resource that is provisioned/attached using an exec based plugin.", Ref: ref("k8s.io/api/core/v1.FlexPersistentVolumeSource")}}, "azureFile": {SchemaProps: spec.SchemaProps{Description: "AzureFile represents an Azure File Service mount on the host and bind mount to the pod.", Ref: ref("k8s.io/api/core/v1.AzureFilePersistentVolumeSource")}}, "vsphereVolume": {SchemaProps: spec.SchemaProps{Description: "VsphereVolume represents a vSphere volume attached and mounted on kubelets host machine", Ref: ref("k8s.io/api/core/v1.VsphereVirtualDiskVolumeSource")}}, "quobyte": {SchemaProps: spec.SchemaProps{Description: "Quobyte represents a Quobyte mount on the host that shares a pod's lifetime", Ref: ref("k8s.io/api/core/v1.QuobyteVolumeSource")}}, "azureDisk": {SchemaProps: spec.SchemaProps{Description: "AzureDisk represents an Azure Data Disk mount on the host and bind mount to the pod.", Ref: ref("k8s.io/api/core/v1.AzureDiskVolumeSource")}}, "photonPersistentDisk": {SchemaProps: spec.SchemaProps{Description: "PhotonPersistentDisk represents a PhotonController persistent disk attached and mounted on kubelets host machine", Ref: ref("k8s.io/api/core/v1.PhotonPersistentDiskVolumeSource")}}, "portworxVolume": {SchemaProps: spec.SchemaProps{Description: "PortworxVolume represents a portworx volume attached and mounted on kubelets host machine", Ref: ref("k8s.io/api/core/v1.PortworxVolumeSource")}}, "scaleIO": {SchemaProps: spec.SchemaProps{Description: "ScaleIO represents a ScaleIO persistent volume attached and mounted on Kubernetes nodes.", Ref: ref("k8s.io/api/core/v1.ScaleIOPersistentVolumeSource")}}, "local": {SchemaProps: spec.SchemaProps{Description: "Local represents directly-attached storage with node affinity", Ref: ref("k8s.io/api/core/v1.LocalVolumeSource")}}, "storageos": {SchemaProps: spec.SchemaProps{Description: "StorageOS represents a StorageOS volume that is attached to the kubelet's host machine and mounted into the pod More info: https://releases.k8s.io/HEAD/examples/volumes/storageos/README.md", Ref: ref("k8s.io/api/core/v1.StorageOSPersistentVolumeSource")}}, "csi": {SchemaProps: spec.SchemaProps{Description: "CSI represents storage that handled by an external CSI driver (Beta feature).", Ref: ref("k8s.io/api/core/v1.CSIPersistentVolumeSource")}}}}}, Dependencies: []string{"k8s.io/api/core/v1.AWSElasticBlockStoreVolumeSource", "k8s.io/api/core/v1.AzureDiskVolumeSource", "k8s.io/api/core/v1.AzureFilePersistentVolumeSource", "k8s.io/api/core/v1.CSIPersistentVolumeSource", "k8s.io/api/core/v1.CephFSPersistentVolumeSource", "k8s.io/api/core/v1.CinderPersistentVolumeSource", "k8s.io/api/core/v1.FCVolumeSource", "k8s.io/api/core/v1.FlexPersistentVolumeSource", "k8s.io/api/core/v1.FlockerVolumeSource", "k8s.io/api/core/v1.GCEPersistentDiskVolumeSource", "k8s.io/api/core/v1.GlusterfsVolumeSource", "k8s.io/api/core/v1.HostPathVolumeSource", "k8s.io/api/core/v1.ISCSIPersistentVolumeSource", "k8s.io/api/core/v1.LocalVolumeSource", "k8s.io/api/core/v1.NFSVolumeSource", "k8s.io/api/core/v1.PhotonPersistentDiskVolumeSource", "k8s.io/api/core/v1.PortworxVolumeSource", "k8s.io/api/core/v1.QuobyteVolumeSource", "k8s.io/api/core/v1.RBDPersistentVolumeSource", "k8s.io/api/core/v1.ScaleIOPersistentVolumeSource", "k8s.io/api/core/v1.StorageOSPersistentVolumeSource", "k8s.io/api/core/v1.VsphereVirtualDiskVolumeSource"}}
 }
 func schema_k8sio_api_core_v1_PersistentVolumeSpec(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -1005,9 +1289,13 @@ func schema_k8sio_api_core_v1_PersistentVolumeStatus(ref common.ReferenceCallbac
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "PersistentVolumeStatus is the current status of a persistent volume.", Properties: map[string]spec.Schema{"phase": {SchemaProps: spec.SchemaProps{Description: "Phase indicates if a volume is available, bound to a claim, or released by a claim. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#phase", Type: []string{"string"}, Format: ""}}, "message": {SchemaProps: spec.SchemaProps{Description: "A human-readable message indicating details about why the volume is in this state.", Type: []string{"string"}, Format: ""}}, "reason": {SchemaProps: spec.SchemaProps{Description: "Reason is a brief CamelCase string that describes any failure and is meant for machine parsing and tidy display in the CLI.", Type: []string{"string"}, Format: ""}}}}}, Dependencies: []string{}}
 }
 func schema_k8sio_api_core_v1_PhotonPersistentDiskVolumeSource(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -1019,9 +1307,13 @@ func schema_k8sio_api_core_v1_Pod(ref common.ReferenceCallback) common.OpenAPIDe
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "Pod is a collection of containers that can run on a host. This resource is created by clients and scheduled onto hosts.", Properties: map[string]spec.Schema{"kind": {SchemaProps: spec.SchemaProps{Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds", Type: []string{"string"}, Format: ""}}, "apiVersion": {SchemaProps: spec.SchemaProps{Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources", Type: []string{"string"}, Format: ""}}, "metadata": {SchemaProps: spec.SchemaProps{Description: "Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata", Ref: ref("k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta")}}, "spec": {SchemaProps: spec.SchemaProps{Description: "Specification of the desired behavior of the pod. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-status", Ref: ref("k8s.io/api/core/v1.PodSpec")}}, "status": {SchemaProps: spec.SchemaProps{Description: "Most recently observed status of the pod. This data may not be up to date. Populated by the system. Read-only. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-status", Ref: ref("k8s.io/api/core/v1.PodStatus")}}}}}, Dependencies: []string{"k8s.io/api/core/v1.PodSpec", "k8s.io/api/core/v1.PodStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"}}
 }
 func schema_k8sio_api_core_v1_PodAffinity(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -1033,9 +1325,13 @@ func schema_k8sio_api_core_v1_PodAffinityTerm(ref common.ReferenceCallback) comm
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "Defines a set of pods (namely those matching the labelSelector relative to the given namespace(s)) that this pod should be co-located (affinity) or not co-located (anti-affinity) with, where co-located is defined as running on a node whose value of the label with key <topologyKey> matches that of any node on which a pod of the set of pods is running", Properties: map[string]spec.Schema{"labelSelector": {SchemaProps: spec.SchemaProps{Description: "A label query over a set of resources, in this case pods.", Ref: ref("k8s.io/apimachinery/pkg/apis/meta/v1.LabelSelector")}}, "namespaces": {SchemaProps: spec.SchemaProps{Description: "namespaces specifies which namespaces the labelSelector applies to (matches against); null or empty list means \"this pod's namespace\"", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Type: []string{"string"}, Format: ""}}}}}, "topologyKey": {SchemaProps: spec.SchemaProps{Description: "This pod should be co-located (affinity) or not co-located (anti-affinity) with the pods matching the labelSelector in the specified namespaces, where co-located is defined as running on a node whose value of the label with key topologyKey matches that of any node on which any of the selected pods is running. Empty topologyKey is not allowed.", Type: []string{"string"}, Format: ""}}}, Required: []string{"topologyKey"}}}, Dependencies: []string{"k8s.io/apimachinery/pkg/apis/meta/v1.LabelSelector"}}
 }
 func schema_k8sio_api_core_v1_PodAntiAffinity(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -1047,9 +1343,13 @@ func schema_k8sio_api_core_v1_PodAttachOptions(ref common.ReferenceCallback) com
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "PodAttachOptions is the query options to a Pod's remote attach call.", Properties: map[string]spec.Schema{"kind": {SchemaProps: spec.SchemaProps{Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds", Type: []string{"string"}, Format: ""}}, "apiVersion": {SchemaProps: spec.SchemaProps{Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources", Type: []string{"string"}, Format: ""}}, "stdin": {SchemaProps: spec.SchemaProps{Description: "Stdin if true, redirects the standard input stream of the pod for this call. Defaults to false.", Type: []string{"boolean"}, Format: ""}}, "stdout": {SchemaProps: spec.SchemaProps{Description: "Stdout if true indicates that stdout is to be redirected for the attach call. Defaults to true.", Type: []string{"boolean"}, Format: ""}}, "stderr": {SchemaProps: spec.SchemaProps{Description: "Stderr if true indicates that stderr is to be redirected for the attach call. Defaults to true.", Type: []string{"boolean"}, Format: ""}}, "tty": {SchemaProps: spec.SchemaProps{Description: "TTY if true indicates that a tty will be allocated for the attach call. This is passed through the container runtime so the tty is allocated on the worker node by the container runtime. Defaults to false.", Type: []string{"boolean"}, Format: ""}}, "container": {SchemaProps: spec.SchemaProps{Description: "The container in which to execute the command. Defaults to only container if there is only one container in the pod.", Type: []string{"string"}, Format: ""}}}}}, Dependencies: []string{}}
 }
 func schema_k8sio_api_core_v1_PodCondition(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -1061,9 +1361,13 @@ func schema_k8sio_api_core_v1_PodDNSConfig(ref common.ReferenceCallback) common.
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "PodDNSConfig defines the DNS parameters of a pod in addition to those generated from DNSPolicy.", Properties: map[string]spec.Schema{"nameservers": {SchemaProps: spec.SchemaProps{Description: "A list of DNS name server IP addresses. This will be appended to the base nameservers generated from DNSPolicy. Duplicated nameservers will be removed.", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Type: []string{"string"}, Format: ""}}}}}, "searches": {SchemaProps: spec.SchemaProps{Description: "A list of DNS search domains for host-name lookup. This will be appended to the base search paths generated from DNSPolicy. Duplicated search paths will be removed.", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Type: []string{"string"}, Format: ""}}}}}, "options": {SchemaProps: spec.SchemaProps{Description: "A list of DNS resolver options. This will be merged with the base options generated from DNSPolicy. Duplicated entries will be removed. Resolution options given in Options will override those that appear in the base DNSPolicy.", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Ref: ref("k8s.io/api/core/v1.PodDNSConfigOption")}}}}}}}}, Dependencies: []string{"k8s.io/api/core/v1.PodDNSConfigOption"}}
 }
 func schema_k8sio_api_core_v1_PodDNSConfigOption(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -1075,9 +1379,13 @@ func schema_k8sio_api_core_v1_PodExecOptions(ref common.ReferenceCallback) commo
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "PodExecOptions is the query options to a Pod's remote exec call.", Properties: map[string]spec.Schema{"kind": {SchemaProps: spec.SchemaProps{Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds", Type: []string{"string"}, Format: ""}}, "apiVersion": {SchemaProps: spec.SchemaProps{Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources", Type: []string{"string"}, Format: ""}}, "stdin": {SchemaProps: spec.SchemaProps{Description: "Redirect the standard input stream of the pod for this call. Defaults to false.", Type: []string{"boolean"}, Format: ""}}, "stdout": {SchemaProps: spec.SchemaProps{Description: "Redirect the standard output stream of the pod for this call. Defaults to true.", Type: []string{"boolean"}, Format: ""}}, "stderr": {SchemaProps: spec.SchemaProps{Description: "Redirect the standard error stream of the pod for this call. Defaults to true.", Type: []string{"boolean"}, Format: ""}}, "tty": {SchemaProps: spec.SchemaProps{Description: "TTY if true indicates that a tty will be allocated for the exec call. Defaults to false.", Type: []string{"boolean"}, Format: ""}}, "container": {SchemaProps: spec.SchemaProps{Description: "Container in which to execute the command. Defaults to only container if there is only one container in the pod.", Type: []string{"string"}, Format: ""}}, "command": {SchemaProps: spec.SchemaProps{Description: "Command is the remote command to execute. argv array. Not executed within a shell.", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Type: []string{"string"}, Format: ""}}}}}}, Required: []string{"command"}}}, Dependencies: []string{}}
 }
 func schema_k8sio_api_core_v1_PodList(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -1089,9 +1397,13 @@ func schema_k8sio_api_core_v1_PodLogOptions(ref common.ReferenceCallback) common
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "PodLogOptions is the query options for a Pod's logs REST call.", Properties: map[string]spec.Schema{"kind": {SchemaProps: spec.SchemaProps{Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds", Type: []string{"string"}, Format: ""}}, "apiVersion": {SchemaProps: spec.SchemaProps{Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources", Type: []string{"string"}, Format: ""}}, "container": {SchemaProps: spec.SchemaProps{Description: "The container for which to stream logs. Defaults to only container if there is one container in the pod.", Type: []string{"string"}, Format: ""}}, "follow": {SchemaProps: spec.SchemaProps{Description: "Follow the log stream of the pod. Defaults to false.", Type: []string{"boolean"}, Format: ""}}, "previous": {SchemaProps: spec.SchemaProps{Description: "Return previous terminated container logs. Defaults to false.", Type: []string{"boolean"}, Format: ""}}, "sinceSeconds": {SchemaProps: spec.SchemaProps{Description: "A relative time in seconds before the current time from which to show logs. If this value precedes the time a pod was started, only logs since the pod start will be returned. If this value is in the future, no logs will be returned. Only one of sinceSeconds or sinceTime may be specified.", Type: []string{"integer"}, Format: "int64"}}, "sinceTime": {SchemaProps: spec.SchemaProps{Description: "An RFC3339 timestamp from which to show logs. If this value precedes the time a pod was started, only logs since the pod start will be returned. If this value is in the future, no logs will be returned. Only one of sinceSeconds or sinceTime may be specified.", Ref: ref("k8s.io/apimachinery/pkg/apis/meta/v1.Time")}}, "timestamps": {SchemaProps: spec.SchemaProps{Description: "If true, add an RFC3339 or RFC3339Nano timestamp at the beginning of every line of log output. Defaults to false.", Type: []string{"boolean"}, Format: ""}}, "tailLines": {SchemaProps: spec.SchemaProps{Description: "If set, the number of lines from the end of the logs to show. If not specified, logs are shown from the creation of the container or sinceSeconds or sinceTime", Type: []string{"integer"}, Format: "int64"}}, "limitBytes": {SchemaProps: spec.SchemaProps{Description: "If set, the number of bytes to read from the server before terminating the log output. This may not display a complete final line of logging, and may return slightly more or slightly less than the specified limit.", Type: []string{"integer"}, Format: "int64"}}}}}, Dependencies: []string{"k8s.io/apimachinery/pkg/apis/meta/v1.Time"}}
 }
 func schema_k8sio_api_core_v1_PodPortForwardOptions(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -1103,9 +1415,13 @@ func schema_k8sio_api_core_v1_PodProxyOptions(ref common.ReferenceCallback) comm
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "PodProxyOptions is the query options to a Pod's proxy call.", Properties: map[string]spec.Schema{"kind": {SchemaProps: spec.SchemaProps{Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds", Type: []string{"string"}, Format: ""}}, "apiVersion": {SchemaProps: spec.SchemaProps{Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources", Type: []string{"string"}, Format: ""}}, "path": {SchemaProps: spec.SchemaProps{Description: "Path is the URL path to use for the current proxy request to pod.", Type: []string{"string"}, Format: ""}}}}}, Dependencies: []string{}}
 }
 func schema_k8sio_api_core_v1_PodReadinessGate(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -1117,9 +1433,13 @@ func schema_k8sio_api_core_v1_PodSecurityContext(ref common.ReferenceCallback) c
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "PodSecurityContext holds pod-level security attributes and common container settings. Some fields are also present in container.securityContext.  Field values of container.securityContext take precedence over field values of PodSecurityContext.", Properties: map[string]spec.Schema{"seLinuxOptions": {SchemaProps: spec.SchemaProps{Description: "The SELinux context to be applied to all containers. If unspecified, the container runtime will allocate a random SELinux context for each container.  May also be set in SecurityContext.  If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence for that container.", Ref: ref("k8s.io/api/core/v1.SELinuxOptions")}}, "runAsUser": {SchemaProps: spec.SchemaProps{Description: "The UID to run the entrypoint of the container process. Defaults to user specified in image metadata if unspecified. May also be set in SecurityContext.  If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence for that container.", Type: []string{"integer"}, Format: "int64"}}, "runAsGroup": {SchemaProps: spec.SchemaProps{Description: "The GID to run the entrypoint of the container process. Uses runtime default if unset. May also be set in SecurityContext.  If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence for that container.", Type: []string{"integer"}, Format: "int64"}}, "runAsNonRoot": {SchemaProps: spec.SchemaProps{Description: "Indicates that the container must run as a non-root user. If true, the Kubelet will validate the image at runtime to ensure that it does not run as UID 0 (root) and fail to start the container if it does. If unset or false, no such validation will be performed. May also be set in SecurityContext.  If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence.", Type: []string{"boolean"}, Format: ""}}, "supplementalGroups": {SchemaProps: spec.SchemaProps{Description: "A list of groups applied to the first process run in each container, in addition to the container's primary GID.  If unspecified, no groups will be added to any container.", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Type: []string{"integer"}, Format: "int64"}}}}}, "fsGroup": {SchemaProps: spec.SchemaProps{Description: "A special supplemental group that applies to all containers in a pod. Some volume types allow the Kubelet to change the ownership of that volume to be owned by the pod:\n\n1. The owning GID will be the FSGroup 2. The setgid bit is set (new files created in the volume will be owned by FSGroup) 3. The permission bits are OR'd with rw-rw----\n\nIf unset, the Kubelet will not modify the ownership and permissions of any volume.", Type: []string{"integer"}, Format: "int64"}}, "sysctls": {SchemaProps: spec.SchemaProps{Description: "Sysctls hold a list of namespaced sysctls used for the pod. Pods with unsupported sysctls (by the container runtime) might fail to launch.", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Ref: ref("k8s.io/api/core/v1.Sysctl")}}}}}}}}, Dependencies: []string{"k8s.io/api/core/v1.SELinuxOptions", "k8s.io/api/core/v1.Sysctl"}}
 }
 func schema_k8sio_api_core_v1_PodSignature(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -1131,9 +1451,13 @@ func schema_k8sio_api_core_v1_PodSpec(ref common.ReferenceCallback) common.OpenA
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "PodSpec is a description of a pod.", Properties: map[string]spec.Schema{"volumes": {VendorExtensible: spec.VendorExtensible{Extensions: spec.Extensions{"x-kubernetes-patch-merge-key": "name", "x-kubernetes-patch-strategy": "merge,retainKeys"}}, SchemaProps: spec.SchemaProps{Description: "List of volumes that can be mounted by containers belonging to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Ref: ref("k8s.io/api/core/v1.Volume")}}}}}, "initContainers": {VendorExtensible: spec.VendorExtensible{Extensions: spec.Extensions{"x-kubernetes-patch-merge-key": "name", "x-kubernetes-patch-strategy": "merge"}}, SchemaProps: spec.SchemaProps{Description: "List of initialization containers belonging to the pod. Init containers are executed in order prior to containers being started. If any init container fails, the pod is considered to have failed and is handled according to its restartPolicy. The name for an init container or normal container must be unique among all containers. Init containers may not have Lifecycle actions, Readiness probes, or Liveness probes. The resourceRequirements of an init container are taken into account during scheduling by finding the highest request/limit for each resource type, and then using the max of of that value or the sum of the normal containers. Limits are applied to init containers in a similar fashion. Init containers cannot currently be added or removed. Cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/init-containers/", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Ref: ref("k8s.io/api/core/v1.Container")}}}}}, "containers": {VendorExtensible: spec.VendorExtensible{Extensions: spec.Extensions{"x-kubernetes-patch-merge-key": "name", "x-kubernetes-patch-strategy": "merge"}}, SchemaProps: spec.SchemaProps{Description: "List of containers belonging to the pod. Containers cannot currently be added or removed. There must be at least one container in a Pod. Cannot be updated.", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Ref: ref("k8s.io/api/core/v1.Container")}}}}}, "restartPolicy": {SchemaProps: spec.SchemaProps{Description: "Restart policy for all containers within the pod. One of Always, OnFailure, Never. Default to Always. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/#restart-policy", Type: []string{"string"}, Format: ""}}, "terminationGracePeriodSeconds": {SchemaProps: spec.SchemaProps{Description: "Optional duration in seconds the pod needs to terminate gracefully. May be decreased in delete request. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period will be used instead. The grace period is the duration in seconds after the processes running in the pod are sent a termination signal and the time when the processes are forcibly halted with a kill signal. Set this value longer than the expected cleanup time for your process. Defaults to 30 seconds.", Type: []string{"integer"}, Format: "int64"}}, "activeDeadlineSeconds": {SchemaProps: spec.SchemaProps{Description: "Optional duration in seconds the pod may be active on the node relative to StartTime before the system will actively try to mark it failed and kill associated containers. Value must be a positive integer.", Type: []string{"integer"}, Format: "int64"}}, "dnsPolicy": {SchemaProps: spec.SchemaProps{Description: "Set DNS policy for the pod. Defaults to \"ClusterFirst\". Valid values are 'ClusterFirstWithHostNet', 'ClusterFirst', 'Default' or 'None'. DNS parameters given in DNSConfig will be merged with the policy selected with DNSPolicy. To have DNS options set along with hostNetwork, you have to specify DNS policy explicitly to 'ClusterFirstWithHostNet'.", Type: []string{"string"}, Format: ""}}, "nodeSelector": {SchemaProps: spec.SchemaProps{Description: "NodeSelector is a selector which must be true for the pod to fit on a node. Selector which must match a node's labels for the pod to be scheduled on that node. More info: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/", Type: []string{"object"}, AdditionalProperties: &spec.SchemaOrBool{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Type: []string{"string"}, Format: ""}}}}}, "serviceAccountName": {SchemaProps: spec.SchemaProps{Description: "ServiceAccountName is the name of the ServiceAccount to use to run this pod. More info: https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/", Type: []string{"string"}, Format: ""}}, "serviceAccount": {SchemaProps: spec.SchemaProps{Description: "DeprecatedServiceAccount is a depreciated alias for ServiceAccountName. Deprecated: Use serviceAccountName instead.", Type: []string{"string"}, Format: ""}}, "automountServiceAccountToken": {SchemaProps: spec.SchemaProps{Description: "AutomountServiceAccountToken indicates whether a service account token should be automatically mounted.", Type: []string{"boolean"}, Format: ""}}, "nodeName": {SchemaProps: spec.SchemaProps{Description: "NodeName is a request to schedule this pod onto a specific node. If it is non-empty, the scheduler simply schedules this pod onto that node, assuming that it fits resource requirements.", Type: []string{"string"}, Format: ""}}, "hostNetwork": {SchemaProps: spec.SchemaProps{Description: "Host networking requested for this pod. Use the host's network namespace. If this option is set, the ports that will be used must be specified. Default to false.", Type: []string{"boolean"}, Format: ""}}, "hostPID": {SchemaProps: spec.SchemaProps{Description: "Use the host's pid namespace. Optional: Default to false.", Type: []string{"boolean"}, Format: ""}}, "hostIPC": {SchemaProps: spec.SchemaProps{Description: "Use the host's ipc namespace. Optional: Default to false.", Type: []string{"boolean"}, Format: ""}}, "shareProcessNamespace": {SchemaProps: spec.SchemaProps{Description: "Share a single process namespace between all of the containers in a pod. When this is set containers will be able to view and signal processes from other containers in the same pod, and the first process in each container will not be assigned PID 1. HostPID and ShareProcessNamespace cannot both be set. Optional: Default to false. This field is beta-level and may be disabled with the PodShareProcessNamespace feature.", Type: []string{"boolean"}, Format: ""}}, "securityContext": {SchemaProps: spec.SchemaProps{Description: "SecurityContext holds pod-level security attributes and common container settings. Optional: Defaults to empty.  See type description for default values of each field.", Ref: ref("k8s.io/api/core/v1.PodSecurityContext")}}, "imagePullSecrets": {VendorExtensible: spec.VendorExtensible{Extensions: spec.Extensions{"x-kubernetes-patch-merge-key": "name", "x-kubernetes-patch-strategy": "merge"}}, SchemaProps: spec.SchemaProps{Description: "ImagePullSecrets is an optional list of references to secrets in the same namespace to use for pulling any of the images used by this PodSpec. If specified, these secrets will be passed to individual puller implementations for them to use. For example, in the case of docker, only DockerConfig type secrets are honored. More info: https://kubernetes.io/docs/concepts/containers/images#specifying-imagepullsecrets-on-a-pod", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Ref: ref("k8s.io/api/core/v1.LocalObjectReference")}}}}}, "hostname": {SchemaProps: spec.SchemaProps{Description: "Specifies the hostname of the Pod If not specified, the pod's hostname will be set to a system-defined value.", Type: []string{"string"}, Format: ""}}, "subdomain": {SchemaProps: spec.SchemaProps{Description: "If specified, the fully qualified Pod hostname will be \"<hostname>.<subdomain>.<pod namespace>.svc.<cluster domain>\". If not specified, the pod will not have a domainname at all.", Type: []string{"string"}, Format: ""}}, "affinity": {SchemaProps: spec.SchemaProps{Description: "If specified, the pod's scheduling constraints", Ref: ref("k8s.io/api/core/v1.Affinity")}}, "schedulerName": {SchemaProps: spec.SchemaProps{Description: "If specified, the pod will be dispatched by specified scheduler. If not specified, the pod will be dispatched by default scheduler.", Type: []string{"string"}, Format: ""}}, "tolerations": {SchemaProps: spec.SchemaProps{Description: "If specified, the pod's tolerations.", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Ref: ref("k8s.io/api/core/v1.Toleration")}}}}}, "hostAliases": {VendorExtensible: spec.VendorExtensible{Extensions: spec.Extensions{"x-kubernetes-patch-merge-key": "ip", "x-kubernetes-patch-strategy": "merge"}}, SchemaProps: spec.SchemaProps{Description: "HostAliases is an optional list of hosts and IPs that will be injected into the pod's hosts file if specified. This is only valid for non-hostNetwork pods.", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Ref: ref("k8s.io/api/core/v1.HostAlias")}}}}}, "priorityClassName": {SchemaProps: spec.SchemaProps{Description: "If specified, indicates the pod's priority. \"system-node-critical\" and \"system-cluster-critical\" are two special keywords which indicate the highest priorities with the former being the highest priority. Any other name must be defined by creating a PriorityClass object with that name. If not specified, the pod priority will be default or zero if there is no default.", Type: []string{"string"}, Format: ""}}, "priority": {SchemaProps: spec.SchemaProps{Description: "The priority value. Various system components use this field to find the priority of the pod. When Priority Admission Controller is enabled, it prevents users from setting this field. The admission controller populates this field from PriorityClassName. The higher the value, the higher the priority.", Type: []string{"integer"}, Format: "int32"}}, "dnsConfig": {SchemaProps: spec.SchemaProps{Description: "Specifies the DNS parameters of a pod. Parameters specified here will be merged to the generated DNS configuration based on DNSPolicy.", Ref: ref("k8s.io/api/core/v1.PodDNSConfig")}}, "readinessGates": {SchemaProps: spec.SchemaProps{Description: "If specified, all readiness gates will be evaluated for pod readiness. A pod is ready when all its containers are ready AND all conditions specified in the readiness gates have status equal to \"True\" More info: https://github.com/kubernetes/community/blob/master/keps/sig-network/0007-pod-ready%2B%2B.md", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Ref: ref("k8s.io/api/core/v1.PodReadinessGate")}}}}}, "runtimeClassName": {SchemaProps: spec.SchemaProps{Description: "RuntimeClassName refers to a RuntimeClass object in the node.k8s.io group, which should be used to run this pod.  If no RuntimeClass resource matches the named class, the pod will not be run. If unset or empty, the \"legacy\" RuntimeClass will be used, which is an implicit class with an empty definition that uses the default runtime handler. More info: https://github.com/kubernetes/community/blob/master/keps/sig-node/0014-runtime-class.md This is an alpha feature and may change in the future.", Type: []string{"string"}, Format: ""}}}, Required: []string{"containers"}}}, Dependencies: []string{"k8s.io/api/core/v1.Affinity", "k8s.io/api/core/v1.Container", "k8s.io/api/core/v1.HostAlias", "k8s.io/api/core/v1.LocalObjectReference", "k8s.io/api/core/v1.PodDNSConfig", "k8s.io/api/core/v1.PodReadinessGate", "k8s.io/api/core/v1.PodSecurityContext", "k8s.io/api/core/v1.Toleration", "k8s.io/api/core/v1.Volume"}}
 }
 func schema_k8sio_api_core_v1_PodStatus(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -1145,9 +1469,13 @@ func schema_k8sio_api_core_v1_PodStatusResult(ref common.ReferenceCallback) comm
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "PodStatusResult is a wrapper for PodStatus returned by kubelet that can be encode/decoded", Properties: map[string]spec.Schema{"kind": {SchemaProps: spec.SchemaProps{Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds", Type: []string{"string"}, Format: ""}}, "apiVersion": {SchemaProps: spec.SchemaProps{Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources", Type: []string{"string"}, Format: ""}}, "metadata": {SchemaProps: spec.SchemaProps{Description: "Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata", Ref: ref("k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta")}}, "status": {SchemaProps: spec.SchemaProps{Description: "Most recently observed status of the pod. This data may not be up to date. Populated by the system. Read-only. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-status", Ref: ref("k8s.io/api/core/v1.PodStatus")}}}}}, Dependencies: []string{"k8s.io/api/core/v1.PodStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"}}
 }
 func schema_k8sio_api_core_v1_PodTemplate(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -1159,9 +1487,13 @@ func schema_k8sio_api_core_v1_PodTemplateList(ref common.ReferenceCallback) comm
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "PodTemplateList is a list of PodTemplates.", Properties: map[string]spec.Schema{"kind": {SchemaProps: spec.SchemaProps{Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds", Type: []string{"string"}, Format: ""}}, "apiVersion": {SchemaProps: spec.SchemaProps{Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources", Type: []string{"string"}, Format: ""}}, "metadata": {SchemaProps: spec.SchemaProps{Description: "Standard list metadata. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds", Ref: ref("k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta")}}, "items": {SchemaProps: spec.SchemaProps{Description: "List of pod templates", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Ref: ref("k8s.io/api/core/v1.PodTemplate")}}}}}}, Required: []string{"items"}}}, Dependencies: []string{"k8s.io/api/core/v1.PodTemplate", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"}}
 }
 func schema_k8sio_api_core_v1_PodTemplateSpec(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -1173,9 +1505,13 @@ func schema_k8sio_api_core_v1_PortworxVolumeSource(ref common.ReferenceCallback)
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "PortworxVolumeSource represents a Portworx volume resource.", Properties: map[string]spec.Schema{"volumeID": {SchemaProps: spec.SchemaProps{Description: "VolumeID uniquely identifies a Portworx volume", Type: []string{"string"}, Format: ""}}, "fsType": {SchemaProps: spec.SchemaProps{Description: "FSType represents the filesystem type to mount Must be a filesystem type supported by the host operating system. Ex. \"ext4\", \"xfs\". Implicitly inferred to be \"ext4\" if unspecified.", Type: []string{"string"}, Format: ""}}, "readOnly": {SchemaProps: spec.SchemaProps{Description: "Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.", Type: []string{"boolean"}, Format: ""}}}, Required: []string{"volumeID"}}}, Dependencies: []string{}}
 }
 func schema_k8sio_api_core_v1_PreferAvoidPodsEntry(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -1187,9 +1523,13 @@ func schema_k8sio_api_core_v1_PreferredSchedulingTerm(ref common.ReferenceCallba
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "An empty preferred scheduling term matches all objects with implicit weight 0 (i.e. it's a no-op). A null preferred scheduling term matches no objects (i.e. is also a no-op).", Properties: map[string]spec.Schema{"weight": {SchemaProps: spec.SchemaProps{Description: "Weight associated with matching the corresponding nodeSelectorTerm, in the range 1-100.", Type: []string{"integer"}, Format: "int32"}}, "preference": {SchemaProps: spec.SchemaProps{Description: "A node selector term, associated with the corresponding weight.", Ref: ref("k8s.io/api/core/v1.NodeSelectorTerm")}}}, Required: []string{"weight", "preference"}}}, Dependencies: []string{"k8s.io/api/core/v1.NodeSelectorTerm"}}
 }
 func schema_k8sio_api_core_v1_Probe(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -1201,9 +1541,13 @@ func schema_k8sio_api_core_v1_ProjectedVolumeSource(ref common.ReferenceCallback
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "Represents a projected volume source", Properties: map[string]spec.Schema{"sources": {SchemaProps: spec.SchemaProps{Description: "list of volume projections", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Ref: ref("k8s.io/api/core/v1.VolumeProjection")}}}}}, "defaultMode": {SchemaProps: spec.SchemaProps{Description: "Mode bits to use on created files by default. Must be a value between 0 and 0777. Directories within the path are not affected by this setting. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.", Type: []string{"integer"}, Format: "int32"}}}, Required: []string{"sources"}}}, Dependencies: []string{"k8s.io/api/core/v1.VolumeProjection"}}
 }
 func schema_k8sio_api_core_v1_QuobyteVolumeSource(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -1215,9 +1559,13 @@ func schema_k8sio_api_core_v1_RBDPersistentVolumeSource(ref common.ReferenceCall
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "Represents a Rados Block Device mount that lasts the lifetime of a pod. RBD volumes support ownership management and SELinux relabeling.", Properties: map[string]spec.Schema{"monitors": {SchemaProps: spec.SchemaProps{Description: "A collection of Ceph monitors. More info: https://releases.k8s.io/HEAD/examples/volumes/rbd/README.md#how-to-use-it", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Type: []string{"string"}, Format: ""}}}}}, "image": {SchemaProps: spec.SchemaProps{Description: "The rados image name. More info: https://releases.k8s.io/HEAD/examples/volumes/rbd/README.md#how-to-use-it", Type: []string{"string"}, Format: ""}}, "fsType": {SchemaProps: spec.SchemaProps{Description: "Filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: \"ext4\", \"xfs\", \"ntfs\". Implicitly inferred to be \"ext4\" if unspecified. More info: https://kubernetes.io/docs/concepts/storage/volumes#rbd", Type: []string{"string"}, Format: ""}}, "pool": {SchemaProps: spec.SchemaProps{Description: "The rados pool name. Default is rbd. More info: https://releases.k8s.io/HEAD/examples/volumes/rbd/README.md#how-to-use-it", Type: []string{"string"}, Format: ""}}, "user": {SchemaProps: spec.SchemaProps{Description: "The rados user name. Default is admin. More info: https://releases.k8s.io/HEAD/examples/volumes/rbd/README.md#how-to-use-it", Type: []string{"string"}, Format: ""}}, "keyring": {SchemaProps: spec.SchemaProps{Description: "Keyring is the path to key ring for RBDUser. Default is /etc/ceph/keyring. More info: https://releases.k8s.io/HEAD/examples/volumes/rbd/README.md#how-to-use-it", Type: []string{"string"}, Format: ""}}, "secretRef": {SchemaProps: spec.SchemaProps{Description: "SecretRef is name of the authentication secret for RBDUser. If provided overrides keyring. Default is nil. More info: https://releases.k8s.io/HEAD/examples/volumes/rbd/README.md#how-to-use-it", Ref: ref("k8s.io/api/core/v1.SecretReference")}}, "readOnly": {SchemaProps: spec.SchemaProps{Description: "ReadOnly here will force the ReadOnly setting in VolumeMounts. Defaults to false. More info: https://releases.k8s.io/HEAD/examples/volumes/rbd/README.md#how-to-use-it", Type: []string{"boolean"}, Format: ""}}}, Required: []string{"monitors", "image"}}}, Dependencies: []string{"k8s.io/api/core/v1.SecretReference"}}
 }
 func schema_k8sio_api_core_v1_RBDVolumeSource(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -1229,9 +1577,13 @@ func schema_k8sio_api_core_v1_RangeAllocation(ref common.ReferenceCallback) comm
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "RangeAllocation is not a public type.", Properties: map[string]spec.Schema{"kind": {SchemaProps: spec.SchemaProps{Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds", Type: []string{"string"}, Format: ""}}, "apiVersion": {SchemaProps: spec.SchemaProps{Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources", Type: []string{"string"}, Format: ""}}, "metadata": {SchemaProps: spec.SchemaProps{Description: "Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata", Ref: ref("k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta")}}, "range": {SchemaProps: spec.SchemaProps{Description: "Range is string that identifies the range represented by 'data'.", Type: []string{"string"}, Format: ""}}, "data": {SchemaProps: spec.SchemaProps{Description: "Data is a bit array containing all allocated addresses in the previous segment.", Type: []string{"string"}, Format: "byte"}}}, Required: []string{"range", "data"}}}, Dependencies: []string{"k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"}}
 }
 func schema_k8sio_api_core_v1_ReplicationController(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -1243,9 +1595,13 @@ func schema_k8sio_api_core_v1_ReplicationControllerCondition(ref common.Referenc
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "ReplicationControllerCondition describes the state of a replication controller at a certain point.", Properties: map[string]spec.Schema{"type": {SchemaProps: spec.SchemaProps{Description: "Type of replication controller condition.", Type: []string{"string"}, Format: ""}}, "status": {SchemaProps: spec.SchemaProps{Description: "Status of the condition, one of True, False, Unknown.", Type: []string{"string"}, Format: ""}}, "lastTransitionTime": {SchemaProps: spec.SchemaProps{Description: "The last time the condition transitioned from one status to another.", Ref: ref("k8s.io/apimachinery/pkg/apis/meta/v1.Time")}}, "reason": {SchemaProps: spec.SchemaProps{Description: "The reason for the condition's last transition.", Type: []string{"string"}, Format: ""}}, "message": {SchemaProps: spec.SchemaProps{Description: "A human readable message indicating details about the transition.", Type: []string{"string"}, Format: ""}}}, Required: []string{"type", "status"}}}, Dependencies: []string{"k8s.io/apimachinery/pkg/apis/meta/v1.Time"}}
 }
 func schema_k8sio_api_core_v1_ReplicationControllerList(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -1257,9 +1613,13 @@ func schema_k8sio_api_core_v1_ReplicationControllerSpec(ref common.ReferenceCall
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "ReplicationControllerSpec is the specification of a replication controller.", Properties: map[string]spec.Schema{"replicas": {SchemaProps: spec.SchemaProps{Description: "Replicas is the number of desired replicas. This is a pointer to distinguish between explicit zero and unspecified. Defaults to 1. More info: https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller#what-is-a-replicationcontroller", Type: []string{"integer"}, Format: "int32"}}, "minReadySeconds": {SchemaProps: spec.SchemaProps{Description: "Minimum number of seconds for which a newly created pod should be ready without any of its container crashing, for it to be considered available. Defaults to 0 (pod will be considered available as soon as it is ready)", Type: []string{"integer"}, Format: "int32"}}, "selector": {SchemaProps: spec.SchemaProps{Description: "Selector is a label query over pods that should match the Replicas count. If Selector is empty, it is defaulted to the labels present on the Pod template. Label keys and values that must match in order to be controlled by this replication controller, if empty defaulted to labels on Pod template. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#label-selectors", Type: []string{"object"}, AdditionalProperties: &spec.SchemaOrBool{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Type: []string{"string"}, Format: ""}}}}}, "template": {SchemaProps: spec.SchemaProps{Description: "Template is the object that describes the pod that will be created if insufficient replicas are detected. This takes precedence over a TemplateRef. More info: https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller#pod-template", Ref: ref("k8s.io/api/core/v1.PodTemplateSpec")}}}}}, Dependencies: []string{"k8s.io/api/core/v1.PodTemplateSpec"}}
 }
 func schema_k8sio_api_core_v1_ReplicationControllerStatus(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -1271,9 +1631,13 @@ func schema_k8sio_api_core_v1_ResourceFieldSelector(ref common.ReferenceCallback
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "ResourceFieldSelector represents container resources (cpu, memory) and their output format", Properties: map[string]spec.Schema{"containerName": {SchemaProps: spec.SchemaProps{Description: "Container name: required for volumes, optional for env vars", Type: []string{"string"}, Format: ""}}, "resource": {SchemaProps: spec.SchemaProps{Description: "Required: resource to select", Type: []string{"string"}, Format: ""}}, "divisor": {SchemaProps: spec.SchemaProps{Description: "Specifies the output format of the exposed resources, defaults to \"1\"", Ref: ref("k8s.io/apimachinery/pkg/api/resource.Quantity")}}}, Required: []string{"resource"}}}, Dependencies: []string{"k8s.io/apimachinery/pkg/api/resource.Quantity"}}
 }
 func schema_k8sio_api_core_v1_ResourceQuota(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -1285,9 +1649,13 @@ func schema_k8sio_api_core_v1_ResourceQuotaList(ref common.ReferenceCallback) co
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "ResourceQuotaList is a list of ResourceQuota items.", Properties: map[string]spec.Schema{"kind": {SchemaProps: spec.SchemaProps{Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds", Type: []string{"string"}, Format: ""}}, "apiVersion": {SchemaProps: spec.SchemaProps{Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources", Type: []string{"string"}, Format: ""}}, "metadata": {SchemaProps: spec.SchemaProps{Description: "Standard list metadata. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds", Ref: ref("k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta")}}, "items": {SchemaProps: spec.SchemaProps{Description: "Items is a list of ResourceQuota objects. More info: https://kubernetes.io/docs/concepts/policy/resource-quotas/", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Ref: ref("k8s.io/api/core/v1.ResourceQuota")}}}}}}, Required: []string{"items"}}}, Dependencies: []string{"k8s.io/api/core/v1.ResourceQuota", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"}}
 }
 func schema_k8sio_api_core_v1_ResourceQuotaSpec(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -1299,9 +1667,13 @@ func schema_k8sio_api_core_v1_ResourceQuotaStatus(ref common.ReferenceCallback) 
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "ResourceQuotaStatus defines the enforced hard limits and observed use.", Properties: map[string]spec.Schema{"hard": {SchemaProps: spec.SchemaProps{Description: "Hard is the set of enforced hard limits for each named resource. More info: https://kubernetes.io/docs/concepts/policy/resource-quotas/", Type: []string{"object"}, AdditionalProperties: &spec.SchemaOrBool{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Ref: ref("k8s.io/apimachinery/pkg/api/resource.Quantity")}}}}}, "used": {SchemaProps: spec.SchemaProps{Description: "Used is the current observed total usage of the resource in the namespace.", Type: []string{"object"}, AdditionalProperties: &spec.SchemaOrBool{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Ref: ref("k8s.io/apimachinery/pkg/api/resource.Quantity")}}}}}}}}, Dependencies: []string{"k8s.io/apimachinery/pkg/api/resource.Quantity"}}
 }
 func schema_k8sio_api_core_v1_ResourceRequirements(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -1313,9 +1685,13 @@ func schema_k8sio_api_core_v1_SELinuxOptions(ref common.ReferenceCallback) commo
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "SELinuxOptions are the labels to be applied to the container", Properties: map[string]spec.Schema{"user": {SchemaProps: spec.SchemaProps{Description: "User is a SELinux user label that applies to the container.", Type: []string{"string"}, Format: ""}}, "role": {SchemaProps: spec.SchemaProps{Description: "Role is a SELinux role label that applies to the container.", Type: []string{"string"}, Format: ""}}, "type": {SchemaProps: spec.SchemaProps{Description: "Type is a SELinux type label that applies to the container.", Type: []string{"string"}, Format: ""}}, "level": {SchemaProps: spec.SchemaProps{Description: "Level is SELinux level label that applies to the container.", Type: []string{"string"}, Format: ""}}}}}, Dependencies: []string{}}
 }
 func schema_k8sio_api_core_v1_ScaleIOPersistentVolumeSource(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -1327,9 +1703,13 @@ func schema_k8sio_api_core_v1_ScaleIOVolumeSource(ref common.ReferenceCallback) 
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "ScaleIOVolumeSource represents a persistent ScaleIO volume", Properties: map[string]spec.Schema{"gateway": {SchemaProps: spec.SchemaProps{Description: "The host address of the ScaleIO API Gateway.", Type: []string{"string"}, Format: ""}}, "system": {SchemaProps: spec.SchemaProps{Description: "The name of the storage system as configured in ScaleIO.", Type: []string{"string"}, Format: ""}}, "secretRef": {SchemaProps: spec.SchemaProps{Description: "SecretRef references to the secret for ScaleIO user and other sensitive information. If this is not provided, Login operation will fail.", Ref: ref("k8s.io/api/core/v1.LocalObjectReference")}}, "sslEnabled": {SchemaProps: spec.SchemaProps{Description: "Flag to enable/disable SSL communication with Gateway, default false", Type: []string{"boolean"}, Format: ""}}, "protectionDomain": {SchemaProps: spec.SchemaProps{Description: "The name of the ScaleIO Protection Domain for the configured storage.", Type: []string{"string"}, Format: ""}}, "storagePool": {SchemaProps: spec.SchemaProps{Description: "The ScaleIO Storage Pool associated with the protection domain.", Type: []string{"string"}, Format: ""}}, "storageMode": {SchemaProps: spec.SchemaProps{Description: "Indicates whether the storage for a volume should be ThickProvisioned or ThinProvisioned. Default is ThinProvisioned.", Type: []string{"string"}, Format: ""}}, "volumeName": {SchemaProps: spec.SchemaProps{Description: "The name of a volume already created in the ScaleIO system that is associated with this volume source.", Type: []string{"string"}, Format: ""}}, "fsType": {SchemaProps: spec.SchemaProps{Description: "Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. \"ext4\", \"xfs\", \"ntfs\". Default is \"xfs\".", Type: []string{"string"}, Format: ""}}, "readOnly": {SchemaProps: spec.SchemaProps{Description: "Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.", Type: []string{"boolean"}, Format: ""}}}, Required: []string{"gateway", "system", "secretRef"}}}, Dependencies: []string{"k8s.io/api/core/v1.LocalObjectReference"}}
 }
 func schema_k8sio_api_core_v1_ScopeSelector(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -1341,9 +1721,13 @@ func schema_k8sio_api_core_v1_ScopedResourceSelectorRequirement(ref common.Refer
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "A scoped-resource selector requirement is a selector that contains values, a scope name, and an operator that relates the scope name and values.", Properties: map[string]spec.Schema{"scopeName": {SchemaProps: spec.SchemaProps{Description: "The name of the scope that the selector applies to.", Type: []string{"string"}, Format: ""}}, "operator": {SchemaProps: spec.SchemaProps{Description: "Represents a scope's relationship to a set of values. Valid operators are In, NotIn, Exists, DoesNotExist.", Type: []string{"string"}, Format: ""}}, "values": {SchemaProps: spec.SchemaProps{Description: "An array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch.", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Type: []string{"string"}, Format: ""}}}}}}, Required: []string{"scopeName", "operator"}}}, Dependencies: []string{}}
 }
 func schema_k8sio_api_core_v1_Secret(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -1355,9 +1739,13 @@ func schema_k8sio_api_core_v1_SecretEnvSource(ref common.ReferenceCallback) comm
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "SecretEnvSource selects a Secret to populate the environment variables with.\n\nThe contents of the target Secret's Data field will represent the key-value pairs as environment variables.", Properties: map[string]spec.Schema{"name": {SchemaProps: spec.SchemaProps{Description: "Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names", Type: []string{"string"}, Format: ""}}, "optional": {SchemaProps: spec.SchemaProps{Description: "Specify whether the Secret must be defined", Type: []string{"boolean"}, Format: ""}}}}}, Dependencies: []string{}}
 }
 func schema_k8sio_api_core_v1_SecretKeySelector(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -1369,9 +1757,13 @@ func schema_k8sio_api_core_v1_SecretList(ref common.ReferenceCallback) common.Op
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "SecretList is a list of Secret.", Properties: map[string]spec.Schema{"kind": {SchemaProps: spec.SchemaProps{Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds", Type: []string{"string"}, Format: ""}}, "apiVersion": {SchemaProps: spec.SchemaProps{Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources", Type: []string{"string"}, Format: ""}}, "metadata": {SchemaProps: spec.SchemaProps{Description: "Standard list metadata. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds", Ref: ref("k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta")}}, "items": {SchemaProps: spec.SchemaProps{Description: "Items is a list of secret objects. More info: https://kubernetes.io/docs/concepts/configuration/secret", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Ref: ref("k8s.io/api/core/v1.Secret")}}}}}}, Required: []string{"items"}}}, Dependencies: []string{"k8s.io/api/core/v1.Secret", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"}}
 }
 func schema_k8sio_api_core_v1_SecretProjection(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -1383,9 +1775,13 @@ func schema_k8sio_api_core_v1_SecretReference(ref common.ReferenceCallback) comm
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace", Properties: map[string]spec.Schema{"name": {SchemaProps: spec.SchemaProps{Description: "Name is unique within a namespace to reference a secret resource.", Type: []string{"string"}, Format: ""}}, "namespace": {SchemaProps: spec.SchemaProps{Description: "Namespace defines the space within which the secret name must be unique.", Type: []string{"string"}, Format: ""}}}}}, Dependencies: []string{}}
 }
 func schema_k8sio_api_core_v1_SecretVolumeSource(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -1397,9 +1793,13 @@ func schema_k8sio_api_core_v1_SecurityContext(ref common.ReferenceCallback) comm
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "SecurityContext holds security configuration that will be applied to a container. Some fields are present in both SecurityContext and PodSecurityContext.  When both are set, the values in SecurityContext take precedence.", Properties: map[string]spec.Schema{"capabilities": {SchemaProps: spec.SchemaProps{Description: "The capabilities to add/drop when running containers. Defaults to the default set of capabilities granted by the container runtime.", Ref: ref("k8s.io/api/core/v1.Capabilities")}}, "privileged": {SchemaProps: spec.SchemaProps{Description: "Run container in privileged mode. Processes in privileged containers are essentially equivalent to root on the host. Defaults to false.", Type: []string{"boolean"}, Format: ""}}, "seLinuxOptions": {SchemaProps: spec.SchemaProps{Description: "The SELinux context to be applied to the container. If unspecified, the container runtime will allocate a random SELinux context for each container.  May also be set in PodSecurityContext.  If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence.", Ref: ref("k8s.io/api/core/v1.SELinuxOptions")}}, "runAsUser": {SchemaProps: spec.SchemaProps{Description: "The UID to run the entrypoint of the container process. Defaults to user specified in image metadata if unspecified. May also be set in PodSecurityContext.  If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence.", Type: []string{"integer"}, Format: "int64"}}, "runAsGroup": {SchemaProps: spec.SchemaProps{Description: "The GID to run the entrypoint of the container process. Uses runtime default if unset. May also be set in PodSecurityContext.  If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence.", Type: []string{"integer"}, Format: "int64"}}, "runAsNonRoot": {SchemaProps: spec.SchemaProps{Description: "Indicates that the container must run as a non-root user. If true, the Kubelet will validate the image at runtime to ensure that it does not run as UID 0 (root) and fail to start the container if it does. If unset or false, no such validation will be performed. May also be set in PodSecurityContext.  If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence.", Type: []string{"boolean"}, Format: ""}}, "readOnlyRootFilesystem": {SchemaProps: spec.SchemaProps{Description: "Whether this container has a read-only root filesystem. Default is false.", Type: []string{"boolean"}, Format: ""}}, "allowPrivilegeEscalation": {SchemaProps: spec.SchemaProps{Description: "AllowPrivilegeEscalation controls whether a process can gain more privileges than its parent process. This bool directly controls if the no_new_privs flag will be set on the container process. AllowPrivilegeEscalation is true always when the container is: 1) run as Privileged 2) has CAP_SYS_ADMIN", Type: []string{"boolean"}, Format: ""}}, "procMount": {SchemaProps: spec.SchemaProps{Description: "procMount denotes the type of proc mount to use for the containers. The default is DefaultProcMount which uses the container runtime defaults for readonly paths and masked paths. This requires the ProcMountType feature flag to be enabled.", Type: []string{"string"}, Format: ""}}}}}, Dependencies: []string{"k8s.io/api/core/v1.Capabilities", "k8s.io/api/core/v1.SELinuxOptions"}}
 }
 func schema_k8sio_api_core_v1_SerializedReference(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -1411,9 +1811,13 @@ func schema_k8sio_api_core_v1_Service(ref common.ReferenceCallback) common.OpenA
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "Service is a named abstraction of software service (for example, mysql) consisting of local port (for example 3306) that the proxy listens on, and the selector that determines which pods will answer requests sent through the proxy.", Properties: map[string]spec.Schema{"kind": {SchemaProps: spec.SchemaProps{Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds", Type: []string{"string"}, Format: ""}}, "apiVersion": {SchemaProps: spec.SchemaProps{Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources", Type: []string{"string"}, Format: ""}}, "metadata": {SchemaProps: spec.SchemaProps{Description: "Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata", Ref: ref("k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta")}}, "spec": {SchemaProps: spec.SchemaProps{Description: "Spec defines the behavior of a service. https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-status", Ref: ref("k8s.io/api/core/v1.ServiceSpec")}}, "status": {SchemaProps: spec.SchemaProps{Description: "Most recently observed status of the service. Populated by the system. Read-only. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-status", Ref: ref("k8s.io/api/core/v1.ServiceStatus")}}}}}, Dependencies: []string{"k8s.io/api/core/v1.ServiceSpec", "k8s.io/api/core/v1.ServiceStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"}}
 }
 func schema_k8sio_api_core_v1_ServiceAccount(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -1425,9 +1829,13 @@ func schema_k8sio_api_core_v1_ServiceAccountList(ref common.ReferenceCallback) c
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "ServiceAccountList is a list of ServiceAccount objects", Properties: map[string]spec.Schema{"kind": {SchemaProps: spec.SchemaProps{Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds", Type: []string{"string"}, Format: ""}}, "apiVersion": {SchemaProps: spec.SchemaProps{Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources", Type: []string{"string"}, Format: ""}}, "metadata": {SchemaProps: spec.SchemaProps{Description: "Standard list metadata. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds", Ref: ref("k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta")}}, "items": {SchemaProps: spec.SchemaProps{Description: "List of ServiceAccounts. More info: https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Ref: ref("k8s.io/api/core/v1.ServiceAccount")}}}}}}, Required: []string{"items"}}}, Dependencies: []string{"k8s.io/api/core/v1.ServiceAccount", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"}}
 }
 func schema_k8sio_api_core_v1_ServiceAccountTokenProjection(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -1439,9 +1847,13 @@ func schema_k8sio_api_core_v1_ServiceList(ref common.ReferenceCallback) common.O
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "ServiceList holds a list of services.", Properties: map[string]spec.Schema{"kind": {SchemaProps: spec.SchemaProps{Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds", Type: []string{"string"}, Format: ""}}, "apiVersion": {SchemaProps: spec.SchemaProps{Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources", Type: []string{"string"}, Format: ""}}, "metadata": {SchemaProps: spec.SchemaProps{Description: "Standard list metadata. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds", Ref: ref("k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta")}}, "items": {SchemaProps: spec.SchemaProps{Description: "List of services", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Ref: ref("k8s.io/api/core/v1.Service")}}}}}}, Required: []string{"items"}}}, Dependencies: []string{"k8s.io/api/core/v1.Service", "k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta"}}
 }
 func schema_k8sio_api_core_v1_ServicePort(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -1453,9 +1865,13 @@ func schema_k8sio_api_core_v1_ServiceProxyOptions(ref common.ReferenceCallback) 
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "ServiceProxyOptions is the query options to a Service's proxy call.", Properties: map[string]spec.Schema{"kind": {SchemaProps: spec.SchemaProps{Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds", Type: []string{"string"}, Format: ""}}, "apiVersion": {SchemaProps: spec.SchemaProps{Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources", Type: []string{"string"}, Format: ""}}, "path": {SchemaProps: spec.SchemaProps{Description: "Path is the part of URLs that include service endpoints, suffixes, and parameters to use for the current proxy request to service. For example, the whole request URL is http://localhost/api/v1/namespaces/kube-system/services/elasticsearch-logging/_search?q=user:kimchy. Path is _search?q=user:kimchy.", Type: []string{"string"}, Format: ""}}}}}, Dependencies: []string{}}
 }
 func schema_k8sio_api_core_v1_ServiceSpec(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -1467,9 +1883,13 @@ func schema_k8sio_api_core_v1_ServiceStatus(ref common.ReferenceCallback) common
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "ServiceStatus represents the current status of a service.", Properties: map[string]spec.Schema{"loadBalancer": {SchemaProps: spec.SchemaProps{Description: "LoadBalancer contains the current status of the load-balancer, if one is present.", Ref: ref("k8s.io/api/core/v1.LoadBalancerStatus")}}}}}, Dependencies: []string{"k8s.io/api/core/v1.LoadBalancerStatus"}}
 }
 func schema_k8sio_api_core_v1_SessionAffinityConfig(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -1481,9 +1901,13 @@ func schema_k8sio_api_core_v1_StorageOSPersistentVolumeSource(ref common.Referen
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "Represents a StorageOS persistent volume resource.", Properties: map[string]spec.Schema{"volumeName": {SchemaProps: spec.SchemaProps{Description: "VolumeName is the human-readable name of the StorageOS volume.  Volume names are only unique within a namespace.", Type: []string{"string"}, Format: ""}}, "volumeNamespace": {SchemaProps: spec.SchemaProps{Description: "VolumeNamespace specifies the scope of the volume within StorageOS.  If no namespace is specified then the Pod's namespace will be used.  This allows the Kubernetes name scoping to be mirrored within StorageOS for tighter integration. Set VolumeName to any name to override the default behaviour. Set to \"default\" if you are not using namespaces within StorageOS. Namespaces that do not pre-exist within StorageOS will be created.", Type: []string{"string"}, Format: ""}}, "fsType": {SchemaProps: spec.SchemaProps{Description: "Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. \"ext4\", \"xfs\", \"ntfs\". Implicitly inferred to be \"ext4\" if unspecified.", Type: []string{"string"}, Format: ""}}, "readOnly": {SchemaProps: spec.SchemaProps{Description: "Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.", Type: []string{"boolean"}, Format: ""}}, "secretRef": {SchemaProps: spec.SchemaProps{Description: "SecretRef specifies the secret to use for obtaining the StorageOS API credentials.  If not specified, default values will be attempted.", Ref: ref("k8s.io/api/core/v1.ObjectReference")}}}}}, Dependencies: []string{"k8s.io/api/core/v1.ObjectReference"}}
 }
 func schema_k8sio_api_core_v1_StorageOSVolumeSource(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -1495,9 +1919,13 @@ func schema_k8sio_api_core_v1_Sysctl(ref common.ReferenceCallback) common.OpenAP
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "Sysctl defines a kernel parameter to be set", Properties: map[string]spec.Schema{"name": {SchemaProps: spec.SchemaProps{Description: "Name of a property to set", Type: []string{"string"}, Format: ""}}, "value": {SchemaProps: spec.SchemaProps{Description: "Value of a property to set", Type: []string{"string"}, Format: ""}}}, Required: []string{"name", "value"}}}, Dependencies: []string{}}
 }
 func schema_k8sio_api_core_v1_TCPSocketAction(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -1509,9 +1937,13 @@ func schema_k8sio_api_core_v1_Taint(ref common.ReferenceCallback) common.OpenAPI
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "The node this Taint is attached to has the \"effect\" on any pod that does not tolerate the Taint.", Properties: map[string]spec.Schema{"key": {SchemaProps: spec.SchemaProps{Description: "Required. The taint key to be applied to a node.", Type: []string{"string"}, Format: ""}}, "value": {SchemaProps: spec.SchemaProps{Description: "Required. The taint value corresponding to the taint key.", Type: []string{"string"}, Format: ""}}, "effect": {SchemaProps: spec.SchemaProps{Description: "Required. The effect of the taint on pods that do not tolerate the taint. Valid effects are NoSchedule, PreferNoSchedule and NoExecute.", Type: []string{"string"}, Format: ""}}, "timeAdded": {SchemaProps: spec.SchemaProps{Description: "TimeAdded represents the time at which the taint was added. It is only written for NoExecute taints.", Ref: ref("k8s.io/apimachinery/pkg/apis/meta/v1.Time")}}}, Required: []string{"key", "effect"}}}, Dependencies: []string{"k8s.io/apimachinery/pkg/apis/meta/v1.Time"}}
 }
 func schema_k8sio_api_core_v1_Toleration(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -1523,9 +1955,13 @@ func schema_k8sio_api_core_v1_TopologySelectorLabelRequirement(ref common.Refere
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "A topology selector requirement is a selector that matches given label. This is an alpha feature and may change in the future.", Properties: map[string]spec.Schema{"key": {SchemaProps: spec.SchemaProps{Description: "The label key that the selector applies to.", Type: []string{"string"}, Format: ""}}, "values": {SchemaProps: spec.SchemaProps{Description: "An array of string values. One value must match the label to be selected. Each entry in Values is ORed.", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Type: []string{"string"}, Format: ""}}}}}}, Required: []string{"key", "values"}}}, Dependencies: []string{}}
 }
 func schema_k8sio_api_core_v1_TopologySelectorTerm(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -1537,9 +1973,13 @@ func schema_k8sio_api_core_v1_TypedLocalObjectReference(ref common.ReferenceCall
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "TypedLocalObjectReference contains enough information to let you locate the typed referenced object inside the same namespace.", Properties: map[string]spec.Schema{"apiGroup": {SchemaProps: spec.SchemaProps{Description: "APIGroup is the group for the resource being referenced. If APIGroup is not specified, the specified Kind must be in the core API group. For any other third-party types, APIGroup is required.", Type: []string{"string"}, Format: ""}}, "kind": {SchemaProps: spec.SchemaProps{Description: "Kind is the type of resource being referenced", Type: []string{"string"}, Format: ""}}, "name": {SchemaProps: spec.SchemaProps{Description: "Name is the name of resource being referenced", Type: []string{"string"}, Format: ""}}}, Required: []string{"kind", "name"}}}, Dependencies: []string{}}
 }
 func schema_k8sio_api_core_v1_Volume(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -1551,9 +1991,13 @@ func schema_k8sio_api_core_v1_VolumeDevice(ref common.ReferenceCallback) common.
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "volumeDevice describes a mapping of a raw block device within a container.", Properties: map[string]spec.Schema{"name": {SchemaProps: spec.SchemaProps{Description: "name must match the name of a persistentVolumeClaim in the pod", Type: []string{"string"}, Format: ""}}, "devicePath": {SchemaProps: spec.SchemaProps{Description: "devicePath is the path inside of the container that the device will be mapped to.", Type: []string{"string"}, Format: ""}}}, Required: []string{"name", "devicePath"}}}, Dependencies: []string{}}
 }
 func schema_k8sio_api_core_v1_VolumeMount(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -1565,9 +2009,13 @@ func schema_k8sio_api_core_v1_VolumeNodeAffinity(ref common.ReferenceCallback) c
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "VolumeNodeAffinity defines constraints that limit what nodes this volume can be accessed from.", Properties: map[string]spec.Schema{"required": {SchemaProps: spec.SchemaProps{Description: "Required specifies hard node constraints that must be met.", Ref: ref("k8s.io/api/core/v1.NodeSelector")}}}}}, Dependencies: []string{"k8s.io/api/core/v1.NodeSelector"}}
 }
 func schema_k8sio_api_core_v1_VolumeProjection(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -1579,9 +2027,13 @@ func schema_k8sio_api_core_v1_VolumeSource(ref common.ReferenceCallback) common.
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "Represents the source of a volume to mount. Only one of its members may be specified.", Properties: map[string]spec.Schema{"hostPath": {SchemaProps: spec.SchemaProps{Description: "HostPath represents a pre-existing file or directory on the host machine that is directly exposed to the container. This is generally used for system agents or other privileged things that are allowed to see the host machine. Most containers will NOT need this. More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath", Ref: ref("k8s.io/api/core/v1.HostPathVolumeSource")}}, "emptyDir": {SchemaProps: spec.SchemaProps{Description: "EmptyDir represents a temporary directory that shares a pod's lifetime. More info: https://kubernetes.io/docs/concepts/storage/volumes#emptydir", Ref: ref("k8s.io/api/core/v1.EmptyDirVolumeSource")}}, "gcePersistentDisk": {SchemaProps: spec.SchemaProps{Description: "GCEPersistentDisk represents a GCE Disk resource that is attached to a kubelet's host machine and then exposed to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk", Ref: ref("k8s.io/api/core/v1.GCEPersistentDiskVolumeSource")}}, "awsElasticBlockStore": {SchemaProps: spec.SchemaProps{Description: "AWSElasticBlockStore represents an AWS Disk resource that is attached to a kubelet's host machine and then exposed to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore", Ref: ref("k8s.io/api/core/v1.AWSElasticBlockStoreVolumeSource")}}, "gitRepo": {SchemaProps: spec.SchemaProps{Description: "GitRepo represents a git repository at a particular revision. DEPRECATED: GitRepo is deprecated. To provision a container with a git repo, mount an EmptyDir into an InitContainer that clones the repo using git, then mount the EmptyDir into the Pod's container.", Ref: ref("k8s.io/api/core/v1.GitRepoVolumeSource")}}, "secret": {SchemaProps: spec.SchemaProps{Description: "Secret represents a secret that should populate this volume. More info: https://kubernetes.io/docs/concepts/storage/volumes#secret", Ref: ref("k8s.io/api/core/v1.SecretVolumeSource")}}, "nfs": {SchemaProps: spec.SchemaProps{Description: "NFS represents an NFS mount on the host that shares a pod's lifetime More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs", Ref: ref("k8s.io/api/core/v1.NFSVolumeSource")}}, "iscsi": {SchemaProps: spec.SchemaProps{Description: "ISCSI represents an ISCSI Disk resource that is attached to a kubelet's host machine and then exposed to the pod. More info: https://releases.k8s.io/HEAD/examples/volumes/iscsi/README.md", Ref: ref("k8s.io/api/core/v1.ISCSIVolumeSource")}}, "glusterfs": {SchemaProps: spec.SchemaProps{Description: "Glusterfs represents a Glusterfs mount on the host that shares a pod's lifetime. More info: https://releases.k8s.io/HEAD/examples/volumes/glusterfs/README.md", Ref: ref("k8s.io/api/core/v1.GlusterfsVolumeSource")}}, "persistentVolumeClaim": {SchemaProps: spec.SchemaProps{Description: "PersistentVolumeClaimVolumeSource represents a reference to a PersistentVolumeClaim in the same namespace. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims", Ref: ref("k8s.io/api/core/v1.PersistentVolumeClaimVolumeSource")}}, "rbd": {SchemaProps: spec.SchemaProps{Description: "RBD represents a Rados Block Device mount on the host that shares a pod's lifetime. More info: https://releases.k8s.io/HEAD/examples/volumes/rbd/README.md", Ref: ref("k8s.io/api/core/v1.RBDVolumeSource")}}, "flexVolume": {SchemaProps: spec.SchemaProps{Description: "FlexVolume represents a generic volume resource that is provisioned/attached using an exec based plugin.", Ref: ref("k8s.io/api/core/v1.FlexVolumeSource")}}, "cinder": {SchemaProps: spec.SchemaProps{Description: "Cinder represents a cinder volume attached and mounted on kubelets host machine More info: https://releases.k8s.io/HEAD/examples/mysql-cinder-pd/README.md", Ref: ref("k8s.io/api/core/v1.CinderVolumeSource")}}, "cephfs": {SchemaProps: spec.SchemaProps{Description: "CephFS represents a Ceph FS mount on the host that shares a pod's lifetime", Ref: ref("k8s.io/api/core/v1.CephFSVolumeSource")}}, "flocker": {SchemaProps: spec.SchemaProps{Description: "Flocker represents a Flocker volume attached to a kubelet's host machine. This depends on the Flocker control service being running", Ref: ref("k8s.io/api/core/v1.FlockerVolumeSource")}}, "downwardAPI": {SchemaProps: spec.SchemaProps{Description: "DownwardAPI represents downward API about the pod that should populate this volume", Ref: ref("k8s.io/api/core/v1.DownwardAPIVolumeSource")}}, "fc": {SchemaProps: spec.SchemaProps{Description: "FC represents a Fibre Channel resource that is attached to a kubelet's host machine and then exposed to the pod.", Ref: ref("k8s.io/api/core/v1.FCVolumeSource")}}, "azureFile": {SchemaProps: spec.SchemaProps{Description: "AzureFile represents an Azure File Service mount on the host and bind mount to the pod.", Ref: ref("k8s.io/api/core/v1.AzureFileVolumeSource")}}, "configMap": {SchemaProps: spec.SchemaProps{Description: "ConfigMap represents a configMap that should populate this volume", Ref: ref("k8s.io/api/core/v1.ConfigMapVolumeSource")}}, "vsphereVolume": {SchemaProps: spec.SchemaProps{Description: "VsphereVolume represents a vSphere volume attached and mounted on kubelets host machine", Ref: ref("k8s.io/api/core/v1.VsphereVirtualDiskVolumeSource")}}, "quobyte": {SchemaProps: spec.SchemaProps{Description: "Quobyte represents a Quobyte mount on the host that shares a pod's lifetime", Ref: ref("k8s.io/api/core/v1.QuobyteVolumeSource")}}, "azureDisk": {SchemaProps: spec.SchemaProps{Description: "AzureDisk represents an Azure Data Disk mount on the host and bind mount to the pod.", Ref: ref("k8s.io/api/core/v1.AzureDiskVolumeSource")}}, "photonPersistentDisk": {SchemaProps: spec.SchemaProps{Description: "PhotonPersistentDisk represents a PhotonController persistent disk attached and mounted on kubelets host machine", Ref: ref("k8s.io/api/core/v1.PhotonPersistentDiskVolumeSource")}}, "projected": {SchemaProps: spec.SchemaProps{Description: "Items for all in one resources secrets, configmaps, and downward API", Ref: ref("k8s.io/api/core/v1.ProjectedVolumeSource")}}, "portworxVolume": {SchemaProps: spec.SchemaProps{Description: "PortworxVolume represents a portworx volume attached and mounted on kubelets host machine", Ref: ref("k8s.io/api/core/v1.PortworxVolumeSource")}}, "scaleIO": {SchemaProps: spec.SchemaProps{Description: "ScaleIO represents a ScaleIO persistent volume attached and mounted on Kubernetes nodes.", Ref: ref("k8s.io/api/core/v1.ScaleIOVolumeSource")}}, "storageos": {SchemaProps: spec.SchemaProps{Description: "StorageOS represents a StorageOS volume attached and mounted on Kubernetes nodes.", Ref: ref("k8s.io/api/core/v1.StorageOSVolumeSource")}}}}}, Dependencies: []string{"k8s.io/api/core/v1.AWSElasticBlockStoreVolumeSource", "k8s.io/api/core/v1.AzureDiskVolumeSource", "k8s.io/api/core/v1.AzureFileVolumeSource", "k8s.io/api/core/v1.CephFSVolumeSource", "k8s.io/api/core/v1.CinderVolumeSource", "k8s.io/api/core/v1.ConfigMapVolumeSource", "k8s.io/api/core/v1.DownwardAPIVolumeSource", "k8s.io/api/core/v1.EmptyDirVolumeSource", "k8s.io/api/core/v1.FCVolumeSource", "k8s.io/api/core/v1.FlexVolumeSource", "k8s.io/api/core/v1.FlockerVolumeSource", "k8s.io/api/core/v1.GCEPersistentDiskVolumeSource", "k8s.io/api/core/v1.GitRepoVolumeSource", "k8s.io/api/core/v1.GlusterfsVolumeSource", "k8s.io/api/core/v1.HostPathVolumeSource", "k8s.io/api/core/v1.ISCSIVolumeSource", "k8s.io/api/core/v1.NFSVolumeSource", "k8s.io/api/core/v1.PersistentVolumeClaimVolumeSource", "k8s.io/api/core/v1.PhotonPersistentDiskVolumeSource", "k8s.io/api/core/v1.PortworxVolumeSource", "k8s.io/api/core/v1.ProjectedVolumeSource", "k8s.io/api/core/v1.QuobyteVolumeSource", "k8s.io/api/core/v1.RBDVolumeSource", "k8s.io/api/core/v1.ScaleIOVolumeSource", "k8s.io/api/core/v1.SecretVolumeSource", "k8s.io/api/core/v1.StorageOSVolumeSource", "k8s.io/api/core/v1.VsphereVirtualDiskVolumeSource"}}
 }
 func schema_k8sio_api_core_v1_VsphereVirtualDiskVolumeSource(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -1593,9 +2045,13 @@ func schema_k8sio_api_core_v1_WeightedPodAffinityTerm(ref common.ReferenceCallba
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "The weights of all of the matched WeightedPodAffinityTerm fields are added per-node to find the most preferred node(s)", Properties: map[string]spec.Schema{"weight": {SchemaProps: spec.SchemaProps{Description: "weight associated with matching the corresponding podAffinityTerm, in the range 1-100.", Type: []string{"integer"}, Format: "int32"}}, "podAffinityTerm": {SchemaProps: spec.SchemaProps{Description: "Required. A pod affinity term, associated with the corresponding weight.", Ref: ref("k8s.io/api/core/v1.PodAffinityTerm")}}}, Required: []string{"weight", "podAffinityTerm"}}}, Dependencies: []string{"k8s.io/api/core/v1.PodAffinityTerm"}}
 }
 func schema_pkg_apis_meta_v1_APIGroup(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -1607,9 +2063,13 @@ func schema_pkg_apis_meta_v1_APIGroupList(ref common.ReferenceCallback) common.O
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "APIGroupList is a list of APIGroup, to allow clients to discover the API at /apis.", Properties: map[string]spec.Schema{"kind": {SchemaProps: spec.SchemaProps{Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds", Type: []string{"string"}, Format: ""}}, "apiVersion": {SchemaProps: spec.SchemaProps{Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources", Type: []string{"string"}, Format: ""}}, "groups": {SchemaProps: spec.SchemaProps{Description: "groups is a list of APIGroup.", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Ref: ref("k8s.io/apimachinery/pkg/apis/meta/v1.APIGroup")}}}}}}, Required: []string{"groups"}}}, Dependencies: []string{"k8s.io/apimachinery/pkg/apis/meta/v1.APIGroup"}}
 }
 func schema_pkg_apis_meta_v1_APIResource(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -1621,9 +2081,13 @@ func schema_pkg_apis_meta_v1_APIResourceList(ref common.ReferenceCallback) commo
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "APIResourceList is a list of APIResource, it is used to expose the name of the resources supported in a specific group and version, and if the resource is namespaced.", Properties: map[string]spec.Schema{"kind": {SchemaProps: spec.SchemaProps{Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds", Type: []string{"string"}, Format: ""}}, "apiVersion": {SchemaProps: spec.SchemaProps{Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources", Type: []string{"string"}, Format: ""}}, "groupVersion": {SchemaProps: spec.SchemaProps{Description: "groupVersion is the group and version this APIResourceList is for.", Type: []string{"string"}, Format: ""}}, "resources": {SchemaProps: spec.SchemaProps{Description: "resources contains the name of the resources and if they are namespaced.", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Ref: ref("k8s.io/apimachinery/pkg/apis/meta/v1.APIResource")}}}}}}, Required: []string{"groupVersion", "resources"}}}, Dependencies: []string{"k8s.io/apimachinery/pkg/apis/meta/v1.APIResource"}}
 }
 func schema_pkg_apis_meta_v1_APIVersions(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -1635,9 +2099,13 @@ func schema_pkg_apis_meta_v1_CreateOptions(ref common.ReferenceCallback) common.
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "CreateOptions may be provided when creating an API object.", Properties: map[string]spec.Schema{"kind": {SchemaProps: spec.SchemaProps{Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds", Type: []string{"string"}, Format: ""}}, "apiVersion": {SchemaProps: spec.SchemaProps{Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources", Type: []string{"string"}, Format: ""}}, "dryRun": {SchemaProps: spec.SchemaProps{Description: "When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Type: []string{"string"}, Format: ""}}}}}, "includeUninitialized": {SchemaProps: spec.SchemaProps{Description: "If IncludeUninitialized is specified, the object may be returned without completing initialization.", Type: []string{"boolean"}, Format: ""}}}}}, Dependencies: []string{}}
 }
 func schema_pkg_apis_meta_v1_DeleteOptions(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -1649,9 +2117,13 @@ func schema_pkg_apis_meta_v1_Duration(ref common.ReferenceCallback) common.OpenA
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "Duration is a wrapper around time.Duration which supports correct marshaling to YAML and JSON. In particular, it marshals into strings, which can be used as map keys in json.", Properties: map[string]spec.Schema{"Duration": {SchemaProps: spec.SchemaProps{Type: []string{"integer"}, Format: "int64"}}}, Required: []string{"Duration"}}}, Dependencies: []string{}}
 }
 func schema_pkg_apis_meta_v1_ExportOptions(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -1663,9 +2135,13 @@ func schema_pkg_apis_meta_v1_GetOptions(ref common.ReferenceCallback) common.Ope
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "GetOptions is the standard query options to the standard REST get call.", Properties: map[string]spec.Schema{"kind": {SchemaProps: spec.SchemaProps{Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds", Type: []string{"string"}, Format: ""}}, "apiVersion": {SchemaProps: spec.SchemaProps{Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources", Type: []string{"string"}, Format: ""}}, "resourceVersion": {SchemaProps: spec.SchemaProps{Description: "When specified: - if unset, then the result is returned from remote storage based on quorum-read flag; - if it's 0, then we simply return what we currently have in cache, no guarantee; - if set to non zero, then the result is at least as fresh as given rv.", Type: []string{"string"}, Format: ""}}, "includeUninitialized": {SchemaProps: spec.SchemaProps{Description: "If true, partially initialized resources are included in the response.", Type: []string{"boolean"}, Format: ""}}}}}, Dependencies: []string{}}
 }
 func schema_pkg_apis_meta_v1_GroupKind(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -1677,9 +2153,13 @@ func schema_pkg_apis_meta_v1_GroupResource(ref common.ReferenceCallback) common.
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "GroupResource specifies a Group and a Resource, but does not force a version.  This is useful for identifying concepts during lookup stages without having partially valid types", Properties: map[string]spec.Schema{"group": {SchemaProps: spec.SchemaProps{Type: []string{"string"}, Format: ""}}, "resource": {SchemaProps: spec.SchemaProps{Type: []string{"string"}, Format: ""}}}, Required: []string{"group", "resource"}}}, Dependencies: []string{}}
 }
 func schema_pkg_apis_meta_v1_GroupVersion(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -1691,9 +2171,13 @@ func schema_pkg_apis_meta_v1_GroupVersionForDiscovery(ref common.ReferenceCallba
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "GroupVersion contains the \"group/version\" and \"version\" string of a version. It is made a struct to keep extensibility.", Properties: map[string]spec.Schema{"groupVersion": {SchemaProps: spec.SchemaProps{Description: "groupVersion specifies the API group and version in the form \"group/version\"", Type: []string{"string"}, Format: ""}}, "version": {SchemaProps: spec.SchemaProps{Description: "version specifies the version in the form of \"version\". This is to save the clients the trouble of splitting the GroupVersion.", Type: []string{"string"}, Format: ""}}}, Required: []string{"groupVersion", "version"}}}, Dependencies: []string{}}
 }
 func schema_pkg_apis_meta_v1_GroupVersionKind(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -1705,9 +2189,13 @@ func schema_pkg_apis_meta_v1_GroupVersionResource(ref common.ReferenceCallback) 
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "GroupVersionResource unambiguously identifies a resource.  It doesn't anonymously include GroupVersion to avoid automatic coersion.  It doesn't use a GroupVersion to avoid custom marshalling", Properties: map[string]spec.Schema{"group": {SchemaProps: spec.SchemaProps{Type: []string{"string"}, Format: ""}}, "version": {SchemaProps: spec.SchemaProps{Type: []string{"string"}, Format: ""}}, "resource": {SchemaProps: spec.SchemaProps{Type: []string{"string"}, Format: ""}}}, Required: []string{"group", "version", "resource"}}}, Dependencies: []string{}}
 }
 func schema_pkg_apis_meta_v1_Initializer(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -1719,9 +2207,13 @@ func schema_pkg_apis_meta_v1_Initializers(ref common.ReferenceCallback) common.O
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "Initializers tracks the progress of initialization.", Properties: map[string]spec.Schema{"pending": {VendorExtensible: spec.VendorExtensible{Extensions: spec.Extensions{"x-kubernetes-patch-merge-key": "name", "x-kubernetes-patch-strategy": "merge"}}, SchemaProps: spec.SchemaProps{Description: "Pending is a list of initializers that must execute in order before this object is visible. When the last pending initializer is removed, and no failing result is set, the initializers struct will be set to nil and the object is considered as initialized and visible to all clients.", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Ref: ref("k8s.io/apimachinery/pkg/apis/meta/v1.Initializer")}}}}}, "result": {SchemaProps: spec.SchemaProps{Description: "If result is set with the Failure field, the object will be persisted to storage and then deleted, ensuring that other clients can observe the deletion.", Ref: ref("k8s.io/apimachinery/pkg/apis/meta/v1.Status")}}}, Required: []string{"pending"}}}, Dependencies: []string{"k8s.io/apimachinery/pkg/apis/meta/v1.Initializer", "k8s.io/apimachinery/pkg/apis/meta/v1.Status"}}
 }
 func schema_pkg_apis_meta_v1_InternalEvent(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -1733,9 +2225,13 @@ func schema_pkg_apis_meta_v1_LabelSelector(ref common.ReferenceCallback) common.
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "A label selector is a label query over a set of resources. The result of matchLabels and matchExpressions are ANDed. An empty label selector matches all objects. A null label selector matches no objects.", Properties: map[string]spec.Schema{"matchLabels": {SchemaProps: spec.SchemaProps{Description: "matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is \"key\", the operator is \"In\", and the values array contains only \"value\". The requirements are ANDed.", Type: []string{"object"}, AdditionalProperties: &spec.SchemaOrBool{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Type: []string{"string"}, Format: ""}}}}}, "matchExpressions": {SchemaProps: spec.SchemaProps{Description: "matchExpressions is a list of label selector requirements. The requirements are ANDed.", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Ref: ref("k8s.io/apimachinery/pkg/apis/meta/v1.LabelSelectorRequirement")}}}}}}}}, Dependencies: []string{"k8s.io/apimachinery/pkg/apis/meta/v1.LabelSelectorRequirement"}}
 }
 func schema_pkg_apis_meta_v1_LabelSelectorRequirement(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -1747,9 +2243,13 @@ func schema_pkg_apis_meta_v1_List(ref common.ReferenceCallback) common.OpenAPIDe
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "List holds a list of objects, which may not be known by the server.", Properties: map[string]spec.Schema{"kind": {SchemaProps: spec.SchemaProps{Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds", Type: []string{"string"}, Format: ""}}, "apiVersion": {SchemaProps: spec.SchemaProps{Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources", Type: []string{"string"}, Format: ""}}, "metadata": {SchemaProps: spec.SchemaProps{Description: "Standard list metadata. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds", Ref: ref("k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta")}}, "items": {SchemaProps: spec.SchemaProps{Description: "List of objects", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Ref: ref("k8s.io/apimachinery/pkg/runtime.RawExtension")}}}}}}, Required: []string{"items"}}}, Dependencies: []string{"k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta", "k8s.io/apimachinery/pkg/runtime.RawExtension"}}
 }
 func schema_pkg_apis_meta_v1_ListMeta(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -1761,9 +2261,13 @@ func schema_pkg_apis_meta_v1_ListOptions(ref common.ReferenceCallback) common.Op
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "ListOptions is the query options to a standard REST list call.", Properties: map[string]spec.Schema{"kind": {SchemaProps: spec.SchemaProps{Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds", Type: []string{"string"}, Format: ""}}, "apiVersion": {SchemaProps: spec.SchemaProps{Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources", Type: []string{"string"}, Format: ""}}, "labelSelector": {SchemaProps: spec.SchemaProps{Description: "A selector to restrict the list of returned objects by their labels. Defaults to everything.", Type: []string{"string"}, Format: ""}}, "fieldSelector": {SchemaProps: spec.SchemaProps{Description: "A selector to restrict the list of returned objects by their fields. Defaults to everything.", Type: []string{"string"}, Format: ""}}, "includeUninitialized": {SchemaProps: spec.SchemaProps{Description: "If true, partially initialized resources are included in the response.", Type: []string{"boolean"}, Format: ""}}, "watch": {SchemaProps: spec.SchemaProps{Description: "Watch for changes to the described resources and return them as a stream of add, update, and remove notifications. Specify resourceVersion.", Type: []string{"boolean"}, Format: ""}}, "resourceVersion": {SchemaProps: spec.SchemaProps{Description: "When specified with a watch call, shows changes that occur after that particular version of a resource. Defaults to changes from the beginning of history. When specified for list: - if unset, then the result is returned from remote storage based on quorum-read flag; - if it's 0, then we simply return what we currently have in cache, no guarantee; - if set to non zero, then the result is at least as fresh as given rv.", Type: []string{"string"}, Format: ""}}, "timeoutSeconds": {SchemaProps: spec.SchemaProps{Description: "Timeout for the list/watch call. This limits the duration of the call, regardless of any activity or inactivity.", Type: []string{"integer"}, Format: "int64"}}, "limit": {SchemaProps: spec.SchemaProps{Description: "limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.\n\nThe server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.", Type: []string{"integer"}, Format: "int64"}}, "continue": {SchemaProps: spec.SchemaProps{Description: "The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server, the server will respond with a 410 ResourceExpired error together with a continue token. If the client needs a consistent list, it must restart their list without the continue field. Otherwise, the client may send another list request with the token received with the 410 error, the server will respond with a list starting from the next key, but from the latest snapshot, which is inconsistent from the previous list results - objects that are created, modified, or deleted after the first list request will be included in the response, as long as their keys are after the \"next key\".\n\nThis field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications.", Type: []string{"string"}, Format: ""}}}}}, Dependencies: []string{}}
 }
 func schema_pkg_apis_meta_v1_MicroTime(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -1775,9 +2279,13 @@ func schema_pkg_apis_meta_v1_ObjectMeta(ref common.ReferenceCallback) common.Ope
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "ObjectMeta is metadata that all persisted resources must have, which includes all objects users must create.", Properties: map[string]spec.Schema{"name": {SchemaProps: spec.SchemaProps{Description: "Name must be unique within a namespace. Is required when creating resources, although some resources may allow a client to request the generation of an appropriate name automatically. Name is primarily intended for creation idempotence and configuration definition. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/identifiers#names", Type: []string{"string"}, Format: ""}}, "generateName": {SchemaProps: spec.SchemaProps{Description: "GenerateName is an optional prefix, used by the server, to generate a unique name ONLY IF the Name field has not been provided. If this field is used, the name returned to the client will be different than the name passed. This value will also be combined with a unique suffix. The provided value has the same validation rules as the Name field, and may be truncated by the length of the suffix required to make the value unique on the server.\n\nIf this field is specified and the generated name exists, the server will NOT return a 409 - instead, it will either return 201 Created or 500 with Reason ServerTimeout indicating a unique name could not be found in the time allotted, and the client should retry (optionally after the time indicated in the Retry-After header).\n\nApplied only if Name is not specified. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#idempotency", Type: []string{"string"}, Format: ""}}, "namespace": {SchemaProps: spec.SchemaProps{Description: "Namespace defines the space within each name must be unique. An empty namespace is equivalent to the \"default\" namespace, but \"default\" is the canonical representation. Not all objects are required to be scoped to a namespace - the value of this field for those objects will be empty.\n\nMust be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/namespaces", Type: []string{"string"}, Format: ""}}, "selfLink": {SchemaProps: spec.SchemaProps{Description: "SelfLink is a URL representing this object. Populated by the system. Read-only.", Type: []string{"string"}, Format: ""}}, "uid": {SchemaProps: spec.SchemaProps{Description: "UID is the unique in time and space value for this object. It is typically generated by the server on successful creation of a resource and is not allowed to change on PUT operations.\n\nPopulated by the system. Read-only. More info: http://kubernetes.io/docs/user-guide/identifiers#uids", Type: []string{"string"}, Format: ""}}, "resourceVersion": {SchemaProps: spec.SchemaProps{Description: "An opaque value that represents the internal version of this object that can be used by clients to determine when objects have changed. May be used for optimistic concurrency, change detection, and the watch operation on a resource or set of resources. Clients must treat these values as opaque and passed unmodified back to the server. They may only be valid for a particular resource or set of resources.\n\nPopulated by the system. Read-only. Value must be treated as opaque by clients and . More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#concurrency-control-and-consistency", Type: []string{"string"}, Format: ""}}, "generation": {SchemaProps: spec.SchemaProps{Description: "A sequence number representing a specific generation of the desired state. Populated by the system. Read-only.", Type: []string{"integer"}, Format: "int64"}}, "creationTimestamp": {SchemaProps: spec.SchemaProps{Description: "CreationTimestamp is a timestamp representing the server time when this object was created. It is not guaranteed to be set in happens-before order across separate operations. Clients may not set this value. It is represented in RFC3339 form and is in UTC.\n\nPopulated by the system. Read-only. Null for lists. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata", Ref: ref("k8s.io/apimachinery/pkg/apis/meta/v1.Time")}}, "deletionTimestamp": {SchemaProps: spec.SchemaProps{Description: "DeletionTimestamp is RFC 3339 date and time at which this resource will be deleted. This field is set by the server when a graceful deletion is requested by the user, and is not directly settable by a client. The resource is expected to be deleted (no longer visible from resource lists, and not reachable by name) after the time in this field, once the finalizers list is empty. As long as the finalizers list contains items, deletion is blocked. Once the deletionTimestamp is set, this value may not be unset or be set further into the future, although it may be shortened or the resource may be deleted prior to this time. For example, a user may request that a pod is deleted in 30 seconds. The Kubelet will react by sending a graceful termination signal to the containers in the pod. After that 30 seconds, the Kubelet will send a hard termination signal (SIGKILL) to the container and after cleanup, remove the pod from the API. In the presence of network partitions, this object may still exist after this timestamp, until an administrator or automated process can determine the resource is fully terminated. If not set, graceful deletion of the object has not been requested.\n\nPopulated by the system when a graceful deletion is requested. Read-only. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata", Ref: ref("k8s.io/apimachinery/pkg/apis/meta/v1.Time")}}, "deletionGracePeriodSeconds": {SchemaProps: spec.SchemaProps{Description: "Number of seconds allowed for this object to gracefully terminate before it will be removed from the system. Only set when deletionTimestamp is also set. May only be shortened. Read-only.", Type: []string{"integer"}, Format: "int64"}}, "labels": {SchemaProps: spec.SchemaProps{Description: "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels", Type: []string{"object"}, AdditionalProperties: &spec.SchemaOrBool{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Type: []string{"string"}, Format: ""}}}}}, "annotations": {SchemaProps: spec.SchemaProps{Description: "Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations", Type: []string{"object"}, AdditionalProperties: &spec.SchemaOrBool{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Type: []string{"string"}, Format: ""}}}}}, "ownerReferences": {VendorExtensible: spec.VendorExtensible{Extensions: spec.Extensions{"x-kubernetes-patch-merge-key": "uid", "x-kubernetes-patch-strategy": "merge"}}, SchemaProps: spec.SchemaProps{Description: "List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller.", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Ref: ref("k8s.io/apimachinery/pkg/apis/meta/v1.OwnerReference")}}}}}, "initializers": {SchemaProps: spec.SchemaProps{Description: "An initializer is a controller which enforces some system invariant at object creation time. This field is a list of initializers that have not yet acted on this object. If nil or empty, this object has been completely initialized. Otherwise, the object is considered uninitialized and is hidden (in list/watch and get calls) from clients that haven't explicitly asked to observe uninitialized objects.\n\nWhen an object is created, the system will populate this list with the current set of initializers. Only privileged users may set or modify this list. Once it is empty, it may not be modified further by any user.", Ref: ref("k8s.io/apimachinery/pkg/apis/meta/v1.Initializers")}}, "finalizers": {VendorExtensible: spec.VendorExtensible{Extensions: spec.Extensions{"x-kubernetes-patch-strategy": "merge"}}, SchemaProps: spec.SchemaProps{Description: "Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed.", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Type: []string{"string"}, Format: ""}}}}}, "clusterName": {SchemaProps: spec.SchemaProps{Description: "The name of the cluster which the object belongs to. This is used to distinguish resources with same name and namespace in different clusters. This field is not set anywhere right now and apiserver is going to ignore it if set in create or update request.", Type: []string{"string"}, Format: ""}}}}}, Dependencies: []string{"k8s.io/apimachinery/pkg/apis/meta/v1.Initializers", "k8s.io/apimachinery/pkg/apis/meta/v1.OwnerReference", "k8s.io/apimachinery/pkg/apis/meta/v1.Time"}}
 }
 func schema_pkg_apis_meta_v1_OwnerReference(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -1789,9 +2297,13 @@ func schema_pkg_apis_meta_v1_Patch(ref common.ReferenceCallback) common.OpenAPID
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "Patch is provided to give a concrete name and type to the Kubernetes PATCH request body.", Properties: map[string]spec.Schema{}}}, Dependencies: []string{}}
 }
 func schema_pkg_apis_meta_v1_Preconditions(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -1803,9 +2315,13 @@ func schema_pkg_apis_meta_v1_RootPaths(ref common.ReferenceCallback) common.Open
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "RootPaths lists the paths available at root. For example: \"/healthz\", \"/apis\".", Properties: map[string]spec.Schema{"paths": {SchemaProps: spec.SchemaProps{Description: "paths are the paths available at root.", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Type: []string{"string"}, Format: ""}}}}}}, Required: []string{"paths"}}}, Dependencies: []string{}}
 }
 func schema_pkg_apis_meta_v1_ServerAddressByClientCIDR(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -1817,9 +2333,13 @@ func schema_pkg_apis_meta_v1_Status(ref common.ReferenceCallback) common.OpenAPI
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "Status is a return value for calls that don't return other objects.", Properties: map[string]spec.Schema{"kind": {SchemaProps: spec.SchemaProps{Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds", Type: []string{"string"}, Format: ""}}, "apiVersion": {SchemaProps: spec.SchemaProps{Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources", Type: []string{"string"}, Format: ""}}, "metadata": {SchemaProps: spec.SchemaProps{Description: "Standard list metadata. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds", Ref: ref("k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta")}}, "status": {SchemaProps: spec.SchemaProps{Description: "Status of the operation. One of: \"Success\" or \"Failure\". More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-status", Type: []string{"string"}, Format: ""}}, "message": {SchemaProps: spec.SchemaProps{Description: "A human-readable description of the status of this operation.", Type: []string{"string"}, Format: ""}}, "reason": {SchemaProps: spec.SchemaProps{Description: "A machine-readable description of why this operation is in the \"Failure\" status. If this value is empty there is no information available. A Reason clarifies an HTTP status code but does not override it.", Type: []string{"string"}, Format: ""}}, "details": {SchemaProps: spec.SchemaProps{Description: "Extended data associated with the reason.  Each reason may define its own extended details. This field is optional and the data returned is not guaranteed to conform to any schema except that defined by the reason type.", Ref: ref("k8s.io/apimachinery/pkg/apis/meta/v1.StatusDetails")}}, "code": {SchemaProps: spec.SchemaProps{Description: "Suggested HTTP return code for this status, 0 if not set.", Type: []string{"integer"}, Format: "int32"}}}}}, Dependencies: []string{"k8s.io/apimachinery/pkg/apis/meta/v1.ListMeta", "k8s.io/apimachinery/pkg/apis/meta/v1.StatusDetails"}}
 }
 func schema_pkg_apis_meta_v1_StatusCause(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -1831,9 +2351,13 @@ func schema_pkg_apis_meta_v1_StatusDetails(ref common.ReferenceCallback) common.
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "StatusDetails is a set of additional properties that MAY be set by the server to provide additional information about a response. The Reason field of a Status object defines what attributes will be set. Clients must ignore fields that do not match the defined type of each attribute, and should assume that any attribute may be empty, invalid, or under defined.", Properties: map[string]spec.Schema{"name": {SchemaProps: spec.SchemaProps{Description: "The name attribute of the resource associated with the status StatusReason (when there is a single name which can be described).", Type: []string{"string"}, Format: ""}}, "group": {SchemaProps: spec.SchemaProps{Description: "The group attribute of the resource associated with the status StatusReason.", Type: []string{"string"}, Format: ""}}, "kind": {SchemaProps: spec.SchemaProps{Description: "The kind attribute of the resource associated with the status StatusReason. On some operations may differ from the requested resource Kind. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds", Type: []string{"string"}, Format: ""}}, "uid": {SchemaProps: spec.SchemaProps{Description: "UID of the resource. (when there is a single resource which can be described). More info: http://kubernetes.io/docs/user-guide/identifiers#uids", Type: []string{"string"}, Format: ""}}, "causes": {SchemaProps: spec.SchemaProps{Description: "The Causes array includes more details associated with the StatusReason failure. Not all StatusReasons may provide detailed causes.", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Ref: ref("k8s.io/apimachinery/pkg/apis/meta/v1.StatusCause")}}}}}, "retryAfterSeconds": {SchemaProps: spec.SchemaProps{Description: "If specified, the time in seconds before the operation should be retried. Some errors may indicate the client must take an alternate action - for those errors this field may indicate how long to wait before taking the alternate action.", Type: []string{"integer"}, Format: "int32"}}}}}, Dependencies: []string{"k8s.io/apimachinery/pkg/apis/meta/v1.StatusCause"}}
 }
 func schema_pkg_apis_meta_v1_Time(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -1845,9 +2369,13 @@ func schema_pkg_apis_meta_v1_Timestamp(ref common.ReferenceCallback) common.Open
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "Timestamp is a struct that is equivalent to Time, but intended for protobuf marshalling/unmarshalling. It is generated into a serialization that matches Time. Do not use in Go structs.", Properties: map[string]spec.Schema{"seconds": {SchemaProps: spec.SchemaProps{Description: "Represents seconds of UTC time since Unix epoch 1970-01-01T00:00:00Z. Must be from 0001-01-01T00:00:00Z to 9999-12-31T23:59:59Z inclusive.", Type: []string{"integer"}, Format: "int64"}}, "nanos": {SchemaProps: spec.SchemaProps{Description: "Non-negative fractions of a second at nanosecond resolution. Negative second values with fractions must still have non-negative nanos values that count forward in time. Must be from 0 to 999,999,999 inclusive. This field may be limited in precision depending on context.", Type: []string{"integer"}, Format: "int32"}}}, Required: []string{"seconds", "nanos"}}}, Dependencies: []string{}}
 }
 func schema_pkg_apis_meta_v1_TypeMeta(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -1859,9 +2387,13 @@ func schema_pkg_apis_meta_v1_UpdateOptions(ref common.ReferenceCallback) common.
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return common.OpenAPIDefinition{Schema: spec.Schema{SchemaProps: spec.SchemaProps{Description: "UpdateOptions may be provided when updating an API object.", Properties: map[string]spec.Schema{"kind": {SchemaProps: spec.SchemaProps{Description: "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds", Type: []string{"string"}, Format: ""}}, "apiVersion": {SchemaProps: spec.SchemaProps{Description: "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources", Type: []string{"string"}, Format: ""}}, "dryRun": {SchemaProps: spec.SchemaProps{Description: "When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed", Type: []string{"array"}, Items: &spec.SchemaOrArray{Schema: &spec.Schema{SchemaProps: spec.SchemaProps{Type: []string{"string"}, Format: ""}}}}}}}}, Dependencies: []string{}}
 }
 func schema_pkg_apis_meta_v1_WatchEvent(ref common.ReferenceCallback) common.OpenAPIDefinition {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()

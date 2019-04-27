@@ -27,9 +27,13 @@ func NewPrometheusRuleInformer(client versioned.Interface, namespace string, res
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return NewFilteredPrometheusRuleInformer(client, namespace, resyncPeriod, indexers, nil)
 }
 func NewFilteredPrometheusRuleInformer(client versioned.Interface, namespace string, resyncPeriod time.Duration, indexers cache.Indexers, tweakListOptions internalinterfaces.TweakListOptionsFunc) cache.SharedIndexInformer {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -51,6 +55,8 @@ func (f *prometheusRuleInformer) defaultInformer(client versioned.Interface, res
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return NewFilteredPrometheusRuleInformer(client, f.namespace, resyncPeriod, cache.Indexers{cache.NamespaceIndex: cache.MetaNamespaceIndexFunc}, f.tweakListOptions)
 }
 func (f *prometheusRuleInformer) Informer() cache.SharedIndexInformer {
@@ -58,9 +64,13 @@ func (f *prometheusRuleInformer) Informer() cache.SharedIndexInformer {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return f.factory.InformerFor(&monitoring_v1.PrometheusRule{}, f.defaultInformer)
 }
 func (f *prometheusRuleInformer) Lister() v1.PrometheusRuleLister {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()

@@ -15,9 +15,13 @@ func (f *Framework) MakeBasicRule(ns, name string, groups []monitoringv1.RuleGro
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return &monitoringv1.PrometheusRule{ObjectMeta: metav1.ObjectMeta{Name: name, Namespace: ns, Labels: map[string]string{"role": "rulefile"}}, Spec: monitoringv1.PrometheusRuleSpec{Groups: groups}}
 }
 func (f *Framework) CreateRule(ns string, ar *monitoringv1.PrometheusRule) (*monitoringv1.PrometheusRule, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -33,6 +37,8 @@ func (f *Framework) MakeAndCreateFiringRule(ns, name, alertName string) (*monito
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	groups := []monitoringv1.RuleGroup{{Name: alertName, Rules: []monitoringv1.Rule{{Alert: alertName, Expr: intstr.FromString("vector(1)")}}}}
 	file := f.MakeBasicRule(ns, name, groups)
 	result, err := f.CreateRule(ns, file)
@@ -42,6 +48,8 @@ func (f *Framework) MakeAndCreateFiringRule(ns, name, alertName string) (*monito
 	return result, nil
 }
 func (f *Framework) WaitForRule(ns, name string) error {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -61,6 +69,8 @@ func (f *Framework) UpdateRule(ns string, ar *monitoringv1.PrometheusRule) (*mon
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	result, err := f.MonClientV1.PrometheusRules(ns).Update(ar)
 	if err != nil {
 		return nil, fmt.Errorf("updating %v RuleFile failed: %v", ar.Name, err)
@@ -68,6 +78,8 @@ func (f *Framework) UpdateRule(ns string, ar *monitoringv1.PrometheusRule) (*mon
 	return result, nil
 }
 func (f *Framework) DeleteRule(ns string, r string) error {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()

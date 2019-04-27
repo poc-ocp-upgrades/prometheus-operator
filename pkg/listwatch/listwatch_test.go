@@ -16,6 +16,8 @@ func setupMultiWatch(n int, t *testing.T, rvs ...string) ([]*watch.FakeWatcher, 
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	if len(rvs) == 0 {
 		rvs = make([]string, n)
 	}
@@ -39,6 +41,8 @@ func TestNewMultiWatch(t *testing.T) {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	func() {
 		defer func() {
 			if r := recover(); r == nil {
@@ -57,6 +61,8 @@ func TestNewMultiWatch(t *testing.T) {
 	}()
 }
 func TestMultiWatchResultChan(t *testing.T) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -88,6 +94,8 @@ func TestMultiWatchResultChan(t *testing.T) {
 	}
 }
 func TestMultiWatchStop(t *testing.T) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -125,9 +133,13 @@ func (m *mockListerWatcher) List(options metav1.ListOptions) (runtime.Object, er
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return nil, nil
 }
 func (m *mockListerWatcher) Watch(options metav1.ListOptions) (watch.Interface, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -139,6 +151,8 @@ func (m *mockListerWatcher) Stop() {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	m.stopped = true
 }
 func (m *mockListerWatcher) ResultChan() <-chan watch.Event {
@@ -146,9 +160,13 @@ func (m *mockListerWatcher) ResultChan() <-chan watch.Event {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return m.evCh
 }
 func TestRacyMultiWatch(t *testing.T) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()

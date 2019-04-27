@@ -19,9 +19,13 @@ func MakeBasicIngress(serviceName string, servicePort int) *v1beta1.Ingress {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return &v1beta1.Ingress{ObjectMeta: metav1.ObjectMeta{Name: "monitoring"}, Spec: v1beta1.IngressSpec{Rules: []v1beta1.IngressRule{{IngressRuleValue: v1beta1.IngressRuleValue{HTTP: &v1beta1.HTTPIngressRuleValue{Paths: []v1beta1.HTTPIngressPath{{Backend: v1beta1.IngressBackend{ServiceName: serviceName, ServicePort: intstr.FromInt(servicePort)}, Path: "/metrics"}}}}}}}}
 }
 func CreateIngress(kubeClient kubernetes.Interface, namespace string, i *v1beta1.Ingress) error {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -30,6 +34,8 @@ func CreateIngress(kubeClient kubernetes.Interface, namespace string, i *v1beta1
 	return errors.Wrap(err, fmt.Sprintf("creating ingress %v failed", i.Name))
 }
 func SetupNginxIngressControllerIncDefaultBackend(kubeClient kubernetes.Interface, namespace string) error {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -63,6 +69,8 @@ func DeleteNginxIngressControllerIncDefaultBackend(kubeClient kubernetes.Interfa
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	if err := deleteReplicationControllerViaYml(kubeClient, namespace, "./framework/ressources/nxginx-ingress-controller.yml"); err != nil {
 		return errors.Wrap(err, "deleting nginx ingress replication controller failed")
 	}
@@ -84,6 +92,8 @@ func DeleteNginxIngressControllerIncDefaultBackend(kubeClient kubernetes.Interfa
 	return nil
 }
 func GetIngressIP(kubeClient kubernetes.Interface, namespace string, ingressName string) (*string, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()

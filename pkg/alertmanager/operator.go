@@ -64,6 +64,8 @@ func New(c prometheusoperator.Config, logger log.Logger) (*Operator, error) {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	cfg, err := k8sutil.NewClusterConfig(c.Host, c.TLSInsecure, &c.TLSConfig)
 	if err != nil {
 		return nil, errors.Wrap(err, "instantiating cluster config failed")
@@ -96,12 +98,16 @@ func (c *Operator) RegisterMetrics(r prometheus.Registerer, reconcileErrorsCount
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	c.reconcileErrorsCounter = reconcileErrorsCounter
 	c.triggerByCounter = triggerByCounter
 	c.reconcileErrorsCounter.With(prometheus.Labels{}).Add(0)
 	r.MustRegister(NewAlertmanagerCollector(c.alrtInf.GetStore()))
 }
 func (c *Operator) waitForCacheSync(stopc <-chan struct{}) error {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -130,10 +136,14 @@ func (c *Operator) addHandlers() {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	c.alrtInf.AddEventHandler(cache.ResourceEventHandlerFuncs{AddFunc: c.handleAlertmanagerAdd, DeleteFunc: c.handleAlertmanagerDelete, UpdateFunc: c.handleAlertmanagerUpdate})
 	c.ssetInf.AddEventHandler(cache.ResourceEventHandlerFuncs{AddFunc: c.handleStatefulSetAdd, DeleteFunc: c.handleStatefulSetDelete, UpdateFunc: c.handleStatefulSetUpdate})
 }
 func (c *Operator) Run(stopc <-chan struct{}) error {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -179,6 +189,8 @@ func (c *Operator) keyFunc(obj interface{}) (string, bool) {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	k, err := cache.DeletionHandlingMetaNamespaceKeyFunc(obj)
 	if err != nil {
 		level.Error(c.logger).Log("msg", "creating key failed", "err", err)
@@ -187,6 +199,8 @@ func (c *Operator) keyFunc(obj interface{}) (string, bool) {
 	return k, true
 }
 func (c *Operator) getObject(obj interface{}) (metav1.Object, bool) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -203,6 +217,8 @@ func (c *Operator) getObject(obj interface{}) (metav1.Object, bool) {
 	return o, true
 }
 func (c *Operator) enqueue(obj interface{}) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -224,6 +240,8 @@ func (c *Operator) enqueueForNamespace(ns string) {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	cache.ListAll(c.alrtInf.GetStore(), labels.Everything(), func(obj interface{}) {
 		am := obj.(*monitoringv1.Alertmanager)
 		if am.Namespace == ns {
@@ -236,10 +254,14 @@ func (c *Operator) worker() {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	for c.processNextWorkItem() {
 	}
 }
 func (c *Operator) processNextWorkItem() bool {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -264,6 +286,8 @@ func (c *Operator) alertmanagerForStatefulSet(sset interface{}) *monitoringv1.Al
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	key, ok := c.keyFunc(sset)
 	if !ok {
 		return nil
@@ -284,6 +308,8 @@ func alertmanagerNameFromStatefulSetName(name string) string {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return strings.TrimPrefix(name, "alertmanager-")
 }
 func statefulSetNameFromAlertmanagerName(name string) string {
@@ -291,9 +317,13 @@ func statefulSetNameFromAlertmanagerName(name string) string {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return "alertmanager-" + name
 }
 func statefulSetKeyToAlertmanagerKey(key string) string {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -306,10 +336,14 @@ func alertmanagerKeyToStatefulSetKey(key string) string {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	keyParts := strings.Split(key, "/")
 	return keyParts[0] + "/alertmanager-" + keyParts[1]
 }
 func (c *Operator) handleAlertmanagerAdd(obj interface{}) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -327,6 +361,8 @@ func (c *Operator) handleAlertmanagerDelete(obj interface{}) {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	key, ok := c.keyFunc(obj)
 	if !ok {
 		return
@@ -336,6 +372,8 @@ func (c *Operator) handleAlertmanagerDelete(obj interface{}) {
 	c.enqueue(key)
 }
 func (c *Operator) handleAlertmanagerUpdate(old, cur interface{}) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -353,6 +391,8 @@ func (c *Operator) handleStatefulSetDelete(obj interface{}) {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	if a := c.alertmanagerForStatefulSet(obj); a != nil {
 		c.enqueue(a)
 	}
@@ -362,11 +402,15 @@ func (c *Operator) handleStatefulSetAdd(obj interface{}) {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	if a := c.alertmanagerForStatefulSet(obj); a != nil {
 		c.enqueue(a)
 	}
 }
 func (c *Operator) handleStatefulSetUpdate(oldo, curo interface{}) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -382,6 +426,8 @@ func (c *Operator) handleStatefulSetUpdate(oldo, curo interface{}) {
 	}
 }
 func (c *Operator) sync(key string) error {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -444,9 +490,13 @@ func ListOptions(name string) metav1.ListOptions {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return metav1.ListOptions{LabelSelector: fields.SelectorFromSet(fields.Set(map[string]string{"app": "alertmanager", "alertmanager": name})).String()}
 }
 func AlertmanagerStatus(kclient kubernetes.Interface, a *monitoringv1.Alertmanager) (*monitoringv1.AlertmanagerStatus, []v1.Pod, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -485,6 +535,8 @@ func needsUpdate(pod *v1.Pod, tmpl v1.PodTemplateSpec) bool {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	c1 := pod.Spec.Containers[0]
 	c2 := tmpl.Spec.Containers[0]
 	if c1.Image != c2.Image {
@@ -496,6 +548,8 @@ func needsUpdate(pod *v1.Pod, tmpl v1.PodTemplateSpec) bool {
 	return false
 }
 func (c *Operator) destroyAlertmanager(key string) error {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -531,6 +585,8 @@ func (c *Operator) destroyAlertmanager(key string) error {
 	return nil
 }
 func (c *Operator) createCRDs() error {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()

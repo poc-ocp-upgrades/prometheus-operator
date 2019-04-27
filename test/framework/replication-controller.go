@@ -15,6 +15,8 @@ func createReplicationControllerViaYml(kubeClient kubernetes.Interface, namespac
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	manifest, err := os.Open(filepath)
 	if err != nil {
 		return err
@@ -31,6 +33,8 @@ func createReplicationControllerViaYml(kubeClient kubernetes.Interface, namespac
 	return nil
 }
 func deleteReplicationControllerViaYml(kubeClient kubernetes.Interface, namespace string, filepath string) error {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -53,6 +57,8 @@ func deleteReplicationControllerViaYml(kubeClient kubernetes.Interface, namespac
 	return nil
 }
 func scaleDownReplicationController(kubeClient kubernetes.Interface, namespace string, rC v1.ReplicationController) error {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()

@@ -14,6 +14,8 @@ func CreateNamespace(kubeClient kubernetes.Interface, name string) (*v1.Namespac
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	namespace, err := kubeClient.Core().Namespaces().Create(&v1.Namespace{ObjectMeta: metav1.ObjectMeta{Name: name}})
 	if err != nil {
 		return nil, errors.Wrap(err, fmt.Sprintf("failed to create namespace with name %v", name))
@@ -21,6 +23,8 @@ func CreateNamespace(kubeClient kubernetes.Interface, name string) (*v1.Namespac
 	return namespace, nil
 }
 func (ctx *TestCtx) CreateNamespace(t *testing.T, kubeClient kubernetes.Interface) string {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -40,9 +44,13 @@ func DeleteNamespace(kubeClient kubernetes.Interface, name string) error {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return kubeClient.Core().Namespaces().Delete(name, nil)
 }
 func AddLabelsToNamespace(kubeClient kubernetes.Interface, name string, additionalLabels map[string]string) error {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()

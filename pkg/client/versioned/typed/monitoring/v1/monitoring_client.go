@@ -21,9 +21,13 @@ func (c *MonitoringV1Client) Alertmanagers(namespace string) AlertmanagerInterfa
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return newAlertmanagers(c, namespace)
 }
 func (c *MonitoringV1Client) Prometheuses(namespace string) PrometheusInterface {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -35,6 +39,8 @@ func (c *MonitoringV1Client) PrometheusRules(namespace string) PrometheusRuleInt
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return newPrometheusRules(c, namespace)
 }
 func (c *MonitoringV1Client) ServiceMonitors(namespace string) ServiceMonitorInterface {
@@ -42,9 +48,13 @@ func (c *MonitoringV1Client) ServiceMonitors(namespace string) ServiceMonitorInt
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return newServiceMonitors(c, namespace)
 }
 func NewForConfig(c *rest.Config) (*MonitoringV1Client, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -64,6 +74,8 @@ func NewForConfigOrDie(c *rest.Config) *MonitoringV1Client {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	client, err := NewForConfig(c)
 	if err != nil {
 		panic(err)
@@ -75,9 +87,13 @@ func New(c rest.Interface) *MonitoringV1Client {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return &MonitoringV1Client{c}
 }
 func setConfigDefaults(config *rest.Config) error {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -92,6 +108,8 @@ func setConfigDefaults(config *rest.Config) error {
 	return nil
 }
 func (c *MonitoringV1Client) RESTClient() rest.Interface {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()

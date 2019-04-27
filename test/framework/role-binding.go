@@ -12,6 +12,8 @@ func CreateRoleBinding(kubeClient kubernetes.Interface, ns string, relativePath 
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	finalizerFn := func() error {
 		return DeleteRoleBinding(kubeClient, ns, relativePath)
 	}
@@ -27,6 +29,8 @@ func DeleteRoleBinding(kubeClient kubernetes.Interface, ns string, relativePath 
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	roleBinding, err := parseRoleBindingYaml(relativePath)
 	if err != nil {
 		return err
@@ -34,6 +38,8 @@ func DeleteRoleBinding(kubeClient kubernetes.Interface, ns string, relativePath 
 	return kubeClient.RbacV1().RoleBindings(ns).Delete(roleBinding.Name, &metav1.DeleteOptions{})
 }
 func parseRoleBindingYaml(relativePath string) (*rbacv1.RoleBinding, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()

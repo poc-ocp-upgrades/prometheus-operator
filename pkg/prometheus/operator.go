@@ -71,9 +71,13 @@ func (labels *Labels) String() string {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return labels.LabelsString
 }
 func (labels *Labels) Merge(otherLabels map[string]string) map[string]string {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -88,6 +92,8 @@ func (labels *Labels) Merge(otherLabels map[string]string) map[string]string {
 	return mergedLabels
 }
 func (labels *Labels) Set(value string) error {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -131,6 +137,8 @@ type BasicAuthCredentials struct {
 }
 
 func New(conf Config, logger log.Logger) (*Operator, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -206,6 +214,8 @@ func (c *Operator) RegisterMetrics(r prometheus.Registerer, reconcileErrorsCount
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	c.reconcileErrorsCounter = reconcileErrorsCounter
 	c.triggerByCounter = triggerByCounter
 	c.reconcileErrorsCounter.With(prometheus.Labels{}).Add(0)
@@ -213,6 +223,8 @@ func (c *Operator) RegisterMetrics(r prometheus.Registerer, reconcileErrorsCount
 	r.MustRegister(c.nodeAddressLookupErrors, NewPrometheusCollector(c.promInf.GetStore()))
 }
 func (c *Operator) waitForCacheSync(stopc <-chan struct{}) error {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -241,6 +253,8 @@ func (c *Operator) addHandlers() {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	c.promInf.AddEventHandler(cache.ResourceEventHandlerFuncs{AddFunc: c.handlePrometheusAdd, DeleteFunc: c.handlePrometheusDelete, UpdateFunc: c.handlePrometheusUpdate})
 	c.smonInf.AddEventHandler(cache.ResourceEventHandlerFuncs{AddFunc: c.handleSmonAdd, DeleteFunc: c.handleSmonDelete, UpdateFunc: c.handleSmonUpdate})
 	c.ruleInf.AddEventHandler(cache.ResourceEventHandlerFuncs{AddFunc: c.handleRuleAdd, DeleteFunc: c.handleRuleDelete, UpdateFunc: c.handleRuleUpdate})
@@ -249,6 +263,8 @@ func (c *Operator) addHandlers() {
 	c.ssetInf.AddEventHandler(cache.ResourceEventHandlerFuncs{AddFunc: c.handleStatefulSetAdd, DeleteFunc: c.handleStatefulSetDelete, UpdateFunc: c.handleStatefulSetUpdate})
 }
 func (c *Operator) Run(stopc <-chan struct{}) error {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -302,6 +318,8 @@ func (c *Operator) keyFunc(obj interface{}) (string, bool) {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	k, err := cache.DeletionHandlingMetaNamespaceKeyFunc(obj)
 	if err != nil {
 		level.Error(c.logger).Log("msg", "creating key failed", "err", err)
@@ -310,6 +328,8 @@ func (c *Operator) keyFunc(obj interface{}) (string, bool) {
 	return k, true
 }
 func (c *Operator) handlePrometheusAdd(obj interface{}) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -327,6 +347,8 @@ func (c *Operator) handlePrometheusDelete(obj interface{}) {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	key, ok := c.keyFunc(obj)
 	if !ok {
 		return
@@ -336,6 +358,8 @@ func (c *Operator) handlePrometheusDelete(obj interface{}) {
 	c.enqueue(key)
 }
 func (c *Operator) handlePrometheusUpdate(old, cur interface{}) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -352,6 +376,8 @@ func (c *Operator) handlePrometheusUpdate(old, cur interface{}) {
 	c.enqueue(key)
 }
 func (c *Operator) reconcileNodeEndpoints(stopc <-chan struct{}) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -375,6 +401,8 @@ func nodeAddress(node v1.Node) (string, map[v1.NodeAddressType][]string, error) 
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	m := map[v1.NodeAddressType][]string{}
 	for _, a := range node.Status.Addresses {
 		m[a.Type] = append(m[a.Type], a.Address)
@@ -392,6 +420,8 @@ func getNodeAddresses(nodes *v1.NodeList) ([]v1.EndpointAddress, []error) {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	addresses := make([]v1.EndpointAddress, 0)
 	errs := make([]error, 0)
 	for _, n := range nodes.Items {
@@ -405,6 +435,8 @@ func getNodeAddresses(nodes *v1.NodeList) ([]v1.EndpointAddress, []error) {
 	return addresses, errs
 }
 func (c *Operator) syncNodeEndpoints() error {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -438,6 +470,8 @@ func (c *Operator) handleSmonAdd(obj interface{}) {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	o, ok := c.getObject(obj)
 	if ok {
 		level.Debug(c.logger).Log("msg", "ServiceMonitor added")
@@ -446,6 +480,8 @@ func (c *Operator) handleSmonAdd(obj interface{}) {
 	}
 }
 func (c *Operator) handleSmonUpdate(old, cur interface{}) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -465,6 +501,8 @@ func (c *Operator) handleSmonDelete(obj interface{}) {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	o, ok := c.getObject(obj)
 	if ok {
 		level.Debug(c.logger).Log("msg", "ServiceMonitor delete")
@@ -477,6 +515,8 @@ func (c *Operator) handleRuleAdd(obj interface{}) {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	o, ok := c.getObject(obj)
 	if ok {
 		level.Debug(c.logger).Log("msg", "PrometheusRule added")
@@ -485,6 +525,8 @@ func (c *Operator) handleRuleAdd(obj interface{}) {
 	}
 }
 func (c *Operator) handleRuleUpdate(old, cur interface{}) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -504,6 +546,8 @@ func (c *Operator) handleRuleDelete(obj interface{}) {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	o, ok := c.getObject(obj)
 	if ok {
 		level.Debug(c.logger).Log("msg", "PrometheusRule deleted")
@@ -516,6 +560,8 @@ func (c *Operator) handleSecretDelete(obj interface{}) {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	o, ok := c.getObject(obj)
 	if ok {
 		level.Debug(c.logger).Log("msg", "Secret deleted")
@@ -524,6 +570,8 @@ func (c *Operator) handleSecretDelete(obj interface{}) {
 	}
 }
 func (c *Operator) handleSecretUpdate(old, cur interface{}) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -543,6 +591,8 @@ func (c *Operator) handleSecretAdd(obj interface{}) {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	o, ok := c.getObject(obj)
 	if ok {
 		level.Debug(c.logger).Log("msg", "Secret added")
@@ -551,6 +601,8 @@ func (c *Operator) handleSecretAdd(obj interface{}) {
 	}
 }
 func (c *Operator) handleConfigMapAdd(obj interface{}) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -567,6 +619,8 @@ func (c *Operator) handleConfigMapDelete(obj interface{}) {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	o, ok := c.getObject(obj)
 	if ok {
 		level.Debug(c.logger).Log("msg", "ConfigMap deleted")
@@ -575,6 +629,8 @@ func (c *Operator) handleConfigMapDelete(obj interface{}) {
 	}
 }
 func (c *Operator) handleConfigMapUpdate(old, cur interface{}) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -590,6 +646,8 @@ func (c *Operator) handleConfigMapUpdate(old, cur interface{}) {
 	}
 }
 func (c *Operator) getObject(obj interface{}) (metav1.Object, bool) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -610,6 +668,8 @@ func (c *Operator) enqueue(obj interface{}) {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	if obj == nil {
 		return
 	}
@@ -623,6 +683,8 @@ func (c *Operator) enqueue(obj interface{}) {
 	c.queue.Add(key)
 }
 func (c *Operator) enqueueForNamespace(nsName string) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -671,10 +733,14 @@ func (c *Operator) worker() {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	for c.processNextWorkItem() {
 	}
 }
 func (c *Operator) processNextWorkItem() bool {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -699,6 +765,8 @@ func (c *Operator) prometheusForStatefulSet(sset interface{}) *monitoringv1.Prom
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	key, ok := c.keyFunc(sset)
 	if !ok {
 		return nil
@@ -719,6 +787,8 @@ func prometheusNameFromStatefulSetName(name string) string {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return strings.TrimPrefix(name, "prometheus-")
 }
 func statefulSetNameFromPrometheusName(name string) string {
@@ -726,9 +796,13 @@ func statefulSetNameFromPrometheusName(name string) string {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return "prometheus-" + name
 }
 func statefulSetKeyToPrometheusKey(key string) string {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -741,10 +815,14 @@ func prometheusKeyToStatefulSetKey(key string) string {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	keyParts := strings.Split(key, "/")
 	return keyParts[0] + "/prometheus-" + keyParts[1]
 }
 func (c *Operator) handleStatefulSetDelete(obj interface{}) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -760,6 +838,8 @@ func (c *Operator) handleStatefulSetAdd(obj interface{}) {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	if ps := c.prometheusForStatefulSet(obj); ps != nil {
 		level.Debug(c.logger).Log("msg", "StatefulSet added")
 		c.triggerByCounter.WithLabelValues("StatefulSet", "add").Inc()
@@ -767,6 +847,8 @@ func (c *Operator) handleStatefulSetAdd(obj interface{}) {
 	}
 }
 func (c *Operator) handleStatefulSetUpdate(oldo, curo interface{}) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -784,6 +866,8 @@ func (c *Operator) handleStatefulSetUpdate(oldo, curo interface{}) {
 	}
 }
 func (c *Operator) sync(key string) error {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -877,6 +961,8 @@ func createSSetInputHash(p monitoringv1.Prometheus, c Config, ruleConfigMapNames
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	hash, err := hashstructure.Hash(struct {
 		P	monitoringv1.Prometheus
 		C	Config
@@ -892,9 +978,13 @@ func ListOptions(name string) metav1.ListOptions {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return metav1.ListOptions{LabelSelector: fields.SelectorFromSet(fields.Set(map[string]string{"app": "prometheus", "prometheus": name})).String()}
 }
 func PrometheusStatus(kclient kubernetes.Interface, p *monitoringv1.Prometheus) (*monitoringv1.PrometheusStatus, []v1.Pod, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -933,6 +1023,8 @@ func needsUpdate(pod *v1.Pod, tmpl v1.PodTemplateSpec) bool {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	c1 := pod.Spec.Containers[0]
 	c2 := tmpl.Spec.Containers[0]
 	if c1.Image != c2.Image {
@@ -944,6 +1036,8 @@ func needsUpdate(pod *v1.Pod, tmpl v1.PodTemplateSpec) bool {
 	return false
 }
 func loadAdditionalScrapeConfigsSecret(additionalScrapeConfigs *v1.SecretKeySelector, s *v1.SecretList) ([]byte, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -966,12 +1060,16 @@ func extractCredKey(secret *v1.Secret, sel v1.SecretKeySelector, cred string) (s
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	if s, ok := secret.Data[sel.Key]; ok {
 		return string(s), nil
 	}
 	return "", fmt.Errorf("secret %s key %q in secret %q not found", cred, sel.Key, sel.Name)
 }
 func getCredFromSecret(c corev1client.SecretInterface, sel v1.SecretKeySelector, cred string, cacheKey string, cache map[string]*v1.Secret) (_ string, err error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -991,6 +1089,8 @@ func loadBasicAuthSecretFromAPI(basicAuth *monitoringv1.BasicAuth, c corev1clien
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	var username string
 	var password string
 	var err error
@@ -1004,6 +1104,8 @@ func loadBasicAuthSecretFromAPI(basicAuth *monitoringv1.BasicAuth, c corev1clien
 	return BasicAuthCredentials{username: username, password: password}, nil
 }
 func loadBasicAuthSecret(basicAuth *monitoringv1.BasicAuth, s *v1.SecretList) (BasicAuthCredentials, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -1032,6 +1134,8 @@ func loadBasicAuthSecret(basicAuth *monitoringv1.BasicAuth, s *v1.SecretList) (B
 	return BasicAuthCredentials{username: username, password: password}, nil
 }
 func (c *Operator) loadBasicAuthSecrets(mons map[string]*monitoringv1.ServiceMonitor, remoteReads []monitoringv1.RemoteReadSpec, remoteWrites []monitoringv1.RemoteWriteSpec, apiserverConfig *monitoringv1.APIServerConfig, SecretsInPromNS *v1.SecretList) (map[string]BasicAuthCredentials, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -1077,6 +1181,8 @@ func (c *Operator) loadBasicAuthSecrets(mons map[string]*monitoringv1.ServiceMon
 	return secrets, nil
 }
 func (c *Operator) createOrUpdateConfigurationSecret(p *monitoringv1.Prometheus, ruleConfigMapNames []string) error {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -1141,6 +1247,8 @@ func (c *Operator) selectServiceMonitors(p *monitoringv1.Prometheus) (map[string
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	namespaces := []string{}
 	res := make(map[string]*monitoringv1.ServiceMonitor)
 	servMonSelector, err := metav1.LabelSelectorAsSelector(p.Spec.ServiceMonitorSelector)
@@ -1180,6 +1288,8 @@ func (c *Operator) listMatchingNamespaces(selector labels.Selector) ([]string, e
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	var ns []string
 	err := cache.ListAll(c.nsInf.GetStore(), selector, func(obj interface{}) {
 		ns = append(ns, obj.(*v1.Namespace).Name)
@@ -1190,6 +1300,8 @@ func (c *Operator) listMatchingNamespaces(selector labels.Selector) ([]string, e
 	return ns, nil
 }
 func (c *Operator) createCRDs() error {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()

@@ -20,9 +20,13 @@ func (f *Framework) MakeBasicPrometheus(ns, name, group string, replicas int32) 
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return &monitoringv1.Prometheus{ObjectMeta: metav1.ObjectMeta{Name: name, Namespace: ns, Annotations: map[string]string{}}, Spec: monitoringv1.PrometheusSpec{Replicas: &replicas, Version: prometheus.DefaultPrometheusVersion, ServiceMonitorSelector: &metav1.LabelSelector{MatchLabels: map[string]string{"group": group}}, ServiceAccountName: "prometheus", RuleSelector: &metav1.LabelSelector{MatchLabels: map[string]string{"role": "rulefile"}}, Resources: v1.ResourceRequirements{Requests: v1.ResourceList{v1.ResourceMemory: resource.MustParse("400Mi")}}}}
 }
 func (f *Framework) AddAlertingToPrometheus(p *monitoringv1.Prometheus, ns, name string) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -34,9 +38,13 @@ func (f *Framework) MakeBasicServiceMonitor(name string) *monitoringv1.ServiceMo
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return &monitoringv1.ServiceMonitor{ObjectMeta: metav1.ObjectMeta{Name: name, Labels: map[string]string{"group": name}}, Spec: monitoringv1.ServiceMonitorSpec{Selector: metav1.LabelSelector{MatchLabels: map[string]string{"group": name}}, Endpoints: []monitoringv1.Endpoint{{Port: "web", Interval: "30s"}}}}
 }
 func (f *Framework) MakePrometheusService(name, group string, serviceType v1.ServiceType) *v1.Service {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -49,6 +57,8 @@ func (f *Framework) MakeThanosQuerierService(name string) *v1.Service {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	service := &v1.Service{ObjectMeta: metav1.ObjectMeta{Name: name}, Spec: v1.ServiceSpec{Ports: []v1.ServicePort{{Name: "http-query", Port: 10902, TargetPort: intstr.FromString("http")}}, Selector: map[string]string{"app": "thanos-query"}}}
 	return service
 }
@@ -57,10 +67,14 @@ func (f *Framework) MakeThanosService(name string) *v1.Service {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	service := &v1.Service{ObjectMeta: metav1.ObjectMeta{Name: name}, Spec: v1.ServiceSpec{Ports: []v1.ServicePort{{Name: "cluster", Port: 10900, TargetPort: intstr.FromString("cluster")}}, Selector: map[string]string{"thanos-peer": "true"}}}
 	return service
 }
 func (f *Framework) CreatePrometheusAndWaitUntilReady(ns string, p *monitoringv1.Prometheus) (*monitoringv1.Prometheus, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -79,6 +93,8 @@ func (f *Framework) UpdatePrometheusAndWaitUntilReady(ns string, p *monitoringv1
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	result, err := f.MonClientV1.Prometheuses(ns).Update(p)
 	if err != nil {
 		return nil, err
@@ -89,6 +105,8 @@ func (f *Framework) UpdatePrometheusAndWaitUntilReady(ns string, p *monitoringv1
 	return result, nil
 }
 func (f *Framework) WaitForPrometheusReady(p *monitoringv1.Prometheus, timeout time.Duration) error {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -111,6 +129,8 @@ func (f *Framework) DeletePrometheusAndWaitUntilGone(ns, name string) error {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_, err := f.MonClientV1.Prometheuses(ns).Get(name, metav1.GetOptions{})
 	if err != nil {
 		return errors.Wrap(err, fmt.Sprintf("requesting Prometheus custom resource %v failed", name))
@@ -128,6 +148,8 @@ func (f *Framework) WaitForPrometheusRunImageAndReady(ns string, p *monitoringv1
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	if err := WaitForPodsRunImage(f.KubeClient, ns, int(*p.Spec.Replicas), promImage(p.Spec.Version), prometheus.ListOptions(p.Name)); err != nil {
 		return err
 	}
@@ -138,9 +160,13 @@ func promImage(version string) string {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return fmt.Sprintf("quay.io/prometheus/prometheus:%s", version)
 }
 func (f *Framework) WaitForTargets(ns, svcName string, amount int) error {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -166,11 +192,15 @@ func (f *Framework) QueryPrometheusSVC(ns, svcName, endpoint string, query map[s
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	ProxyGet := f.KubeClient.CoreV1().Services(ns).ProxyGet
 	request := ProxyGet("", svcName, "web", endpoint, query)
 	return request.DoRaw()
 }
 func (f *Framework) GetActiveTargets(ns, svcName string) ([]*Target, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -186,6 +216,8 @@ func (f *Framework) GetActiveTargets(ns, svcName string) ([]*Target, error) {
 	return rt.Data.ActiveTargets, nil
 }
 func (f *Framework) CheckPrometheusFiringAlert(ns, svcName, alertName string) (bool, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -208,6 +240,8 @@ func (f *Framework) CheckPrometheusFiringAlert(ns, svcName, alertName string) (b
 	return alertstate == "firing", nil
 }
 func (f *Framework) WaitForPrometheusFiringAlert(ns, svcName, alertName string) error {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()

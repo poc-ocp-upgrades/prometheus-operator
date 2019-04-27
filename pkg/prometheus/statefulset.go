@@ -47,6 +47,8 @@ func makeStatefulSet(p monitoringv1.Prometheus, config *Config, ruleConfigMapNam
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	p = *p.DeepCopy()
 	if p.Spec.BaseImage == "" {
 		p.Spec.BaseImage = config.PrometheusDefaultBaseImage
@@ -124,11 +126,15 @@ func makeEmptyConfigurationSecret(p *monitoringv1.Prometheus, config Config) (*v
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	s := makeConfigSecret(p, config)
 	s.ObjectMeta.Annotations = map[string]string{"empty": "true"}
 	return s, nil
 }
 func makeConfigSecret(p *monitoringv1.Prometheus, config Config) *v1.Secret {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -141,10 +147,14 @@ func makeStatefulSetService(p *monitoringv1.Prometheus, config Config) *v1.Servi
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	svc := &v1.Service{ObjectMeta: metav1.ObjectMeta{Name: governingServiceName, OwnerReferences: []metav1.OwnerReference{metav1.OwnerReference{Name: p.GetName(), Kind: p.Kind, APIVersion: p.APIVersion, UID: p.GetUID()}}, Labels: config.Labels.Merge(map[string]string{"operated-prometheus": "true"})}, Spec: v1.ServiceSpec{ClusterIP: "None", Ports: []v1.ServicePort{{Name: "web", Port: 9090, TargetPort: intstr.FromString("web")}}, Selector: map[string]string{"app": "prometheus"}}}
 	return svc
 }
 func makeStatefulSetSpec(p monitoringv1.Prometheus, c *Config, ruleConfigMapNames []string) (*appsv1.StatefulSetSpec, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -365,9 +375,13 @@ func configSecretName(name string) string {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return prefixedName(name)
 }
 func volumeName(name string) string {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -379,9 +393,13 @@ func prefixedName(name string) string {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return fmt.Sprintf("prometheus-%s", name)
 }
 func subPathForStorage(s *monitoringv1.StorageSpec) string {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()

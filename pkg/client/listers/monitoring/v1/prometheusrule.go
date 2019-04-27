@@ -19,9 +19,13 @@ func NewPrometheusRuleLister(indexer cache.Indexer) PrometheusRuleLister {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return &prometheusRuleLister{indexer: indexer}
 }
 func (s *prometheusRuleLister) List(selector labels.Selector) (ret []*v1.PrometheusRule, err error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -32,6 +36,8 @@ func (s *prometheusRuleLister) List(selector labels.Selector) (ret []*v1.Prometh
 	return ret, err
 }
 func (s *prometheusRuleLister) PrometheusRules(namespace string) PrometheusRuleNamespaceLister {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -54,12 +60,16 @@ func (s prometheusRuleNamespaceLister) List(selector labels.Selector) (ret []*v1
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	err = cache.ListAllByNamespace(s.indexer, s.namespace, selector, func(m interface{}) {
 		ret = append(ret, m.(*v1.PrometheusRule))
 	})
 	return ret, err
 }
 func (s prometheusRuleNamespaceLister) Get(name string) (*v1.PrometheusRule, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()

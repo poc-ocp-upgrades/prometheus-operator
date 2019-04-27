@@ -33,9 +33,13 @@ func newServiceMonitors(c *MonitoringV1Client, namespace string) *serviceMonitor
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return &serviceMonitors{client: c.RESTClient(), ns: namespace}
 }
 func (c *serviceMonitors) Get(name string, options meta_v1.GetOptions) (result *v1.ServiceMonitor, err error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -49,6 +53,8 @@ func (c *serviceMonitors) List(opts meta_v1.ListOptions) (result *v1.ServiceMoni
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	result = &v1.ServiceMonitorList{}
 	err = c.client.Get().Namespace(c.ns).Resource("servicemonitors").VersionedParams(&opts, scheme.ParameterCodec).Do().Into(result)
 	return
@@ -58,10 +64,14 @@ func (c *serviceMonitors) Watch(opts meta_v1.ListOptions) (watch.Interface, erro
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	opts.Watch = true
 	return c.client.Get().Namespace(c.ns).Resource("servicemonitors").VersionedParams(&opts, scheme.ParameterCodec).Watch()
 }
 func (c *serviceMonitors) Create(serviceMonitor *v1.ServiceMonitor) (result *v1.ServiceMonitor, err error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -75,11 +85,15 @@ func (c *serviceMonitors) Update(serviceMonitor *v1.ServiceMonitor) (result *v1.
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	result = &v1.ServiceMonitor{}
 	err = c.client.Put().Namespace(c.ns).Resource("servicemonitors").Name(serviceMonitor.Name).Body(serviceMonitor).Do().Into(result)
 	return
 }
 func (c *serviceMonitors) Delete(name string, options *meta_v1.DeleteOptions) error {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -91,9 +105,13 @@ func (c *serviceMonitors) DeleteCollection(options *meta_v1.DeleteOptions, listO
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return c.client.Delete().Namespace(c.ns).Resource("servicemonitors").VersionedParams(&listOptions, scheme.ParameterCodec).Body(options).Do().Error()
 }
 func (c *serviceMonitors) Patch(name string, pt types.PatchType, data []byte, subresources ...string) (result *v1.ServiceMonitor, err error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()

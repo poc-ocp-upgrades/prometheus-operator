@@ -19,9 +19,13 @@ func NewServiceMonitorLister(indexer cache.Indexer) ServiceMonitorLister {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return &serviceMonitorLister{indexer: indexer}
 }
 func (s *serviceMonitorLister) List(selector labels.Selector) (ret []*v1.ServiceMonitor, err error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -32,6 +36,8 @@ func (s *serviceMonitorLister) List(selector labels.Selector) (ret []*v1.Service
 	return ret, err
 }
 func (s *serviceMonitorLister) ServiceMonitors(namespace string) ServiceMonitorNamespaceLister {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -54,12 +60,16 @@ func (s serviceMonitorNamespaceLister) List(selector labels.Selector) (ret []*v1
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	err = cache.ListAllByNamespace(s.indexer, s.namespace, selector, func(m interface{}) {
 		ret = append(ret, m.(*v1.ServiceMonitor))
 	})
 	return ret, err
 }
 func (s serviceMonitorNamespaceLister) Get(name string) (*v1.ServiceMonitor, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()

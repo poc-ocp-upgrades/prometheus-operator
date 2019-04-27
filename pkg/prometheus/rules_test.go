@@ -12,11 +12,15 @@ func TestMakeRulesConfigMaps(t *testing.T) {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	t.Run("ShouldReturnAtLeastOneConfigMap", shouldReturnAtLeastOneConfigMap)
 	t.Run("ShouldErrorOnTooLargeRuleFile", shouldErrorOnTooLargeRuleFile)
 	t.Run("ShouldSplitUpLargeSmallIntoTwo", shouldSplitUpLargeSmallIntoTwo)
 }
 func shouldReturnAtLeastOneConfigMap(t *testing.T) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -36,6 +40,8 @@ func shouldErrorOnTooLargeRuleFile(t *testing.T) {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	expectedError := "rule file 'my-rule-file' is too large for a single Kubernetes ConfigMap"
 	p := &monitoringv1.Prometheus{}
 	ruleFiles := map[string]string{}
@@ -46,6 +52,8 @@ func shouldErrorOnTooLargeRuleFile(t *testing.T) {
 	}
 }
 func shouldSplitUpLargeSmallIntoTwo(t *testing.T) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()

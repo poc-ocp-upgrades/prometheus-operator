@@ -32,6 +32,8 @@ func testPromCreateDeleteCluster(t *testing.T) {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	t.Parallel()
 	ctx := framework.NewTestCtx(t)
 	defer ctx.Cleanup(t)
@@ -48,6 +50,8 @@ func testPromCreateDeleteCluster(t *testing.T) {
 	}
 }
 func testPromScaleUpDownCluster(t *testing.T) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -78,6 +82,8 @@ func testPromNoServiceMonitorSelector(t *testing.T) {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	t.Parallel()
 	ctx := framework.NewTestCtx(t)
 	defer ctx.Cleanup(t)
@@ -91,6 +97,8 @@ func testPromNoServiceMonitorSelector(t *testing.T) {
 	}
 }
 func testPromVersionMigration(t *testing.T) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -121,6 +129,8 @@ func testPromVersionMigration(t *testing.T) {
 	}
 }
 func testPromResourceUpdate(t *testing.T) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -173,6 +183,8 @@ func testPromStorageUpdate(t *testing.T) {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	t.Parallel()
 	ctx := framework.NewTestCtx(t)
 	defer ctx.Cleanup(t)
@@ -209,6 +221,8 @@ func testPromStorageUpdate(t *testing.T) {
 	}
 }
 func testPromReloadConfig(t *testing.T) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -275,6 +289,8 @@ func testPromAdditionalScrapeConfig(t *testing.T) {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	t.Parallel()
 	ctx := framework.NewTestCtx(t)
 	defer ctx.Cleanup(t)
@@ -312,6 +328,8 @@ func testPromAdditionalScrapeConfig(t *testing.T) {
 	}
 }
 func testPromAdditionalAlertManagerConfig(t *testing.T) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -375,6 +393,8 @@ func testPromReloadRules(t *testing.T) {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	t.Parallel()
 	ctx := framework.NewTestCtx(t)
 	defer ctx.Cleanup(t)
@@ -418,6 +438,8 @@ func testPromMultiplePrometheusRulesSameNS(t *testing.T) {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	t.Parallel()
 	ctx := framework.NewTestCtx(t)
 	defer ctx.Cleanup(t)
@@ -451,6 +473,8 @@ func testPromMultiplePrometheusRulesSameNS(t *testing.T) {
 	}
 }
 func testPromMultiplePrometheusRulesDifferentNS(t *testing.T) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -501,6 +525,8 @@ func testPromMultiplePrometheusRulesDifferentNS(t *testing.T) {
 	}
 }
 func testPromRulesExceedingConfigMapLimit(t *testing.T) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -573,6 +599,8 @@ func generateHugePrometheusRule(ns, identifier string) *monitoringv1.PrometheusR
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	alertName := "my-alert"
 	groups := []monitoringv1.RuleGroup{{Name: alertName, Rules: []monitoringv1.Rule{}}}
 	for i := 0; i < 12000; i++ {
@@ -582,6 +610,8 @@ func generateHugePrometheusRule(ns, identifier string) *monitoringv1.PrometheusR
 	return rule
 }
 func testPromOnlyUpdatedOnRelevantChanges(t *testing.T) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -688,6 +718,8 @@ func testPromWhenDeleteCRDCleanUpViaOwnerRef(t *testing.T) {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	t.Parallel()
 	ctx := framework.NewTestCtx(t)
 	defer ctx.Cleanup(t)
@@ -714,6 +746,8 @@ func testPromWhenDeleteCRDCleanUpViaOwnerRef(t *testing.T) {
 	}
 }
 func testPromDiscovery(t *testing.T) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -750,6 +784,8 @@ func testPromDiscovery(t *testing.T) {
 	}
 }
 func testPromAlertmanagerDiscovery(t *testing.T) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -799,6 +835,8 @@ func testPromExposingWithKubernetesAPI(t *testing.T) {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	t.Parallel()
 	ctx := framework.NewTestCtx(t)
 	defer ctx.Cleanup(t)
@@ -820,6 +858,8 @@ func testPromExposingWithKubernetesAPI(t *testing.T) {
 	}
 }
 func testPromDiscoverTargetPort(t *testing.T) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -855,6 +895,8 @@ func testPromDiscoverTargetPort(t *testing.T) {
 	}
 }
 func testPromOpMatchPromAndServMonInDiffNSs(t *testing.T) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -895,6 +937,8 @@ func testPromOpMatchPromAndServMonInDiffNSs(t *testing.T) {
 	}
 }
 func testThanos(t *testing.T) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -976,6 +1020,8 @@ func testPromGetBasicAuthSecret(t *testing.T) {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	t.Parallel()
 	ctx := framework.NewTestCtx(t)
 	defer ctx.Cleanup(t)
@@ -1021,6 +1067,8 @@ func testPromGetBasicAuthSecret(t *testing.T) {
 	}
 }
 func testOperatorNSScope(t *testing.T) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -1141,6 +1189,8 @@ func isDiscoveryWorking(ns, svcName, prometheusName string) error {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	var loopErr error
 	err := wait.Poll(time.Second, 5*framework.DefaultTimeout, func() (bool, error) {
 		pods, loopErr := framework.KubeClient.CoreV1().Pods(ns).List(prometheus.ListOptions(prometheusName))
@@ -1192,6 +1242,8 @@ func basicQueryWorking(ns, svcName string) (bool, error) {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	response, err := framework.QueryPrometheusSVC(ns, svcName, "/api/v1/query", map[string]string{"query": "up"})
 	if err != nil {
 		return false, err
@@ -1207,6 +1259,8 @@ func basicQueryWorking(ns, svcName string) (bool, error) {
 	return true, nil
 }
 func isAlertmanagerDiscoveryWorking(ns, promSVCName, alertmanagerName string) func() (bool, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -1242,6 +1296,8 @@ func assertExpectedTargets(targets []*testFramework.Target, expectedTargets []st
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	existingTargets := []string{}
 	for _, t := range targets {
 		existingTargets = append(existingTargets, t.ScrapeURL)
@@ -1254,6 +1310,8 @@ func assertExpectedTargets(targets []*testFramework.Target, expectedTargets []st
 	return nil
 }
 func assertExpectedAlertmanagerTargets(ams []*alertmanagerTarget, expectedTargets []string) bool {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()

